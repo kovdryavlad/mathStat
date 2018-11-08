@@ -12,6 +12,14 @@
 
 # Build results
 .vs/**
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
+!*/**/bin/*.dll
+!*/**/bin/*.dll
+!*/**/obj/*.dll
+!*/**/obj/*.dll
 *.exe
 *.pdb
 *.manifest
