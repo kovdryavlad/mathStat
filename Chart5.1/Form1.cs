@@ -1099,11 +1099,11 @@ namespace Chart1._1
             Stat2dDataGrid.Rows.Add("Коефіцієнт Юла Y", r(fctables.Coefficient_Link_of_Yula_Y()));
 
             //N*M
-            fctablesNM = TwoDimStat.TableConnectionNonM;
-            Stat2dDataGrid.Rows.Add("Таблиця сполучень N * M");
-            Stat2dDataGrid.Rows.Add("Коефіцієнт сполучень Пірсона", r(fctablesNM.СoefficientConnectionsPirsona()));           
-            //Stat2dDataGrid.Rows.Add("Міра зв’язку Кендалла", r(fctablesNM.MeasureOfConnectionKendella()));
-            Stat2dDataGrid.Rows.Add("Статистика Стюарта", r(fctablesNM.StatStuarta()));
+            //fctablesNM = TwoDimStat.TableConnectionNonM;
+            //Stat2dDataGrid.Rows.Add("Таблиця сполучень N * M");
+            //Stat2dDataGrid.Rows.Add("Коефіцієнт сполучень Пірсона", r(fctablesNM.СoefficientConnectionsPirsona()));           
+            ////Stat2dDataGrid.Rows.Add("Міра зв’язку Кендалла", r(fctablesNM.MeasureOfConnectionKendella()));
+            //Stat2dDataGrid.Rows.Add("Статистика Стюарта", r(fctablesNM.StatStuarta()));
 
         }
 

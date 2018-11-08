@@ -221,17 +221,17 @@ namespace Chart1._1
             for (int i = 1; i < _NumberOfCOlors; i++)
             {
                 var Variants2Draw = VariantsArray.Where(z => z.p > ColorH * i && z.p <= ColorH * (i + 1)).AsParallel().ToArray();
-                
+
+                List <PointD> localList = new List<PointD>();
                 foreach (Varianta item in Variants2Draw)
                 {
                     int lines = 100;//полосок в одном прямоугольничке
                     double yh2lines = (item.topBorder - item.bottomBorder) / lines;
-                    double xh2lines = (item.rightBorder - item.leftBorder) / lines;
+                    //double xh2lines = (item.rightBorder - item.leftBorder) / lines;
                     var v = i * ColorH / maxFrequency * 255;
 
                     Series s = new Series();
 
-                    List <PointD> localList = new List<PointD>();
                     for (int j = 0; j < lines; j++)
                     {
                         
@@ -1887,25 +1887,28 @@ namespace Chart1._1
                 //Центрирование
                 double x = oldX[i];
                 double y = oldY[i];
-                
+
                 newX[i] = x * cos + y * sin;
                 newY[i] = -x * sin + y * cos;
-
-                double seriaXstart = _pointsOfSeries[0][0].x;
-                double seriaYstart = _pointsOfSeries[0][0].y;
-                PointD startRotatedPoint = new PointD(seriaXstart * cos + seriaYstart * sin,
-                                                      -seriaXstart * sin + seriaYstart * cos);
-
-                double seriaXend = _pointsOfSeries[0][1].x;
-                double seriaYend = _pointsOfSeries[0][1].y;
-
-                PointD endRotatedPoint = new PointD(seriaXend * cos + seriaYend * sin,
-                                                   -seriaXend * sin + seriaYend * cos);
-
+            }
+            for (int i = 0; i < _pointsOfSeries.Count; i++)
+            {
                 Series s = new Series();
+
+                for (int j = 0; j < _pointsOfSeries[i].Count; j++)
+                {
+                    double seriaXstart = _pointsOfSeries[i][j].x;
+                    double seriaYstart = _pointsOfSeries[i][j].y;
+                    PointD RotatedPoint = new PointD(seriaXstart * cos + seriaYstart * sin,
+                                                          -seriaXstart * sin + seriaYstart * cos);
+
+                    s.Points.AddXY(RotatedPoint.x, RotatedPoint.y);
+                }
+
                 s.Color = _colorsList[i];
                 sCol.Add(s);
             }
+
 
             _x.Setd(newX);
             _y.Setd(newY);
