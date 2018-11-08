@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Chart1._1.Varianta">
+    <Position X="7" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABgAACABAAAAAAAAAQAIAAAAAAAAAgAAGEAAAAAAAAA=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart1._1.STAT2D">
+    <Position X="10" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gAAQEoAIAAQAUQMAgCCAgwgCAwBQgBEBAAYSgBKBAEA=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_tConnect2on2" />
+      <Field Name="_tConnectNonM" />
+      <Field Name="_var" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Chart1._1.koefRatioService">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAARgAAAAAAA=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart1._1.RankElement">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart1._1.ExtendedRanks">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAA=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart1._1.RankWork">
+    <Position X="4.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAA=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart1._1.FactorsConnectionsTables">
+    <Position X="18" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BgCAAAAABEAAAAIAAAAAAIAAAAACADIAAAAQIBAAACE=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart1._1.FactorsConnectionsTablesNM">
+    <Position X="14.5" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAAACBAAGAAMIEqCIAUAAACggACAAMEgAUABBgAEE=</HashCode>
+      <FileName>STAT2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

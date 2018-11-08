@@ -1,0 +1,75 @@
+﻿<Window x:Class="WpfMathStat2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chartns="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="19"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="3"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="19"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Menu Grid.Row="0">
+                <MenuItem Header="Відкрити" Click="MenuItem_Click"></MenuItem>
+            </Menu>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <WindowsFormsHost Grid.Column="0">
+                    <chartns:Chart></chartns:Chart>
+                </WindowsFormsHost>
+                <WindowsFormsHost Grid.Column="2">
+                    <chartns:Chart></chartns:Chart>
+                </WindowsFormsHost>
+            </Grid>
+            
+            <TabControl Grid.Row="3">
+                <TabItem Header="Менеджер вибірок">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="3"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <ListView Grid.Column="2" x:Name="SamlesList">
+                            <ListView.HeaderTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Margin="7 0 0 0" Grid.Row="0" Grid.Column="0" Foreground="#ff0000" Text="Ім'я"  />
+                                        <TextBlock Margin="0 0 15 0" Grid.Row="0" Grid.Column="1" Foreground="#ff0000" Text="Кількість" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.HeaderTemplate>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ListView>
+                                        <TextBlock Text="{Binding Path=Name}"/>
+                                        <TextBlock Text="{Binding Path=Count}"/>
+                                    </ListView>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Оцінки"></TabItem>
+                <TabItem Header="Журнал"></TabItem>
+            </TabControl>
+            <StatusBar Grid.Row="4"></StatusBar>
+        </Grid>
+    </Grid>
+</Window>
