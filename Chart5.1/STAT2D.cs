@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms.DataVisualization.Charting;
 using Disrtibutions;
-using SetsOpearations;
 using System.Drawing;
 using Chart5._1;
 

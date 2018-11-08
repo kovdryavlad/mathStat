@@ -48,14 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Algebra">
-      <HintPath>..\..\..\Matrix-master\Matrix-master\SimpleMatrix\bin\Debug\Algebra.dll</HintPath>
+      <HintPath>..\..\development6sem\Matrix-master\Matrix-master\SimpleMatrix\bin\Debug\Algebra.dll</HintPath>
     </Reference>
-    <Reference Include="SetsOpearations">
-      <HintPath>..\..\..\OMVasylyk\Interpolation\SetsOpearations\bin\Debug\SetsOpearations.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleMatrix, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Matrix-master\Matrix-master\SimpleMatrix\bin\Debug\SimpleMatrix.dll</HintPath>
+    <Reference Include="SimpleMatrix">
+      <HintPath>..\..\development6sem\Matrix-master\Matrix-master\SimpleMatrix\bin\Debug\SimpleMatrix.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
