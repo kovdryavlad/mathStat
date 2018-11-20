@@ -222,6 +222,7 @@ namespace Chart1._1
             for (int i = 1; i < _NumberOfCOlors; i++)
             {
                 var Variants2Draw = VariantsArray.Where(z => z.p > ColorH * i && z.p <= ColorH * (i + 1)).AsParallel().ToArray();
+
                 
                 foreach (Varianta item in Variants2Draw)
                 {
@@ -230,9 +231,9 @@ namespace Chart1._1
                     double xh2lines = (item.rightBorder - item.leftBorder) / lines;
                     var v = i * ColorH / maxFrequency * 255;
 
+                    List<PointD> localList = new List<PointD>();
                     Series s = new Series();
 
-                    List <PointD> localList = new List<PointD>();
                     for (int j = 0; j < lines; j++)
                     {
                         
@@ -242,8 +243,8 @@ namespace Chart1._1
                                 s.Points.AddXY(item.leftBorder, y);
                                 s.Points.AddXY(item.rightBorder, y);
 
-                        localList.Add(new PointD(item.leftBorder - _xMGKexp, y -_yMGKexp));
-                        localList.Add(new PointD(item.rightBorder - _xMGKexp, y - _yMGKexp));
+                        localList.Add(new PointD(item.leftBorder , y ));
+                        localList.Add(new PointD(item.rightBorder, y ));
 
                       
                     }
@@ -1837,7 +1838,7 @@ namespace Chart1._1
         //МГК
         double _xMGKexp;
         double _yMGKexp;
-
+        
         public void MGK()
         {
             double tan2fi = 2 * _koefLinearCorrelation * _x.Sigma * _y.Sigma;
@@ -1874,6 +1875,9 @@ namespace Chart1._1
 
         public void BackRotate(SeriesCollection sCol)
         {
+            foreach (Series s in sCol)
+                s.Points.Clear();
+
             sCol.Clear();
 
             //поворот
@@ -1899,7 +1903,7 @@ namespace Chart1._1
             _x.Setd2Stat2d(newX);
             _y.Setd2Stat2d(newY);
 
-            
+
             for (int i = 0; i < _pointsOfSeries.Count; i++)
             {
                 Series s = new Series();
@@ -1910,8 +1914,12 @@ namespace Chart1._1
                     double x = selectedSeria[j].x;
                     double y = selectedSeria[j].y;
 
-                    x = x * cos + y * sin + _xMGKexp;
-                    y = -x * sin + y * cos + _yMGKexp;
+                    //x = x * cos + y * sin + _xMGKexp;
+                    //y = -x * sin + y * cos + _yMGKexp;
+                    
+                    x = x * cos + y * sin;
+                    y = -x * sin + y * cos;
+
                     s.Points.AddXY(x, y);
                 }
 
