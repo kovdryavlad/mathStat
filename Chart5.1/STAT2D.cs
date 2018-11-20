@@ -206,6 +206,7 @@ namespace Chart1._1
 
         public double ColorH;
 
+        //тут серии для  поворота МГК
         List<List<PointD>> _pointsOfSeries = new List<List<PointD>>();
         List<Color> _colorsList = new List<Color>();
 
@@ -241,8 +242,8 @@ namespace Chart1._1
                                 s.Points.AddXY(item.leftBorder, y);
                                 s.Points.AddXY(item.rightBorder, y);
 
-                        localList.Add(new PointD(item.leftBorder, y));
-                        localList.Add(new PointD(item.rightBorder, y));
+                        localList.Add(new PointD(item.leftBorder - _xMGKexp, y -_yMGKexp));
+                        localList.Add(new PointD(item.rightBorder - _xMGKexp, y - _yMGKexp));
 
                       
                     }
@@ -1834,6 +1835,9 @@ namespace Chart1._1
 
         double _fi;
         //МГК
+        double _xMGKexp;
+        double _yMGKexp;
+
         public void MGK()
         {
             double tan2fi = 2 * _koefLinearCorrelation * _x.Sigma * _y.Sigma;
@@ -1851,8 +1855,8 @@ namespace Chart1._1
             double[] oldX = _x.d;
             double[] oldY = _y.d;
 
-            double xExp = _x.Expectation;
-            double yExp = _y.Expectation;
+            double xExp = _xMGKexp = _x.Expectation;
+            double yExp = _yMGKexp = _y.Expectation;
 
             for (int i = 0; i < N; i++)
             {   
@@ -1864,8 +1868,8 @@ namespace Chart1._1
                 newY[i] = -x * sin + y * cos;
             }
 
-            _x.Setd(newX);
-            _y.Setd(newY);
+            _x.Setd2Stat2d(newX);
+            _y.Setd2Stat2d(newY);
         }
 
         public void BackRotate(SeriesCollection sCol)
@@ -1887,28 +1891,34 @@ namespace Chart1._1
                 //Центрирование
                 double x = oldX[i];
                 double y = oldY[i];
-                
-                newX[i] = x * cos + y * sin;
-                newY[i] = -x * sin + y * cos;
 
-                double seriaXstart = _pointsOfSeries[0][0].x;
-                double seriaYstart = _pointsOfSeries[0][0].y;
-                PointD startRotatedPoint = new PointD(seriaXstart * cos + seriaYstart * sin,
-                                                      -seriaXstart * sin + seriaYstart * cos);
+                newX[i] = x * cos + y * sin + _xMGKexp;
+                newY[i] = -x * sin + y * cos + _yMGKexp;
+            }
 
-                double seriaXend = _pointsOfSeries[0][1].x;
-                double seriaYend = _pointsOfSeries[0][1].y;
+            _x.Setd2Stat2d(newX);
+            _y.Setd2Stat2d(newY);
 
-                PointD endRotatedPoint = new PointD(seriaXend * cos + seriaYend * sin,
-                                                   -seriaXend * sin + seriaYend * cos);
-
+            
+            for (int i = 0; i < _pointsOfSeries.Count; i++)
+            {
                 Series s = new Series();
+                var selectedSeria = _pointsOfSeries[i];
+
+                for (int j = 0; j < selectedSeria.Count; j++)
+                {
+                    double x = selectedSeria[j].x;
+                    double y = selectedSeria[j].y;
+
+                    x = x * cos + y * sin + _xMGKexp;
+                    y = -x * sin + y * cos + _yMGKexp;
+                    s.Points.AddXY(x, y);
+                }
+
                 s.Color = _colorsList[i];
                 sCol.Add(s);
             }
-
-            _x.Setd(newX);
-            _y.Setd(newY);
+            
         }
     }
     
