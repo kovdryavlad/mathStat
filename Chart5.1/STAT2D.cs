@@ -1882,12 +1882,12 @@ namespace Chart1._1
 
         public void BackRotate(SeriesCollection sCol)
         {
-
-            /*    
+            /*
             foreach (Series s in sCol)
                 s.Points.Clear();
 
             sCol.Clear();
+
             //поворот
             double cos = Math.Cos(-_fi);
             double sin = Math.Sin(-_fi);
@@ -1932,37 +1932,20 @@ namespace Chart1._1
                 sCol.Add(s);
             }
             
-        }
-        */
-
+        }*/
 
             double cos = Math.Cos(-_fi);
             double sin = Math.Sin(-_fi);
-
-            int i = 0;
             foreach (var ss in sCol)
             {
-                Series s1 = new Series();
-                var selectedSeria = _pointsOfSeries[i];
-
                 for (int j = 0; j < ss.Points.Count; j++)
                 {
                     double x = ss.Points[j].XValue;
                     double y = ss.Points[j].YValues[0];
-                    
+
                     ss.Points[j].XValue = x * cos + y * sin;
                     ss.Points[j].YValues[0] = -x * sin + y * cos;
-
-                    ////////
-                    double x1 = selectedSeria[j].x;
-                    double y1 = selectedSeria[j].y;
-
-                    var newXpoint = x1 * cos + y1 * sin;
-                    var newYpoint = -x1 * sin + y1 * cos;
-                    s1.Points.AddXY(newXpoint, newYpoint);
                 }
-                sCol.Add(s1);
-                i++;
             }
         }
     }
