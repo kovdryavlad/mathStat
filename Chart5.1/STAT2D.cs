@@ -193,6 +193,11 @@ namespace Chart1._1
         }
         public void GetTwoDimGist(SeriesCollection sc, int Mx, int My)
         {
+            foreach (Series s in sc)
+                s.Points.Clear();
+
+            sc.Clear();
+
             _serCollection = sc;
             //формирование вариант
             FormVariants(Mx, My);
@@ -212,6 +217,8 @@ namespace Chart1._1
 
         private void DrawVariantsOnChart()
         {
+            _pointsOfSeries.Clear();
+
             var VariantsArray = _var.Select(x => x).SelectMany(y => y).AsParallel().ToArray();
             //sc.Clear();
             //находим максимальную частоту
