@@ -230,7 +230,7 @@ namespace Chart1._1
             {
                 var Variants2Draw = VariantsArray.Where(z => z.p > ColorH * i && z.p <= ColorH * (i + 1)).AsParallel().ToArray();
 
-                
+
                 foreach (Varianta item in Variants2Draw)
                 {
                     int lines = 100;//полосок в одном прямоугольничке
@@ -1882,6 +1882,7 @@ namespace Chart1._1
 
         public void BackRotate(SeriesCollection sCol)
         {
+            /*
             foreach (Series s in sCol)
                 s.Points.Clear();
 
@@ -1920,20 +1921,32 @@ namespace Chart1._1
                 {
                     double x = selectedSeria[j].x;
                     double y = selectedSeria[j].y;
-
-                    //x = x * cos + y * sin + _xMGKexp;
-                    //y = -x * sin + y * cos + _yMGKexp;
                     
-                    x = x * cos + y * sin;
-                    y = -x * sin + y * cos;
+                    var newXpoint = x * cos + y * sin;
+                    var newYpoint = -x * sin + y * cos;
 
-                    s.Points.AddXY(x, y);
+                    s.Points.AddXY(newXpoint, newYpoint);
                 }
 
                 s.Color = _colorsList[i];
                 sCol.Add(s);
             }
             
+        }*/
+
+            double cos = Math.Cos(-_fi);
+            double sin = Math.Sin(-_fi);
+            foreach (var ss in sCol)
+            {
+                for (int j = 0; j < ss.Points.Count; j++)
+                {
+                    double x = ss.Points[j].XValue;
+                    double y = ss.Points[j].YValues[0];
+
+                    ss.Points[j].XValue = x * cos + y * sin;
+                    ss.Points[j].YValues[0] = -x * sin + y * cos;
+                }
+            }
         }
     }
     
