@@ -494,6 +494,17 @@ namespace Chart5._1
                 }
             }
         }
+
+        //7семестр
+        public void MGK()
+        {
+            Matrix dc = new Matrix(DC);
+
+            var laverierFadeevaResult = LaverierFadeevaMethod.Solve(dc, LaverierFadeevaSolvingOptions.FullSolving);
+
+
+        }
+
     }
 
     

@@ -254,6 +254,7 @@ namespace Chart1._1
             this.BoubleChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.DiagnosticDiagramChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.мГКToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -1265,7 +1266,8 @@ namespace Chart1._1
             this.стандартизуватиToolStripMenuItem,
             this.частковийКоефыцієнтКореляціїToolStripMenuItem,
             this.багатовимірнаРегрессіяToolStripMenuItem,
-            this.toolStripMenuItem6});
+            this.toolStripMenuItem6,
+            this.мГКToolStripMenuItem1});
             this.багатовимірніДаніToolStripMenuItem.Name = "багатовимірніДаніToolStripMenuItem";
             this.багатовимірніДаніToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.багатовимірніДаніToolStripMenuItem.Text = "Багатовимірні дані";
@@ -2078,6 +2080,13 @@ namespace Chart1._1
             this.DiagnosticDiagramChart.TabIndex = 1;
             this.DiagnosticDiagramChart.Text = "chart5";
             // 
+            // мГКToolStripMenuItem1
+            // 
+            this.мГКToolStripMenuItem1.Name = "мГКToolStripMenuItem1";
+            this.мГКToolStripMenuItem1.Size = new System.Drawing.Size(249, 22);
+            this.мГКToolStripMenuItem1.Text = "МГК";
+            this.мГКToolStripMenuItem1.Click += new System.EventHandler(this.мГКToolStripMenuItem1_Click);
+            // 
             // MyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2337,6 +2346,7 @@ namespace Chart1._1
         private Chart DiagnosticDiagramChart;
         private System.Windows.Forms.TextBox VariationalServiceTextBox;
         private System.Windows.Forms.ToolStripMenuItem мГКToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem мГКToolStripMenuItem1;
     }
 }
 
