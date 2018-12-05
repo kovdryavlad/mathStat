@@ -1112,10 +1112,10 @@ namespace Chart1._1
 
             chart3.ChartAreas[0].AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Lines;
             chart3.ChartAreas[0].AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Lines;
-            //chart3.ChartAreas[0].AxisX.Minimum = TwoDimStat._x.Min;
-            //chart3.ChartAreas[0].AxisX.Maximum = TwoDimStat._x.Max;
-            //chart3.ChartAreas[0].AxisY.Minimum = TwoDimStat._y.Min;
-            //chart3.ChartAreas[0].AxisY.Maximum = TwoDimStat._y.Max;
+            chart3.ChartAreas[0].AxisX.Minimum = TwoDimStat._x.Min;
+            chart3.ChartAreas[0].AxisX.Maximum = TwoDimStat._x.Max;
+            chart3.ChartAreas[0].AxisY.Minimum = TwoDimStat._y.Min;
+            chart3.ChartAreas[0].AxisY.Maximum = TwoDimStat._y.Max;
             chart3.ChartAreas[0].AxisX.Interval = TwoDimStat._x.h;
             chart3.ChartAreas[0].AxisY.Interval = TwoDimStat._y.h;
             chart3.ChartAreas[0].AxisX.LabelStyle.Format = "{0:0.0000}";

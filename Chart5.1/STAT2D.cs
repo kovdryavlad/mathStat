@@ -1882,12 +1882,6 @@ namespace Chart1._1
 
         public void BackRotate(SeriesCollection sCol)
         {
-            /*
-            foreach (Series s in sCol)
-                s.Points.Clear();
-
-            sCol.Clear();
-
             //поворот
             double cos = Math.Cos(-_fi);
             double sin = Math.Sin(-_fi);
@@ -1904,38 +1898,13 @@ namespace Chart1._1
                 double x = oldX[i];
                 double y = oldY[i];
 
-                newX[i] = x * cos + y * sin + _xMGKexp;
+                newX[i] = x * cos + y * sin  + _xMGKexp;
                 newY[i] = -x * sin + y * cos + _yMGKexp;
             }
 
             _x.Setd2Stat2d(newX);
             _y.Setd2Stat2d(newY);
 
-
-            for (int i = 0; i < _pointsOfSeries.Count; i++)
-            {
-                Series s = new Series();
-                var selectedSeria = _pointsOfSeries[i];
-
-                for (int j = 0; j < selectedSeria.Count; j++)
-                {
-                    double x = selectedSeria[j].x;
-                    double y = selectedSeria[j].y;
-                    
-                    var newXpoint = x * cos + y * sin;
-                    var newYpoint = -x * sin + y * cos;
-
-                    s.Points.AddXY(newXpoint, newYpoint);
-                }
-
-                s.Color = _colorsList[i];
-                sCol.Add(s);
-            }
-            
-        }*/
-
-            double cos = Math.Cos(-_fi);
-            double sin = Math.Sin(-_fi);
             foreach (var ss in sCol)
             {
                 for (int j = 0; j < ss.Points.Count; j++)
@@ -1943,8 +1912,8 @@ namespace Chart1._1
                     double x = ss.Points[j].XValue;
                     double y = ss.Points[j].YValues[0];
 
-                    ss.Points[j].XValue = x * cos + y * sin;
-                    ss.Points[j].YValues[0] = -x * sin + y * cos;
+                    ss.Points[j].XValue = x * cos + y * sin + _xMGKexp;
+                    ss.Points[j].YValues[0] = -x * sin + y * cos + _yMGKexp ;
                 }
             }
         }
