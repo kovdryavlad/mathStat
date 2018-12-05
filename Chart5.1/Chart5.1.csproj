@@ -47,13 +47,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Algebra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\development6sem\Matrix-master\Matrix-master\SimpleMatrix\bin\Debug\Algebra.dll</HintPath>
+    <Reference Include="Algebra">
+      <HintPath>..\..\Matrix-master\SimpleMatrix\bin\Debug\Algebra.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleMatrix, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\development6sem\Matrix-master\Matrix-master\SimpleMatrix\bin\Debug\SimpleMatrix.dll</HintPath>
+    <Reference Include="SimpleMatrix">
+      <HintPath>..\..\Matrix-master\SimpleMatrix\bin\Debug\SimpleMatrix.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -71,6 +69,7 @@
     <Compile Include="Anomalii.cs" />
     <Compile Include="ChildrensOfEventArgs.cs" />
     <Compile Include="FactorsConnectionsTablesNM.cs" />
+    <Compile Include="LaverierFadeevaExtended.cs" />
     <Compile Include="MakeKndimGroup.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -499,10 +499,9 @@ namespace Chart5._1
         public void MGK()
         {
             Matrix dc = new Matrix(DC);
-
             var laverierFadeevaResult = LaverierFadeevaMethod.Solve(dc, LaverierFadeevaSolvingOptions.FullSolving);
-
-
+            var extended = LaverierFadeevaExtendedResult.ConvertToExtendedLaverierFadeevaResult(laverierFadeevaResult);
+            
         }
 
     }
