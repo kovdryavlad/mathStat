@@ -2155,6 +2155,11 @@ namespace Chart1._1
             //настроили вид чартов
             TwoDimChartDesign();
         }
+
+        private void мГКToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NDimStat.MGK();
+        }
     }
 
     public class GroupOfViborkas
