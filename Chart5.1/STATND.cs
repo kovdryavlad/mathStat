@@ -495,15 +495,38 @@ namespace Chart5._1
             }
         }
 
+        public LaverierFadeevaExtendedResult[] MGKInfo;
+
         //7семестр
-        public void MGK()
+        public LaverierFadeevaExtendedResult[] MGKGetinfo()
         {
-            Matrix dc = new Matrix(DC);
-            var laverierFadeevaResult = LaverierFadeevaMethod.Solve(dc, LaverierFadeevaSolvingOptions.FullSolving);
-            var extended = LaverierFadeevaExtendedResult.ConvertToExtendedLaverierFadeevaResult(laverierFadeevaResult);
+            Matrix r = new Matrix(R);
+            var laverierFadeevaResult = LaverierFadeevaMethod.Solve(r, LaverierFadeevaSolvingOptions.FullSolving);
+            var extended = MGKInfo =  LaverierFadeevaExtendedResult.ConvertToExtendedLaverierFadeevaResult(laverierFadeevaResult);
+
             
+            return extended;
         }
 
+        internal void UseDirectTransitionMGK(int value)
+        {
+            var originalData = stats.Select(stat => stat.InputData).ToArray();
+            Matrix originalDataMatrix = new Matrix(originalData);
+
+            originalDataMatrix = originalDataMatrix.Transpose();
+
+            for (int i = 0; i < value; i++)
+            {
+                MGKInfo[i].includeInMGK = true;
+            }
+
+
+            List<double[]> transitionMatrixArrList = MGKInfo.Where(v=>v.includeInMGK).Select(v=>v.eigenVector.GetCloneOfData()).ToList();
+            Matrix transitionMatrix = Matrix.Create.JoinVectors(transitionMatrixArrList);
+
+
+            Matrix MGKDirectResult = originalDataMatrix * transitionMatrix;
+        }
     }
 
     

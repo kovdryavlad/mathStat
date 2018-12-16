@@ -96,42 +96,6 @@ namespace Chart1._1
             this.рівномірнийToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ClearReproductRozpodil = new System.Windows.Forms.ToolStripMenuItem();
-            this.критеріїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.колмогоровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пірсонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.автоматичноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuViborki = new System.Windows.Forms.ToolStripMenuItem();
-            this.дляДвохВибірокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.параметриToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.критерійЗнаківToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.незалежніВибіркиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.критерійВілкоксонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дляKВибірокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.критерійБартлетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаГіпотезToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.хіквадратToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевыркаНезалежностіХТаУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіМіриЗвToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.TwoVibCombobox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.TwoVibCombobox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.мГКToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регресіяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.перевіркаЗначенняДисперсіїКритеріійБартлеттаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.лінійToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -175,6 +139,42 @@ namespace Chart1._1
             this.очиститиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.моделюванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.моделюванняToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.критеріїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.колмогоровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пірсонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.автоматичноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuViborki = new System.Windows.Forms.ToolStripMenuItem();
+            this.дляДвохВибірокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.параметриToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.критерійЗнаківToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.незалежніВибіркиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗбігуДисперсійToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.критерійВілкоксонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дляKВибірокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.критерійБартлетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.однофакторнийДисперсійнийАналізToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаГіпотезToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.хіквадратToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевыркаНезалежностіХТаУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіМіриЗвToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.TwoVibCombobox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.TwoVibCombobox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.мГКToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.багатовимірніДаніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.менеджерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.перевіркаЗбігуСередніхТаDCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -200,6 +200,7 @@ namespace Chart1._1
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.NdimFilenameTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.мГКToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -254,7 +255,12 @@ namespace Chart1._1
             this.BoubleChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.DiagnosticDiagramChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.мГКToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.MGKnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MGKDataGridView = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -288,6 +294,9 @@ namespace Chart1._1
             ((System.ComponentModel.ISupportInitialize)(this.BoubleChart)).BeginInit();
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DiagnosticDiagramChart)).BeginInit();
+            this.tabPage14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MGKnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MGKDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -376,12 +385,12 @@ namespace Chart1._1
             this.перетворенняToolStripMenuItem,
             this.моделированиеToolStripMenuItem,
             this.выдтворенняРозподілівToolStripMenuItem,
+            this.регресіяToolStripMenuItem,
             this.критеріїToolStripMenuItem,
             this.MenuViborki,
             this.дляДвохВибірокToolStripMenuItem,
             this.дляKВибірокToolStripMenuItem,
             this.toolStripMenuItem3,
-            this.регресіяToolStripMenuItem,
             this.багатовимірніДаніToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -652,280 +661,6 @@ namespace Chart1._1
             this.ClearReproductRozpodil.Size = new System.Drawing.Size(176, 22);
             this.ClearReproductRozpodil.Text = "Очистити";
             this.ClearReproductRozpodil.Click += new System.EventHandler(this.ClearReproductRozpodil_Click);
-            // 
-            // критеріїToolStripMenuItem
-            // 
-            this.критеріїToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.колмогоровToolStripMenuItem,
-            this.пірсонаToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.автоматичноToolStripMenuItem});
-            this.критеріїToolStripMenuItem.Name = "критеріїToolStripMenuItem";
-            this.критеріїToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.критеріїToolStripMenuItem.Text = "Критерії згоди";
-            // 
-            // колмогоровToolStripMenuItem
-            // 
-            this.колмогоровToolStripMenuItem.Name = "колмогоровToolStripMenuItem";
-            this.колмогоровToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.колмогоровToolStripMenuItem.Text = "Колмогоров";
-            this.колмогоровToolStripMenuItem.Click += new System.EventHandler(this.колмогоровToolStripMenuItem_Click);
-            // 
-            // пірсонаToolStripMenuItem
-            // 
-            this.пірсонаToolStripMenuItem.Name = "пірсонаToolStripMenuItem";
-            this.пірсонаToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.пірсонаToolStripMenuItem.Text = "Пірсона";
-            this.пірсонаToolStripMenuItem.Click += new System.EventHandler(this.пірсонаToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(145, 6);
-            // 
-            // автоматичноToolStripMenuItem
-            // 
-            this.автоматичноToolStripMenuItem.Name = "автоматичноToolStripMenuItem";
-            this.автоматичноToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.автоматичноToolStripMenuItem.Text = "Автоматично";
-            this.автоматичноToolStripMenuItem.Click += new System.EventHandler(this.автоматичноToolStripMenuItem_Click);
-            // 
-            // MenuViborki
-            // 
-            this.MenuViborki.Name = "MenuViborki";
-            this.MenuViborki.Size = new System.Drawing.Size(63, 20);
-            this.MenuViborki.Text = "Вибірки";
-            // 
-            // дляДвохВибірокToolStripMenuItem
-            // 
-            this.дляДвохВибірокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.параметриToolStripMenuItem,
-            this.toolStripSeparator8,
-            this.toolStripMenuItem2,
-            this.незалежніВибіркиToolStripMenuItem});
-            this.дляДвохВибірокToolStripMenuItem.Name = "дляДвохВибірокToolStripMenuItem";
-            this.дляДвохВибірокToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
-            this.дляДвохВибірокToolStripMenuItem.Text = "Критерії для двох вибірок";
-            // 
-            // параметриToolStripMenuItem
-            // 
-            this.параметриToolStripMenuItem.Name = "параметриToolStripMenuItem";
-            this.параметриToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.параметриToolStripMenuItem.Text = "Параметри";
-            this.параметриToolStripMenuItem.Click += new System.EventHandler(this.параметриToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(175, 6);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1,
-            this.критерійЗнаківToolStripMenuItem});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(178, 22);
-            this.toolStripMenuItem2.Text = "Залежні вибірки";
-            // 
-            // перевіркаЗбігуСередніхЗалежніToolStripMenuItem1
-            // 
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Name = "перевіркаЗбігуСередніхЗалежніToolStripMenuItem1";
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Size = new System.Drawing.Size(208, 22);
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Text = "Перевірка збігу середніх";
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Click += new System.EventHandler(this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1_Click);
-            // 
-            // критерійЗнаківToolStripMenuItem
-            // 
-            this.критерійЗнаківToolStripMenuItem.Name = "критерійЗнаківToolStripMenuItem";
-            this.критерійЗнаківToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.критерійЗнаківToolStripMenuItem.Text = "Критерій знаків";
-            this.критерійЗнаківToolStripMenuItem.Click += new System.EventHandler(this.критерійЗнаківToolStripMenuItem_Click);
-            // 
-            // незалежніВибіркиToolStripMenuItem
-            // 
-            this.незалежніВибіркиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2,
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1,
-            this.критерійВілкоксонаToolStripMenuItem});
-            this.незалежніВибіркиToolStripMenuItem.Name = "незалежніВибіркиToolStripMenuItem";
-            this.незалежніВибіркиToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.незалежніВибіркиToolStripMenuItem.Text = "Незалежні вибірки";
-            // 
-            // перевіркаЗбігуСередніхНезалToolStripMenuItem2
-            // 
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Name = "перевіркаЗбігуСередніхНезалToolStripMenuItem2";
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Size = new System.Drawing.Size(217, 22);
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Text = "Перевірка збігу середніх";
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Click += new System.EventHandler(this.перевіркаЗбігуСередніхНезалToolStripMenuItem2_Click);
-            // 
-            // перевіркаЗбігуДисперсійToolStripMenuItem1
-            // 
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Name = "перевіркаЗбігуДисперсійToolStripMenuItem1";
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Size = new System.Drawing.Size(217, 22);
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Text = "Перевірка збігу дисперсій";
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Click += new System.EventHandler(this.перевіркаЗбігуДисперсійToolStripMenuItem1_Click);
-            // 
-            // критерійВілкоксонаToolStripMenuItem
-            // 
-            this.критерійВілкоксонаToolStripMenuItem.Name = "критерійВілкоксонаToolStripMenuItem";
-            this.критерійВілкоксонаToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.критерійВілкоксонаToolStripMenuItem.Text = "Критерій Вілкоксона";
-            this.критерійВілкоксонаToolStripMenuItem.Click += new System.EventHandler(this.критерійВілкоксонаToolStripMenuItem_Click);
-            // 
-            // дляKВибірокToolStripMenuItem
-            // 
-            this.дляKВибірокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.критерійБартлетаToolStripMenuItem,
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem});
-            this.дляKВибірокToolStripMenuItem.Name = "дляKВибірокToolStripMenuItem";
-            this.дляKВибірокToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
-            this.дляKВибірокToolStripMenuItem.Text = "Еритерії для k вибірок";
-            // 
-            // критерійБартлетаToolStripMenuItem
-            // 
-            this.критерійБартлетаToolStripMenuItem.Name = "критерійБартлетаToolStripMenuItem";
-            this.критерійБартлетаToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
-            this.критерійБартлетаToolStripMenuItem.Text = "Критерій Бартлетта";
-            this.критерійБартлетаToolStripMenuItem.Click += new System.EventHandler(this.критерійБартлетаToolStripMenuItem_Click);
-            // 
-            // однофакторнийДисперсійнийАналізToolStripMenuItem
-            // 
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Name = "однофакторнийДисперсійнийАналізToolStripMenuItem";
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Text = "Однофакторний дисперсійний аналіз";
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Click += new System.EventHandler(this.однофакторнийДисперсійнийАналізToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.перевіркаГіпотезToolStripMenuItem,
-            this.toolStripSeparator12,
-            this.TwoVibCombobox1,
-            this.TwoVibCombobox2,
-            this.toolStripMenuItem4,
-            this.мГКToolStripMenuItem});
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(107, 20);
-            this.toolStripMenuItem3.Text = "Двовимірні дані";
-            // 
-            // перевіркаГіпотезToolStripMenuItem
-            // 
-            this.перевіркаГіпотезToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.хіквадратToolStripMenuItem,
-            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem,
-            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem,
-            this.перевіркаЗначущостіToolStripMenuItem,
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem,
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem,
-            this.перевыркаНезалежностіХТаУToolStripMenuItem,
-            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem,
-            this.перевіркаЗначущостіМіриЗвToolStripMenuItem,
-            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem});
-            this.перевіркаГіпотезToolStripMenuItem.Name = "перевіркаГіпотезToolStripMenuItem";
-            this.перевіркаГіпотезToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.перевіркаГіпотезToolStripMenuItem.Text = "Перевірка гіпотез";
-            // 
-            // хіквадратToolStripMenuItem
-            // 
-            this.хіквадратToolStripMenuItem.Name = "хіквадратToolStripMenuItem";
-            this.хіквадратToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.хіквадратToolStripMenuItem.Text = "Хі-квадрат";
-            this.хіквадратToolStripMenuItem.Click += new System.EventHandler(this.хіквадратToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Name = "перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem";
-            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Text = "Перевірка значущості лінійного коефіцієнта кореляції";
-            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Name = "перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem";
-            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Text = "Перевірка значущості кореляційного відношення";
-            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіToolStripMenuItem.Name = "перевіркаЗначущостіToolStripMenuItem";
-            this.перевіркаЗначущостіToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіToolStripMenuItem.Text = "Перевірка значущості коефіцієнта сполучень Фі";
-            this.перевіркаЗначущостіToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Name = "перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem";
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Text = "Перевірка значущості коефіцієнта зв\'язку Юла Q";
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Name = "перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem";
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Text = "Перевірка значущості коефіцієнта зв\'язку Юла Y";
-            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem_Click);
-            // 
-            // перевыркаНезалежностіХТаУToolStripMenuItem
-            // 
-            this.перевыркаНезалежностіХТаУToolStripMenuItem.Name = "перевыркаНезалежностіХТаУToolStripMenuItem";
-            this.перевыркаНезалежностіХТаУToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевыркаНезалежностіХТаУToolStripMenuItem.Text = "Перевырка незалежності Х та У";
-            this.перевыркаНезалежностіХТаУToolStripMenuItem.Click += new System.EventHandler(this.перевыркаНезалежностіХТаУToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Name = "перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem";
-            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Text = "Перевірка значущості коефіцієнта сполучень Пірсона";
-            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіМіриЗвToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Name = "перевіркаЗначущостіМіриЗвToolStripMenuItem";
-            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Text = "Перевірка значущості міри зв\'язку Кендалла";
-            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіМіриЗвToolStripMenuItem_Click);
-            // 
-            // перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem
-            // 
-            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Name = "перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem";
-            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
-            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Text = "Перевірка значущості статистики Стюарта";
-            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(178, 6);
-            // 
-            // TwoVibCombobox1
-            // 
-            this.TwoVibCombobox1.DropDownWidth = 600;
-            this.TwoVibCombobox1.Name = "TwoVibCombobox1";
-            this.TwoVibCombobox1.Size = new System.Drawing.Size(121, 23);
-            // 
-            // TwoVibCombobox2
-            // 
-            this.TwoVibCombobox2.DropDownWidth = 600;
-            this.TwoVibCombobox2.Name = "TwoVibCombobox2";
-            this.TwoVibCombobox2.Size = new System.Drawing.Size(121, 23);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(181, 22);
-            this.toolStripMenuItem4.Text = "Задати";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // мГКToolStripMenuItem
-            // 
-            this.мГКToolStripMenuItem.Name = "мГКToolStripMenuItem";
-            this.мГКToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.мГКToolStripMenuItem.Text = "МГК";
-            this.мГКToolStripMenuItem.Click += new System.EventHandler(this.мГКToolStripMenuItem_Click);
             // 
             // регресіяToolStripMenuItem
             // 
@@ -1258,6 +993,280 @@ namespace Chart1._1
             this.моделюванняToolStripMenuItem1.Text = "Моделювання (Параболічна)";
             this.моделюванняToolStripMenuItem1.Click += new System.EventHandler(this.моделюванняToolStripMenuItem1_Click);
             // 
+            // критеріїToolStripMenuItem
+            // 
+            this.критеріїToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.колмогоровToolStripMenuItem,
+            this.пірсонаToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.автоматичноToolStripMenuItem});
+            this.критеріїToolStripMenuItem.Name = "критеріїToolStripMenuItem";
+            this.критеріїToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.критеріїToolStripMenuItem.Text = "Критерії згоди";
+            // 
+            // колмогоровToolStripMenuItem
+            // 
+            this.колмогоровToolStripMenuItem.Name = "колмогоровToolStripMenuItem";
+            this.колмогоровToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.колмогоровToolStripMenuItem.Text = "Колмогоров";
+            this.колмогоровToolStripMenuItem.Click += new System.EventHandler(this.колмогоровToolStripMenuItem_Click);
+            // 
+            // пірсонаToolStripMenuItem
+            // 
+            this.пірсонаToolStripMenuItem.Name = "пірсонаToolStripMenuItem";
+            this.пірсонаToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.пірсонаToolStripMenuItem.Text = "Пірсона";
+            this.пірсонаToolStripMenuItem.Click += new System.EventHandler(this.пірсонаToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(145, 6);
+            // 
+            // автоматичноToolStripMenuItem
+            // 
+            this.автоматичноToolStripMenuItem.Name = "автоматичноToolStripMenuItem";
+            this.автоматичноToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.автоматичноToolStripMenuItem.Text = "Автоматично";
+            this.автоматичноToolStripMenuItem.Click += new System.EventHandler(this.автоматичноToolStripMenuItem_Click);
+            // 
+            // MenuViborki
+            // 
+            this.MenuViborki.Name = "MenuViborki";
+            this.MenuViborki.Size = new System.Drawing.Size(63, 20);
+            this.MenuViborki.Text = "Вибірки";
+            // 
+            // дляДвохВибірокToolStripMenuItem
+            // 
+            this.дляДвохВибірокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.параметриToolStripMenuItem,
+            this.toolStripSeparator8,
+            this.toolStripMenuItem2,
+            this.незалежніВибіркиToolStripMenuItem});
+            this.дляДвохВибірокToolStripMenuItem.Name = "дляДвохВибірокToolStripMenuItem";
+            this.дляДвохВибірокToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
+            this.дляДвохВибірокToolStripMenuItem.Text = "Критерії для двох вибірок";
+            // 
+            // параметриToolStripMenuItem
+            // 
+            this.параметриToolStripMenuItem.Name = "параметриToolStripMenuItem";
+            this.параметриToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.параметриToolStripMenuItem.Text = "Параметри";
+            this.параметриToolStripMenuItem.Click += new System.EventHandler(this.параметриToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(175, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1,
+            this.критерійЗнаківToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(178, 22);
+            this.toolStripMenuItem2.Text = "Залежні вибірки";
+            // 
+            // перевіркаЗбігуСередніхЗалежніToolStripMenuItem1
+            // 
+            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Name = "перевіркаЗбігуСередніхЗалежніToolStripMenuItem1";
+            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Size = new System.Drawing.Size(208, 22);
+            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Text = "Перевірка збігу середніх";
+            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Click += new System.EventHandler(this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1_Click);
+            // 
+            // критерійЗнаківToolStripMenuItem
+            // 
+            this.критерійЗнаківToolStripMenuItem.Name = "критерійЗнаківToolStripMenuItem";
+            this.критерійЗнаківToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.критерійЗнаківToolStripMenuItem.Text = "Критерій знаків";
+            this.критерійЗнаківToolStripMenuItem.Click += new System.EventHandler(this.критерійЗнаківToolStripMenuItem_Click);
+            // 
+            // незалежніВибіркиToolStripMenuItem
+            // 
+            this.незалежніВибіркиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2,
+            this.перевіркаЗбігуДисперсійToolStripMenuItem1,
+            this.критерійВілкоксонаToolStripMenuItem});
+            this.незалежніВибіркиToolStripMenuItem.Name = "незалежніВибіркиToolStripMenuItem";
+            this.незалежніВибіркиToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.незалежніВибіркиToolStripMenuItem.Text = "Незалежні вибірки";
+            // 
+            // перевіркаЗбігуСередніхНезалToolStripMenuItem2
+            // 
+            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Name = "перевіркаЗбігуСередніхНезалToolStripMenuItem2";
+            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Size = new System.Drawing.Size(217, 22);
+            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Text = "Перевірка збігу середніх";
+            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Click += new System.EventHandler(this.перевіркаЗбігуСередніхНезалToolStripMenuItem2_Click);
+            // 
+            // перевіркаЗбігуДисперсійToolStripMenuItem1
+            // 
+            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Name = "перевіркаЗбігуДисперсійToolStripMenuItem1";
+            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Size = new System.Drawing.Size(217, 22);
+            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Text = "Перевірка збігу дисперсій";
+            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Click += new System.EventHandler(this.перевіркаЗбігуДисперсійToolStripMenuItem1_Click);
+            // 
+            // критерійВілкоксонаToolStripMenuItem
+            // 
+            this.критерійВілкоксонаToolStripMenuItem.Name = "критерійВілкоксонаToolStripMenuItem";
+            this.критерійВілкоксонаToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.критерійВілкоксонаToolStripMenuItem.Text = "Критерій Вілкоксона";
+            this.критерійВілкоксонаToolStripMenuItem.Click += new System.EventHandler(this.критерійВілкоксонаToolStripMenuItem_Click);
+            // 
+            // дляKВибірокToolStripMenuItem
+            // 
+            this.дляKВибірокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.критерійБартлетаToolStripMenuItem,
+            this.однофакторнийДисперсійнийАналізToolStripMenuItem});
+            this.дляKВибірокToolStripMenuItem.Name = "дляKВибірокToolStripMenuItem";
+            this.дляKВибірокToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
+            this.дляKВибірокToolStripMenuItem.Text = "Еритерії для k вибірок";
+            // 
+            // критерійБартлетаToolStripMenuItem
+            // 
+            this.критерійБартлетаToolStripMenuItem.Name = "критерійБартлетаToolStripMenuItem";
+            this.критерійБартлетаToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.критерійБартлетаToolStripMenuItem.Text = "Критерій Бартлетта";
+            this.критерійБартлетаToolStripMenuItem.Click += new System.EventHandler(this.критерійБартлетаToolStripMenuItem_Click);
+            // 
+            // однофакторнийДисперсійнийАналізToolStripMenuItem
+            // 
+            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Name = "однофакторнийДисперсійнийАналізToolStripMenuItem";
+            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Text = "Однофакторний дисперсійний аналіз";
+            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Click += new System.EventHandler(this.однофакторнийДисперсійнийАналізToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.перевіркаГіпотезToolStripMenuItem,
+            this.toolStripSeparator12,
+            this.TwoVibCombobox1,
+            this.TwoVibCombobox2,
+            this.toolStripMenuItem4,
+            this.мГКToolStripMenuItem});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(107, 20);
+            this.toolStripMenuItem3.Text = "Двовимірні дані";
+            // 
+            // перевіркаГіпотезToolStripMenuItem
+            // 
+            this.перевіркаГіпотезToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.хіквадратToolStripMenuItem,
+            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem,
+            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem,
+            this.перевіркаЗначущостіToolStripMenuItem,
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem,
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem,
+            this.перевыркаНезалежностіХТаУToolStripMenuItem,
+            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem,
+            this.перевіркаЗначущостіМіриЗвToolStripMenuItem,
+            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem});
+            this.перевіркаГіпотезToolStripMenuItem.Name = "перевіркаГіпотезToolStripMenuItem";
+            this.перевіркаГіпотезToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.перевіркаГіпотезToolStripMenuItem.Text = "Перевірка гіпотез";
+            // 
+            // хіквадратToolStripMenuItem
+            // 
+            this.хіквадратToolStripMenuItem.Name = "хіквадратToolStripMenuItem";
+            this.хіквадратToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.хіквадратToolStripMenuItem.Text = "Хі-квадрат";
+            this.хіквадратToolStripMenuItem.Click += new System.EventHandler(this.хіквадратToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Name = "перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem";
+            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Text = "Перевірка значущості лінійного коефіцієнта кореляції";
+            this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіЛінійногоКоефіцієнтаКореляціїToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Name = "перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem";
+            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Text = "Перевірка значущості кореляційного відношення";
+            this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКореляційногоВідношенняToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіToolStripMenuItem.Name = "перевіркаЗначущостіToolStripMenuItem";
+            this.перевіркаЗначущостіToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіToolStripMenuItem.Text = "Перевірка значущості коефіцієнта сполучень Фі";
+            this.перевіркаЗначущостіToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Name = "перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem";
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Text = "Перевірка значущості коефіцієнта зв\'язку Юла Q";
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаQToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Name = "перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem";
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Text = "Перевірка значущості коефіцієнта зв\'язку Юла Y";
+            this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКоефіцієнтівЗвязкуЮлаYToolStripMenuItem_Click);
+            // 
+            // перевыркаНезалежностіХТаУToolStripMenuItem
+            // 
+            this.перевыркаНезалежностіХТаУToolStripMenuItem.Name = "перевыркаНезалежностіХТаУToolStripMenuItem";
+            this.перевыркаНезалежностіХТаУToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевыркаНезалежностіХТаУToolStripMenuItem.Text = "Перевырка незалежності Х та У";
+            this.перевыркаНезалежностіХТаУToolStripMenuItem.Click += new System.EventHandler(this.перевыркаНезалежностіХТаУToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Name = "перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem";
+            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Text = "Перевірка значущості коефіцієнта сполучень Пірсона";
+            this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіКоефіцієнтаСполученьПірсонаToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіМіриЗвToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Name = "перевіркаЗначущостіМіриЗвToolStripMenuItem";
+            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Text = "Перевірка значущості міри зв\'язку Кендалла";
+            this.перевіркаЗначущостіМіриЗвToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіМіриЗвToolStripMenuItem_Click);
+            // 
+            // перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem
+            // 
+            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Name = "перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem";
+            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Size = new System.Drawing.Size(375, 22);
+            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Text = "Перевірка значущості статистики Стюарта";
+            this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem.Click += new System.EventHandler(this.перевіркаЗначущостіСтатистикиСтюартаToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(178, 6);
+            // 
+            // TwoVibCombobox1
+            // 
+            this.TwoVibCombobox1.DropDownWidth = 600;
+            this.TwoVibCombobox1.Name = "TwoVibCombobox1";
+            this.TwoVibCombobox1.Size = new System.Drawing.Size(121, 23);
+            // 
+            // TwoVibCombobox2
+            // 
+            this.TwoVibCombobox2.DropDownWidth = 600;
+            this.TwoVibCombobox2.Name = "TwoVibCombobox2";
+            this.TwoVibCombobox2.Size = new System.Drawing.Size(121, 23);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(181, 22);
+            this.toolStripMenuItem4.Text = "Задати";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // мГКToolStripMenuItem
+            // 
+            this.мГКToolStripMenuItem.Name = "мГКToolStripMenuItem";
+            this.мГКToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.мГКToolStripMenuItem.Text = "МГК";
+            this.мГКToolStripMenuItem.Click += new System.EventHandler(this.мГКToolStripMenuItem_Click);
+            // 
             // багатовимірніДаніToolStripMenuItem
             // 
             this.багатовимірніДаніToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1443,6 +1452,13 @@ namespace Chart1._1
             this.toolStripMenuItem7.Size = new System.Drawing.Size(160, 22);
             this.toolStripMenuItem7.Text = "Виконати";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            // 
+            // мГКToolStripMenuItem1
+            // 
+            this.мГКToolStripMenuItem1.Name = "мГКToolStripMenuItem1";
+            this.мГКToolStripMenuItem1.Size = new System.Drawing.Size(249, 22);
+            this.мГКToolStripMenuItem1.Text = "МГК";
+            this.мГКToolStripMenuItem1.Click += new System.EventHandler(this.мГКToolStripMenuItem1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -1972,6 +1988,7 @@ namespace Chart1._1
             this.tabControl3.Controls.Add(this.tabPage11);
             this.tabControl3.Controls.Add(this.tabPage12);
             this.tabControl3.Controls.Add(this.tabPage13);
+            this.tabControl3.Controls.Add(this.tabPage14);
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
@@ -2080,12 +2097,77 @@ namespace Chart1._1
             this.DiagnosticDiagramChart.TabIndex = 1;
             this.DiagnosticDiagramChart.Text = "chart5";
             // 
-            // мГКToolStripMenuItem1
+            // tabPage14
             // 
-            this.мГКToolStripMenuItem1.Name = "мГКToolStripMenuItem1";
-            this.мГКToolStripMenuItem1.Size = new System.Drawing.Size(249, 22);
-            this.мГКToolStripMenuItem1.Text = "МГК";
-            this.мГКToolStripMenuItem1.Click += new System.EventHandler(this.мГКToolStripMenuItem1_Click);
+            this.tabPage14.Controls.Add(this.button3);
+            this.tabPage14.Controls.Add(this.button2);
+            this.tabPage14.Controls.Add(this.MGKnumericUpDown);
+            this.tabPage14.Controls.Add(this.label2);
+            this.tabPage14.Controls.Add(this.MGKDataGridView);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(1176, 287);
+            this.tabPage14.TabIndex = 4;
+            this.tabPage14.Text = "МГК";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // MGKnumericUpDown
+            // 
+            this.MGKnumericUpDown.Location = new System.Drawing.Point(787, 15);
+            this.MGKnumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MGKnumericUpDown.Name = "MGKnumericUpDown";
+            this.MGKnumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.MGKnumericUpDown.TabIndex = 2;
+            this.MGKnumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MGKnumericUpDown.ValueChanged += new System.EventHandler(this.MGKnumericUpDown_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(666, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Кількість компонент:";
+            // 
+            // MGKDataGridView
+            // 
+            this.MGKDataGridView.AllowUserToAddRows = false;
+            this.MGKDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MGKDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.MGKDataGridView.Name = "MGKDataGridView";
+            this.MGKDataGridView.ReadOnly = true;
+            this.MGKDataGridView.ShowEditingIcon = false;
+            this.MGKDataGridView.Size = new System.Drawing.Size(631, 310);
+            this.MGKDataGridView.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(669, 62);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 31);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Застосувати МГК";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(669, 99);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(190, 31);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Зворотнє перетворення";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // MyForm
             // 
@@ -2141,6 +2223,10 @@ namespace Chart1._1
             ((System.ComponentModel.ISupportInitialize)(this.BoubleChart)).EndInit();
             this.tabPage13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DiagnosticDiagramChart)).EndInit();
+            this.tabPage14.ResumeLayout(false);
+            this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MGKnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MGKDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2347,6 +2433,12 @@ namespace Chart1._1
         private System.Windows.Forms.TextBox VariationalServiceTextBox;
         private System.Windows.Forms.ToolStripMenuItem мГКToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem мГКToolStripMenuItem1;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.DataGridView MGKDataGridView;
+        private System.Windows.Forms.NumericUpDown MGKnumericUpDown;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Anomalii.cs" />
     <Compile Include="ChildrensOfEventArgs.cs" />
+    <Compile Include="DoubleHelper.cs" />
     <Compile Include="FactorsConnectionsTablesNM.cs" />
     <Compile Include="LaverierFadeevaExtended.cs" />
     <Compile Include="MakeKndimGroup.cs">

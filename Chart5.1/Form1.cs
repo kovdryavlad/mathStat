@@ -2158,7 +2158,91 @@ namespace Chart1._1
 
         private void мГКToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            NDimStat.MGK();
+            tabControl3.SelectTab(4);
+            var laverierFadeevaExtendedResult = NDimStat.MGKGetinfo();
+
+            int size = laverierFadeevaExtendedResult.Length;
+
+            MGKDataGridView.ColumnCount = size+1;
+            MGKDataGridView.RowHeadersWidth = 135 ;
+
+            MGKDataGridView.Columns[size].HeaderText = "delta";
+            for (int i = 0; i < size; i++)
+            {
+                //column name
+                MGKDataGridView.Columns[i].HeaderText = laverierFadeevaExtendedResult[i].name;
+                MGKDataGridView.Columns[i].Width = 80;
+
+                //add a row
+                MGKDataGridView.Rows.Add(new DataGridViewRow());
+
+                //rowName
+                MGKDataGridView.Rows[i].HeaderCell.Value = "x" + i;
+                MGKDataGridView.Rows[i].Height = 30;
+
+                double delta = 0;
+                for (int j = 0; j < size; j++)
+                {
+                    double eValue = laverierFadeevaExtendedResult[i].eigenVector[j];
+                    delta += eValue * eValue * 100;
+                    MGKDataGridView.Rows[i].Cells[j].Value = eValue.Round(4);
+                }
+
+                MGKDataGridView.Rows[i].Cells[size].Value = delta+"%";
+            }
+
+            //eigen Vectors output
+            DataGridViewRow lyambdaRow = new DataGridViewRow {HeaderCell = {Value = "EigenValue"}};
+            DataGridViewRow lyambdaPercentRow = new DataGridViewRow() { HeaderCell = { Value = "EigenValue %" } };
+            DataGridViewRow lyambdaSumRow = new DataGridViewRow() { HeaderCell = { Value = "EigenValues Sum" } };
+            DataGridViewRow lyambdaSumPercentRow = new DataGridViewRow() { HeaderCell = { Value = "EigenValues Sum %" } };
+
+            MGKDataGridView.Rows.AddRange(lyambdaRow, lyambdaPercentRow, lyambdaSumRow, lyambdaSumPercentRow);
+
+            double allLyambdaSum = 0;
+            for (int i = 0; i < size; i++)
+                allLyambdaSum += laverierFadeevaExtendedResult[i].EigenValue;
+
+            double sumLyambda = 0;
+
+            for (int i = 0; i < size; i++)
+            {
+                double eValue = laverierFadeevaExtendedResult[i].EigenValue;
+                sumLyambda += eValue;
+
+                lyambdaRow.Cells[i].Value = eValue.Round(2);
+                lyambdaPercentRow.Cells[i].Value = (eValue / allLyambdaSum * 100).Round(2)+"%";
+                lyambdaSumRow.Cells[i].Value = sumLyambda.Round(2);
+                lyambdaSumPercentRow.Cells[i].Value = (sumLyambda / allLyambdaSum*100).Round(2) + "%";
+            }
+
+            MGKnumericUpDown.Value = size;
+            MGKnumericUpDown.Maximum = size;
+        }
+
+        private void MGKnumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            var laverierFadeevaExtendedResult = NDimStat.MGKInfo;
+            var size = laverierFadeevaExtendedResult.Length;
+            var upper = MGKnumericUpDown.Value;
+
+            for (int i = 0; i < size; i++)
+            {
+                double delta = 0;
+                for (int j = 0; j < upper; j++)
+                {
+                    double eValue = laverierFadeevaExtendedResult[i].eigenVector[j];
+                    delta += eValue * eValue * 100;
+                    MGKDataGridView.Rows[i].Cells[j].Value = eValue.Round(4);
+                }
+
+                MGKDataGridView.Rows[i].Cells[size].Value = delta.Round(2) + "%";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NDimStat.UseDirectTransitionMGK(Convert.ToInt32(MGKnumericUpDown.Value));
         }
     }
 

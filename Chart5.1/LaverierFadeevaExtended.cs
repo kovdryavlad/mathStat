@@ -23,14 +23,14 @@ namespace Chart5._1
             {
                 result[i] = new LaverierFadeevaExtendedResult()
                 {
-                    includeInMGK = true,
+                    includeInMGK = false,
                     EigenValue = laverierFadeevaResult.EigenValues[i],
-                    eigenVector = laverierFadeevaResult.EigenVectors[i],
-                    name = "F" + i
+                    eigenVector = laverierFadeevaResult.EigenVectors[i].Normilize(),
+                    name = "F" + (size-i-1)
                 };
             }
 
-            return result;
+            return result.OrderByDescending(v=>v.EigenValue).ToArray();
         }
     }
 }
