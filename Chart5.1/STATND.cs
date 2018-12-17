@@ -539,9 +539,8 @@ namespace Chart5._1
             originalDataMatrix = originalDataMatrix.Transpose();
 
             for (int i = 0; i < value; i++)
-            {
                 MGKInfo[i].includeInMGK = true;
-            }
+            
 
             List<double[]> transitionMatrixArrList = MGKInfo.Where(v=>v.includeInMGK).Select(v=>v.eigenVector.GetCloneOfData()).ToList();
             Matrix transitionMatrix = Matrix.Create.JoinVectors(transitionMatrixArrList);

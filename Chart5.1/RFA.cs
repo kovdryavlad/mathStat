@@ -51,9 +51,8 @@ namespace Chart5._1
             {
                 double sum = 0;
                 for (int j = 0; j < w; j++)
-                {
-                    sum += R.data[i][j];
-                }
+                    sum += neededVectors[j][i];
+                
                 result[i] = sum;
             }
 
