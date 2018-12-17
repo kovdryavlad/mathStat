@@ -500,16 +500,39 @@ namespace Chart5._1
         //7семестр
         public LaverierFadeevaExtendedResult[] MGKGetinfo()
         {
-            Matrix r = new Matrix(R);
-            var laverierFadeevaResult = LaverierFadeevaMethod.Solve(r, LaverierFadeevaSolvingOptions.FullSolving);
+            Matrix dc = new Matrix(DC);
+            var laverierFadeevaResult = LaverierFadeevaMethod.Solve(dc, LaverierFadeevaSolvingOptions.FullSolving);
             var extended = MGKInfo =  LaverierFadeevaExtendedResult.ConvertToExtendedLaverierFadeevaResult(laverierFadeevaResult);
 
             
             return extended;
         }
+       
+        List<double> centers = new List<double>();
 
-        internal void UseDirectTransitionMGK(int value)
+        void Centering()
         {
+            centers.Clear();
+
+            for (int i = 0; i < stats.Length; i++)
+            {
+                double center = stats[i].Expectation;
+                centers.Add(center);
+
+                var stat = stats[i].d;
+                double[] newStatArr = ((new Vector(stat)) - center).GetCloneOfData();
+
+                stats[i] = new STAT();
+                stats[i].Setd(newStatArr);
+            }
+            
+        }
+
+
+        internal STAT[] UseDirectTransitionMGK(int value)
+        {
+            Centering();
+
             var originalData = stats.Select(stat => stat.InputData).ToArray();
             Matrix originalDataMatrix = new Matrix(originalData);
 
@@ -520,12 +543,31 @@ namespace Chart5._1
                 MGKInfo[i].includeInMGK = true;
             }
 
-
             List<double[]> transitionMatrixArrList = MGKInfo.Where(v=>v.includeInMGK).Select(v=>v.eigenVector.GetCloneOfData()).ToList();
             Matrix transitionMatrix = Matrix.Create.JoinVectors(transitionMatrixArrList);
-
-
+            
             Matrix MGKDirectResult = originalDataMatrix * transitionMatrix;
+
+            var statsSize = MGKDirectResult.Columns;
+            var TransoseMGKDirect = MGKDirectResult.Transpose();
+
+
+            List<STAT> TransiotionStats = new List<STAT>();
+
+            for (int i = 0; i < statsSize; i++)
+            {
+                STAT s = new STAT();
+                s.Setd2Stat2d(TransoseMGKDirect.GetRow(i).GetCloneOfData());
+
+                TransiotionStats.Add(s);
+            }
+
+            return TransiotionStats.ToArray();
+        }
+
+        internal void doRFA(double epsilon)
+        {
+            RFA.Solve(new Matrix(R), epsilon);
         }
     }
 

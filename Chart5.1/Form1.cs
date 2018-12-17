@@ -2160,7 +2160,7 @@ namespace Chart1._1
         {
             tabControl3.SelectTab(4);
             var laverierFadeevaExtendedResult = NDimStat.MGKGetinfo();
-
+            
             int size = laverierFadeevaExtendedResult.Length;
 
             MGKDataGridView.ColumnCount = size+1;
@@ -2183,7 +2183,7 @@ namespace Chart1._1
                 double delta = 0;
                 for (int j = 0; j < size; j++)
                 {
-                    double eValue = laverierFadeevaExtendedResult[i].eigenVector[j];
+                    double eValue = laverierFadeevaExtendedResult[j].eigenVector[i];
                     delta += eValue * eValue * 100;
                     MGKDataGridView.Rows[i].Cells[j].Value = eValue.Round(4);
                 }
@@ -2231,7 +2231,7 @@ namespace Chart1._1
                 double delta = 0;
                 for (int j = 0; j < upper; j++)
                 {
-                    double eValue = laverierFadeevaExtendedResult[i].eigenVector[j];
+                    double eValue = laverierFadeevaExtendedResult[j].eigenVector[i];
                     delta += eValue * eValue * 100;
                     MGKDataGridView.Rows[i].Cells[j].Value = eValue.Round(4);
                 }
@@ -2242,7 +2242,18 @@ namespace Chart1._1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NDimStat.UseDirectTransitionMGK(Convert.ToInt32(MGKnumericUpDown.Value));
+            var newTransitionsStats = NDimStat.UseDirectTransitionMGK(Convert.ToInt32(MGKnumericUpDown.Value));
+
+            ////////////
+            for (int i = 0; i < newTransitionsStats.Length; i++)
+            {
+                AddViborka("Transition Stat MGK#" + i, newTransitionsStats[i]);
+            }
+        }
+
+        private void рФАToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NDimStat.doRFA(0.0000001);
         }
     }
 

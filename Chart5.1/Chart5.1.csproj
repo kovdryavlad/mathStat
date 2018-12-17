@@ -86,6 +86,7 @@
     <Compile Include="NdimHypothesis.cs" />
     <Compile Include="NdimRegression.cs" />
     <Compile Include="PointD.cs" />
+    <Compile Include="RFA.cs" />
     <Compile Include="SampleSelectingForm.cs">
       <SubType>Form</SubType>
     </Compile>

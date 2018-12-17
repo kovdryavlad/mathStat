@@ -12,5 +12,10 @@ namespace Chart5._1
         {
             return Math.Round(value, digitsAfterComma);
         }
+
+        public static double Abs(this double value)
+        {
+            return Math.Abs(value);
+        }
     }
 }

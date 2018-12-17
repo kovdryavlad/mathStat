@@ -256,11 +256,12 @@ namespace Chart1._1
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.DiagnosticDiagramChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.MGKnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.MGKDataGridView = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.рФАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -1276,7 +1277,8 @@ namespace Chart1._1
             this.частковийКоефыцієнтКореляціїToolStripMenuItem,
             this.багатовимірнаРегрессіяToolStripMenuItem,
             this.toolStripMenuItem6,
-            this.мГКToolStripMenuItem1});
+            this.мГКToolStripMenuItem1,
+            this.рФАToolStripMenuItem});
             this.багатовимірніДаніToolStripMenuItem.Name = "багатовимірніДаніToolStripMenuItem";
             this.багатовимірніДаніToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.багатовимірніДаніToolStripMenuItem.Text = "Багатовимірні дані";
@@ -2112,6 +2114,25 @@ namespace Chart1._1
             this.tabPage14.Text = "МГК";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(669, 99);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(190, 31);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Зворотнє перетворення";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(669, 62);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 31);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Застосувати МГК";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MGKnumericUpDown
             // 
             this.MGKnumericUpDown.Location = new System.Drawing.Point(787, 15);
@@ -2150,24 +2171,12 @@ namespace Chart1._1
             this.MGKDataGridView.Size = new System.Drawing.Size(631, 310);
             this.MGKDataGridView.TabIndex = 0;
             // 
-            // button2
+            // рФАToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(669, 62);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 31);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Застосувати МГК";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(669, 99);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 31);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Зворотнє перетворення";
-            this.button3.UseVisualStyleBackColor = true;
+            this.рФАToolStripMenuItem.Name = "рФАToolStripMenuItem";
+            this.рФАToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.рФАToolStripMenuItem.Text = "РФА";
+            this.рФАToolStripMenuItem.Click += new System.EventHandler(this.рФАToolStripMenuItem_Click);
             // 
             // MyForm
             // 
@@ -2439,6 +2448,7 @@ namespace Chart1._1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem рФАToolStripMenuItem;
     }
 }
 
