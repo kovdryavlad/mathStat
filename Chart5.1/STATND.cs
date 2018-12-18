@@ -508,7 +508,7 @@ namespace Chart5._1
             return extended;
         }
        
-        List<double> centers = new List<double>();
+        public List<double> centers = new List<double>();
 
         void Centering()
         {
@@ -533,10 +533,7 @@ namespace Chart5._1
         {
             Centering();
 
-            var originalData = stats.Select(stat => stat.InputData).ToArray();
-            Matrix originalDataMatrix = new Matrix(originalData);
-
-            originalDataMatrix = originalDataMatrix.Transpose();
+            var originalDataMatrix = GetOriginalDataMatrix();
 
             for (int i = 0; i < value; i++)
                 MGKInfo[i].includeInMGK = true;
@@ -546,10 +543,16 @@ namespace Chart5._1
             Matrix transitionMatrix = Matrix.Create.JoinVectors(transitionMatrixArrList);
             
             Matrix MGKDirectResult = originalDataMatrix * transitionMatrix;
+            
+            return GetTransiotionStats(MGKDirectResult);
+        }
+
+        private static STAT[] GetTransiotionStats(Matrix MGKDirectResult)
+        {
 
             var statsSize = MGKDirectResult.Columns;
-            var TransoseMGKDirect = MGKDirectResult.Transpose();
 
+            var TransoseMGKDirect = MGKDirectResult.Transpose();
 
             List<STAT> TransiotionStats = new List<STAT>();
 
@@ -564,10 +567,46 @@ namespace Chart5._1
             return TransiotionStats.ToArray();
         }
 
+        protected Matrix GetOriginalDataMatrix()
+        {
+            //var originalData = stats.Select(stat => stat.InputData).ToArray();
+            var originalData = stats.Select(stat => stat.d).ToArray();
+            Matrix originalDataMatrix = new Matrix(originalData);
+
+            originalDataMatrix = originalDataMatrix.Transpose();
+            return originalDataMatrix;
+        }
+
+
+        internal STAT[] MGKBackTransition()
+        {
+            var originalDataMatrix = GetOriginalDataMatrix();
+
+            List<double[]> transitionMatrixArrList = MGKInfo.Where(v => v.includeInMGK).Select(v => v.eigenVector.GetCloneOfData()).ToList();
+            Matrix transitionMatrix = Matrix.Create.JoinVectors(transitionMatrixArrList);
+
+            Matrix backTransitionMatrix = transitionMatrix.Transpose();
+            Matrix MGKBackTransitionResult = originalDataMatrix * backTransitionMatrix;
+
+            STAT[] BackTransiotionStats = GetTransiotionStats(MGKBackTransitionResult);
+
+            for (int i = 0; i < BackTransiotionStats.Length; i++)
+            {
+                var data = BackTransiotionStats[i].d.Select(v => v + centers[i]).ToArray();
+
+                var s = new STAT();
+                s.Setd(data);
+
+                BackTransiotionStats[i] = s;
+            }
+            return BackTransiotionStats;
+        }
+
         internal void doRFA(double epsilon)
         {
             RFA.Solve(new Matrix(R), epsilon);
         }
+
     }
 
     

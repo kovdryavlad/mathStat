@@ -2240,10 +2240,16 @@ namespace Chart1._1
             }
         }
 
+
+        private LaverierFadeevaExtendedResult[] _mgkInfo;
+        private List<double> _centers;
+
         private void button2_Click(object sender, EventArgs e)
         {
             var newTransitionsStats = NDimStat.UseDirectTransitionMGK(Convert.ToInt32(MGKnumericUpDown.Value));
 
+            _mgkInfo = NDimStat.MGKInfo;
+            _centers = NDimStat.centers;
             ////////////
             for (int i = 0; i < newTransitionsStats.Length; i++)
             {
@@ -2254,6 +2260,20 @@ namespace Chart1._1
         private void рФАToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NDimStat.doRFA(0.0000001);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NDimStat.MGKInfo = _mgkInfo;
+            NDimStat.centers = _centers;
+
+            var backTransiotionStats = NDimStat.MGKBackTransition();
+
+            ////////////
+            for (int i = 0; i < backTransiotionStats.Length; i++)
+            {
+                AddViborka("Back Transition Stat MGK#" + i, backTransiotionStats[i]);
+            }
         }
     }
 

@@ -201,6 +201,7 @@ namespace Chart1._1
             this.NdimFilenameTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.мГКToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.рФАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -261,7 +262,6 @@ namespace Chart1._1
             this.MGKnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.MGKDataGridView = new System.Windows.Forms.DataGridView();
-            this.рФАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -1462,6 +1462,13 @@ namespace Chart1._1
             this.мГКToolStripMenuItem1.Text = "МГК";
             this.мГКToolStripMenuItem1.Click += new System.EventHandler(this.мГКToolStripMenuItem1_Click);
             // 
+            // рФАToolStripMenuItem
+            // 
+            this.рФАToolStripMenuItem.Name = "рФАToolStripMenuItem";
+            this.рФАToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.рФАToolStripMenuItem.Text = "РФА";
+            this.рФАToolStripMenuItem.Click += new System.EventHandler(this.рФАToolStripMenuItem_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2122,6 +2129,7 @@ namespace Chart1._1
             this.button3.TabIndex = 3;
             this.button3.Text = "Зворотнє перетворення";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -2170,13 +2178,6 @@ namespace Chart1._1
             this.MGKDataGridView.ShowEditingIcon = false;
             this.MGKDataGridView.Size = new System.Drawing.Size(631, 310);
             this.MGKDataGridView.TabIndex = 0;
-            // 
-            // рФАToolStripMenuItem
-            // 
-            this.рФАToolStripMenuItem.Name = "рФАToolStripMenuItem";
-            this.рФАToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.рФАToolStripMenuItem.Text = "РФА";
-            this.рФАToolStripMenuItem.Click += new System.EventHandler(this.рФАToolStripMenuItem_Click);
             // 
             // MyForm
             // 
