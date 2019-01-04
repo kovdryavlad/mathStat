@@ -1931,8 +1931,8 @@ namespace Chart1._1
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.06226F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.93774F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.09727F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.90272F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1190, 514);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -1942,10 +1942,10 @@ namespace Chart1._1
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Controls.Add(this.tabPage9);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 322);
+            this.tabControl2.Location = new System.Drawing.Point(3, 388);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1184, 189);
+            this.tabControl2.Size = new System.Drawing.Size(1184, 123);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage8
@@ -1954,7 +1954,7 @@ namespace Chart1._1
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1176, 163);
+            this.tabPage8.Size = new System.Drawing.Size(1176, 97);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Варіаційний ряд";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1966,7 +1966,7 @@ namespace Chart1._1
             this.VariationalServiceTextBox.Multiline = true;
             this.VariationalServiceTextBox.Name = "VariationalServiceTextBox";
             this.VariationalServiceTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.VariationalServiceTextBox.Size = new System.Drawing.Size(1170, 157);
+            this.VariationalServiceTextBox.Size = new System.Drawing.Size(1170, 91);
             this.VariationalServiceTextBox.TabIndex = 0;
             // 
             // tabPage9
@@ -2002,7 +2002,7 @@ namespace Chart1._1
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1184, 313);
+            this.tabControl3.Size = new System.Drawing.Size(1184, 379);
             this.tabControl3.TabIndex = 1;
             this.tabControl3.SelectedIndexChanged += new System.EventHandler(this.tabControl3_SelectedIndexChanged);
             // 
@@ -2012,7 +2012,7 @@ namespace Chart1._1
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1176, 287);
+            this.tabPage10.Size = new System.Drawing.Size(1176, 353);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Матриця діаграм розкиду";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -2028,7 +2028,7 @@ namespace Chart1._1
             this.MatrixOfScatterDiagramsTableLayout.RowCount = 2;
             this.MatrixOfScatterDiagramsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.MatrixOfScatterDiagramsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.MatrixOfScatterDiagramsTableLayout.Size = new System.Drawing.Size(1170, 281);
+            this.MatrixOfScatterDiagramsTableLayout.Size = new System.Drawing.Size(1170, 347);
             this.MatrixOfScatterDiagramsTableLayout.TabIndex = 0;
             // 
             // tabPage11
