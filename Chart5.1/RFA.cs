@@ -11,8 +11,7 @@ namespace Chart5._1
     {
         public static void Solve(Matrix R, double epsilon)
         {
-            int wMin = 0;
-            GetA(R, out wMin);
+            int wMin = getW(R);
 
             //eigenvalues {(1,0.6717,0.5639,0.2915,0.7731), (0.6717,1,0.4304,0.0171,0.3127),(0.5639,0.4304,1,0.1760,0.2589),(0.2915, 0.0171,0.1760,1,-0.0184), (0.7731, 0.3127, 0.2589, -0.0184, 1}
             //максимальной корреляции
@@ -41,38 +40,50 @@ namespace Chart5._1
 
             int w = 0;
             Matrix RhPrev = R.SetMainDiagonal(hBest);
-            Matrix Aprev = GetA(RhPrev, out w);
+            Matrix Aprev = GetA(RhPrev, out w, wMin);
             double fPrev = fMin.Value;
             
-            while (true)
+            int n = R.Rows;
+
+            //while (true)
+            //while (true==true)
+            while (true!=false)
             {
-                w = Math.Max(w, wMin);
+                Matrix A = GetA(RhPrev, out w, wMin);
+                
+                //w = Math.Max(w, wMin);
+
                 //определяем общности
-                double[] h = new double[w];
+                double[] h = new double[n];
 
-                for (int i = 0; i < w; i++)
-                    h[i] = Aprev.GetRow(i).GetCloneOfData().Take(w).Sum(el => el * el);
+                for (int i = 0; i < n; i++)
+                    h[i] = A.GetRow(i).GetCloneOfData().Take(w).Sum(el => el * el);
+                
+                //Matrix A = GetA(Rh, out w, wMin);
 
-                Matrix Rh = R.SetMainDiagonal(h);
+                Matrix Rzal = RhPrev - A * A.Transpose();
 
-                Matrix A = GetA(Rh, out w);
-
-                Matrix Rzal = Rh - A * A.Transpose();
-
+                RhPrev = A.SetMainDiagonal(h);
+                
                 double fCurr = 0;
-                for (int v = 0; v < w; v++)
-                    fCurr += Rzal.GetRow(v).GetCloneOfData().Take(w).Where((val, index) => index != v).Sum(val => val * val);
+                for (int v = 0; v < n; v++)
+                    fCurr += Rzal.GetRow(v).GetCloneOfData().Where((val, index) => index != v).Sum(val => val * val);
+
 
                 if (fCurr > fPrev)
                     break;
 
                 int sumOfDifference = 0;
                 Matrix ADifference = A - Aprev;
+                double sum = 0;
+
                 for (int i = 0; i < A.Rows; i++)
                     for (int j = 0; j < A.Columns; j++)
-                        if (Math.Pow(ADifference[i, j], 2) < epsilon)
-                            sumOfDifference++;
+                        sum += Math.Pow(ADifference[i, j], 2);
 
+                if (sum < epsilon)
+                    break;
+                
                 if (sumOfDifference == A.Rows * A.Columns)
                     break;
 
@@ -81,7 +92,7 @@ namespace Chart5._1
                         break;
 
                 ///***///
-                RhPrev = Rh;
+                //RhPrev = Rh;
                 Aprev = A;
                 fPrev = fCurr;
             }
@@ -100,7 +111,7 @@ namespace Chart5._1
                 Matrix Rh = R.SetMainDiagonal(hCommon[i]);
 
                 int w = 0;
-                Matrix A = GetA(Rh, out w);
+                Matrix A = GetA(Rh, out w, wMin);
 
                 Matrix Rzal = Rh - A * A.Transpose();
 
@@ -108,8 +119,9 @@ namespace Chart5._1
 
                 double fValue = 0;
 
-                for (int v = 0; v < w; v++)
-                    fValue += Rzal.GetRow(v).GetCloneOfData().Take(w).Where((val, index) => index != v).Sum(val => val * val);
+                for (int v = 0; v < R.Rows; v++)
+                    //fValue += Rzal.GetRow(v).GetCloneOfData().Take(w).Where((val, index) => index != v).Sum(val => val * val);
+                    fValue += Rzal.GetRow(v).GetCloneOfData().Where((val, index) => index != v).Sum(val => val * val);
 
 
                 f[i] = fValue;
@@ -118,14 +130,29 @@ namespace Chart5._1
             return f;
         }
 
-        private static Matrix GetA(Matrix R, out int w)
+        static int getW(Matrix R)
         {
             var l = LaverierFadeevaMethod.Solve(R, LaverierFadeevaSolvingOptions.FullSolving);
             LaverierFadeevaExtendedResult[] ext = LaverierFadeevaExtendedResult.ConvertToExtendedLaverierFadeevaResult(l);
             ext = ext.OrderByDescending(v => v.EigenValue.Abs()).ToArray();
 
             var eigenAverage = ext.Sum(v => v.EigenValue) / ext.Length;
-            w = ext.Count(v => v.EigenValue.Abs() > eigenAverage);
+            int w = ext.Count(v => v.EigenValue > eigenAverage);
+
+            return w;
+        }
+
+        private static Matrix GetA(Matrix R, out int w, int wMin)
+        {
+            var l = LaverierFadeevaMethod.Solve(R, LaverierFadeevaSolvingOptions.FullSolving);
+            LaverierFadeevaExtendedResult[] ext = LaverierFadeevaExtendedResult.ConvertToExtendedLaverierFadeevaResult(l);
+            ext = ext.OrderByDescending(v => v.EigenValue.Abs()).ToArray();
+
+            var eigenAverage = ext.Sum(v => v.EigenValue) / ext.Length;
+
+            w = ext.Count(v => v.EigenValue> eigenAverage);
+
+            w = Math.Max(w, wMin);
 
             var neededVectors = ext.Take(w).Select(el => el.eigenVector).ToList();
 

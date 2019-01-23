@@ -78,6 +78,7 @@
     <Compile Include="MakeKndimGroup.Designer.cs">
       <DependentUpon>MakeKndimGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="PointsMetrics.cs" />
     <Compile Include="ModelTwoDimRegressionWindowParabol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +230,9 @@
       <Project>{565D4F67-7C14-4CE6-B0BF-4E78E6FE4357}</Project>
       <Name>Stat2</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XMLFile1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
