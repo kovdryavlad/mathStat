@@ -13,6 +13,7 @@ using DialogWindowHelper;
 using System.Threading;
 using Chart5._1;
 using Stat2;
+using Chart5._1.KAverage;
 
 namespace Chart1._1
 {
@@ -2274,6 +2275,17 @@ namespace Chart1._1
             {
                 AddViborka("Back Transition Stat MGK#" + i, backTransiotionStats[i]);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var d = PointsMetrics.Evklid(null);
+
+            KAverageMethod kAverageMethod = new KAverageMethod(NDimStat, (int)KnumericUpDown.Value, new FirstKPointsSelector());
+
+            var clasters = kAverageMethod.BollaHolla(d, (int)IterationsNumericUpDown.Value);
+
+
         }
     }
 
