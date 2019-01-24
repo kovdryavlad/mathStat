@@ -10,16 +10,17 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Chart5._1.KAverage
 {
-    class Visualization
+    class VisualizationOFClasterization
     {
-        public void GetMatrixOfScatterDiagrams(TableLayoutPanel tableLayout)
+        public static void GetMatrixOfScatterDiagrams(TableLayoutPanel tableLayout,Claster[] clasters)
         {
-            /*
+            
             tableLayout.Controls.Clear();
             tableLayout.ColumnStyles.Clear();
             tableLayout.RowStyles.Clear();
 
-            tableLayout.ColumnCount = tableLayout.RowCount = n;
+            int n = tableLayout.ColumnCount = tableLayout.RowCount = clasters[0].Center.Length;
+            int k = clasters.Length;
 
             for (int i = 0; i < n; i++)
             {
@@ -32,13 +33,13 @@ namespace Chart5._1.KAverage
 
             tableLayout.CellBorderStyle = TableLayoutPanelCellBorderStyle.InsetDouble;
 
+            for (int i = 0; i < k; i++)
+                clasters[i].PrepareForVisualization();
+
             for (int i = 0; i < n; i++)
             {
-                STAT stat_i = stats[i];
                 for (int j = 0; j < n; j++)
                 {
-                    STAT stat_j = stats[j];
-
                     Chart chart = new Chart();
                     chart.Dock = DockStyle.Fill;
 
@@ -46,35 +47,28 @@ namespace Chart5._1.KAverage
                     ChartArea chartArea = new ChartArea();
                     chart.ChartAreas.Add(chartArea);
 
-                    chart.ChartAreas[0].AxisX.Minimum = stat_i.Min;
-                    chart.ChartAreas[0].AxisX.Maximum = stat_i.Max;
+                    //chart.ChartAreas[0].AxisX.Minimum = stat_i.Min;
+                    //chart.ChartAreas[0].AxisX.Maximum = stat_i.Max;
                     chart.ChartAreas[0].AxisX.LabelStyle.Format = "{0:0.00}";
                     chart.ChartAreas[0].AxisY.LabelStyle.Format = "{0:0.00}";
 
-                    Series s = new Series();
-
-                    if (i == j)
+                   
+                    if (i != j)
                     {
-                        s.BorderColor = Color.Black;
-                        s.CustomProperties = "PointWidth=1";
-                        stat_i.GetSeria1_Column(s);
-                        //chart.Series.Add(s);
+                        for (int l = 0; l < k; l++)
+                        {
+                            Series s = new Series();
 
-                        chart.ChartAreas[0].AxisX.Interval = Math.Round(stat_i.h, 4);
-                        chart.ChartAreas[0].AxisY.Maximum = stat_i.masYVid.Max();
-                    }
-                    else
-                    {
-                        s.ChartType = SeriesChartType.Point;
-                        chart.ChartAreas[0].AxisY.Minimum = stat_j.Min;
-                        chart.ChartAreas[0].AxisY.Maximum = stat_j.Max;
-                        s.Points.DataBindXY(stat_i.d, stat_j.d);
+                            s.ChartType = SeriesChartType.Point;
+                            s.Points.DataBindXY(clasters[l].Dimentions[i], clasters[l].Dimentions[j]);
+                            
+                            chart.Series.Add(s);
+                        }
                     }
 
-                    chart.Series.Add(s);
                     tableLayout.Controls.Add(chart, j, i);
                 }
-            }*/
+            }
         }
 
     }

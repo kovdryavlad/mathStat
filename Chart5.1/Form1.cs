@@ -2282,10 +2282,11 @@ namespace Chart1._1
             var d = PointsMetrics.Evklid(null);
 
             KAverageMethod kAverageMethod = new KAverageMethod(NDimStat, (int)KnumericUpDown.Value, new FirstKPointsSelector());
+            kAverageMethod.Epsilon = Convert.ToDouble(EpsilonClasterizationTextBox.Text.Replace(".", ","));
 
-            var clasters = kAverageMethod.BollaHolla(d, (int)IterationsNumericUpDown.Value);
+            var clasters = kAverageMethod.McKinna(d, (int)IterationsNumericUpDown.Value);
 
-
+            VisualizationOFClasterization.GetMatrixOfScatterDiagrams(KlasterizationtableLayoutPanel, clasters);
         }
     }
 

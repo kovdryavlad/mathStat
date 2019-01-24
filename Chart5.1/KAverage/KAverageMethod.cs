@@ -46,7 +46,10 @@ namespace Chart5._1
                 {
                     double[] currentPoint = m_data[i];
 
-                    var distances = m_clasters.Select((claster, index) => new { Index = index, Distance = d(claster.Center, currentPoint) }).OrderBy(el => el).ToArray();
+                    var distances = m_clasters.Select((claster, index) => 
+                                                    new { Index = index, Distance = d(claster.Center, currentPoint) })
+                                              .OrderBy(el => el.Distance)
+                                              .ToArray();
                     int minIndex = distances[0].Index;
 
                     m_clasters[minIndex].Points.Add(currentPoint);
@@ -55,13 +58,50 @@ namespace Chart5._1
                 //recalc Centers of clasters and remember status
                 bool status = true;
                 for (int i = 0; i < m_k; i++)                
-                    status = status && m_clasters[i].RecalcCenter(m_k, Epsilon);
+                    status = status && m_clasters[i].RecalcCenter(Epsilon);
 
-                if (status)
+                if (status && iteration==iterations-1)
                     break;
+
+                for (int k = 0; k < m_k; k++)
+                    m_clasters[k].ClearPoints();
+                
             }
 
             return m_clasters;            
         }
+
+        public Claster[] McKinna(Func<double[], double[], double> d, int iterations)
+        {
+            for (int iteration = 0; iteration < iterations; iteration++)
+            {
+                for (int i = 0; i < m_N; i++)
+                {
+                    double[] currentPoint = m_data[i];
+
+                    var distances = m_clasters.Select((claster, index) =>
+                                                    new { Index = index, Distance = d(claster.Center, currentPoint) })
+                                              .OrderBy(el => el.Distance)
+                                              .ToArray();
+                    int minIndex = distances[0].Index;
+
+                    m_clasters[minIndex].Points.Add(currentPoint);
+
+                    //recalc Center of clasters and remember status
+                    for (int j = 0; j < m_k; j++)
+                        m_clasters[j].RecalcCenter(Epsilon);
+                }
+
+                if (iteration == iterations - 1)
+                    break;
+
+                for (int k = 0; k < m_k; k++)
+                    m_clasters[k].ClearPoints();
+            }
+
+
+            return m_clasters;
+        }
+
     }
 }

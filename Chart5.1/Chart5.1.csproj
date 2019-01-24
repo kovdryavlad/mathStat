@@ -78,7 +78,7 @@
     <Compile Include="KAverage\KAverageMethod.cs" />
     <Compile Include="KAverage\KPointsSelector\RandomKPointsSelector.cs" />
     <Compile Include="KAverage\KPointsSelector\TheMostFarestKPointsSelector.cs" />
-    <Compile Include="KAverage\Visualization.cs" />
+    <Compile Include="KAverage\VisualizationOFClasterization.cs" />
     <Compile Include="LaverierFadeevaExtended.cs" />
     <Compile Include="MakeKndimGroup.cs">
       <SubType>Form</SubType>

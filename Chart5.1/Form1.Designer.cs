@@ -263,10 +263,11 @@ namespace Chart1._1
             this.label2 = new System.Windows.Forms.Label();
             this.MGKDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.KlasterizationtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.IterationsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.KnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.EpsilonClasterizationTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -285,7 +286,6 @@ namespace Chart1._1
             this.ManhetenradioButton = new System.Windows.Forms.RadioButton();
             this.EvklidWeightedradioButton = new System.Windows.Forms.RadioButton();
             this.EvklidradioButton = new System.Windows.Forms.RadioButton();
-            this.KlasterizationtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -2216,7 +2216,7 @@ namespace Chart1._1
             this.tabPage15.Controls.Add(this.button4);
             this.tabPage15.Controls.Add(this.IterationsNumericUpDown);
             this.tabPage15.Controls.Add(this.KnumericUpDown);
-            this.tabPage15.Controls.Add(this.textBox3);
+            this.tabPage15.Controls.Add(this.EpsilonClasterizationTextBox);
             this.tabPage15.Controls.Add(this.label5);
             this.tabPage15.Controls.Add(this.label4);
             this.tabPage15.Controls.Add(this.label3);
@@ -2227,6 +2227,22 @@ namespace Chart1._1
             this.tabPage15.Size = new System.Drawing.Size(1176, 374);
             this.tabPage15.TabIndex = 5;
             this.tabPage15.Text = "Кластеризація";
+            // 
+            // KlasterizationtableLayoutPanel
+            // 
+            this.KlasterizationtableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KlasterizationtableLayoutPanel.ColumnCount = 2;
+            this.KlasterizationtableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.KlasterizationtableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.KlasterizationtableLayoutPanel.Location = new System.Drawing.Point(271, 8);
+            this.KlasterizationtableLayoutPanel.Name = "KlasterizationtableLayoutPanel";
+            this.KlasterizationtableLayoutPanel.RowCount = 2;
+            this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.KlasterizationtableLayoutPanel.Size = new System.Drawing.Size(905, 370);
+            this.KlasterizationtableLayoutPanel.TabIndex = 6;
             // 
             // button4
             // 
@@ -2241,6 +2257,11 @@ namespace Chart1._1
             // IterationsNumericUpDown
             // 
             this.IterationsNumericUpDown.Location = new System.Drawing.Point(84, 329);
+            this.IterationsNumericUpDown.Maximum = new decimal(new int[] {
+            1316134912,
+            2328,
+            0,
+            0});
             this.IterationsNumericUpDown.Name = "IterationsNumericUpDown";
             this.IterationsNumericUpDown.Size = new System.Drawing.Size(100, 20);
             this.IterationsNumericUpDown.TabIndex = 4;
@@ -2262,13 +2283,13 @@ namespace Chart1._1
             0,
             0});
             // 
-            // textBox3
+            // EpsilonClasterizationTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(84, 351);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "0.000001";
+            this.EpsilonClasterizationTextBox.Location = new System.Drawing.Point(84, 351);
+            this.EpsilonClasterizationTextBox.Name = "EpsilonClasterizationTextBox";
+            this.EpsilonClasterizationTextBox.Size = new System.Drawing.Size(100, 20);
+            this.EpsilonClasterizationTextBox.TabIndex = 3;
+            this.EpsilonClasterizationTextBox.Text = "0.000001";
             // 
             // label5
             // 
@@ -2412,7 +2433,6 @@ namespace Chart1._1
             this.MahalanobisaradioButton.Name = "MahalanobisaradioButton";
             this.MahalanobisaradioButton.Size = new System.Drawing.Size(95, 17);
             this.MahalanobisaradioButton.TabIndex = 0;
-            this.MahalanobisaradioButton.TabStop = true;
             this.MahalanobisaradioButton.Text = "Махаланобіса";
             this.MahalanobisaradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2423,7 +2443,6 @@ namespace Chart1._1
             this.MinkovskogoradioButton.Name = "MinkovskogoradioButton";
             this.MinkovskogoradioButton.Size = new System.Drawing.Size(95, 17);
             this.MinkovskogoradioButton.TabIndex = 0;
-            this.MinkovskogoradioButton.TabStop = true;
             this.MinkovskogoradioButton.Text = "Мінковського";
             this.MinkovskogoradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2434,7 +2453,6 @@ namespace Chart1._1
             this.ChebishevaradioButton.Name = "ChebishevaradioButton";
             this.ChebishevaradioButton.Size = new System.Drawing.Size(77, 17);
             this.ChebishevaradioButton.TabIndex = 0;
-            this.ChebishevaradioButton.TabStop = true;
             this.ChebishevaradioButton.Text = "Чебишева";
             this.ChebishevaradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2445,7 +2463,6 @@ namespace Chart1._1
             this.ManhetenradioButton.Name = "ManhetenradioButton";
             this.ManhetenradioButton.Size = new System.Drawing.Size(98, 17);
             this.ManhetenradioButton.TabIndex = 0;
-            this.ManhetenradioButton.TabStop = true;
             this.ManhetenradioButton.Text = "Манхетенська";
             this.ManhetenradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2456,13 +2473,13 @@ namespace Chart1._1
             this.EvklidWeightedradioButton.Name = "EvklidWeightedradioButton";
             this.EvklidWeightedradioButton.Size = new System.Drawing.Size(123, 17);
             this.EvklidWeightedradioButton.TabIndex = 0;
-            this.EvklidWeightedradioButton.TabStop = true;
             this.EvklidWeightedradioButton.Text = "Зважена евклідова";
             this.EvklidWeightedradioButton.UseVisualStyleBackColor = true;
             // 
             // EvklidradioButton
             // 
             this.EvklidradioButton.AutoSize = true;
+            this.EvklidradioButton.Checked = true;
             this.EvklidradioButton.Location = new System.Drawing.Point(16, 19);
             this.EvklidradioButton.Name = "EvklidradioButton";
             this.EvklidradioButton.Size = new System.Drawing.Size(76, 17);
@@ -2470,22 +2487,6 @@ namespace Chart1._1
             this.EvklidradioButton.TabStop = true;
             this.EvklidradioButton.Text = "Евклідова";
             this.EvklidradioButton.UseVisualStyleBackColor = true;
-            // 
-            // KlasterizationtableLayoutPanel
-            // 
-            this.KlasterizationtableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.KlasterizationtableLayoutPanel.ColumnCount = 2;
-            this.KlasterizationtableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KlasterizationtableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KlasterizationtableLayoutPanel.Location = new System.Drawing.Point(271, 8);
-            this.KlasterizationtableLayoutPanel.Name = "KlasterizationtableLayoutPanel";
-            this.KlasterizationtableLayoutPanel.RowCount = 2;
-            this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KlasterizationtableLayoutPanel.Size = new System.Drawing.Size(905, 370);
-            this.KlasterizationtableLayoutPanel.TabIndex = 6;
             // 
             // MyForm
             // 
@@ -2770,7 +2771,7 @@ namespace Chart1._1
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NumericUpDown IterationsNumericUpDown;
         private System.Windows.Forms.NumericUpDown KnumericUpDown;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox EpsilonClasterizationTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
