@@ -69,8 +69,15 @@
   <ItemGroup>
     <Compile Include="Anomalii.cs" />
     <Compile Include="ChildrensOfEventArgs.cs" />
+    <Compile Include="KAverage\Claster.cs" />
+    <Compile Include="KAverage\ClastersMetrics.cs" />
     <Compile Include="DoubleHelper.cs" />
     <Compile Include="FactorsConnectionsTablesNM.cs" />
+    <Compile Include="KAverage\KPointsSelector\FirstKPointsSelector.cs" />
+    <Compile Include="KAverage\KPointsSelector\IKFirstPointsSelector.cs" />
+    <Compile Include="KAverage\KAverageMethod.cs" />
+    <Compile Include="KAverage\KPointsSelector\RandomKPointsSelector.cs" />
+    <Compile Include="KAverage\KPointsSelector\TheMostFarestKPointsSelector.cs" />
     <Compile Include="LaverierFadeevaExtended.cs" />
     <Compile Include="MakeKndimGroup.cs">
       <SubType>Form</SubType>
@@ -78,7 +85,7 @@
     <Compile Include="MakeKndimGroup.Designer.cs">
       <DependentUpon>MakeKndimGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="PointsMetrics.cs" />
+    <Compile Include="KAverage\PointsMetrics.cs" />
     <Compile Include="ModelTwoDimRegressionWindowParabol.cs">
       <SubType>Form</SubType>
     </Compile>
