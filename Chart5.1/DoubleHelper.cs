@@ -17,5 +17,10 @@ namespace Chart5._1
         {
             return Math.Abs(value);
         }
+
+        public static double Pow(this double value, double p)
+        {
+            return Math.Pow(value, p);
+        }
     }
 }

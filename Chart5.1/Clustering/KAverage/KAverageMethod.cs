@@ -73,8 +73,14 @@ namespace Chart5._1
 
         public Claster[] McKinna(Func<double[], double[], double> d, int iterations)
         {
+            int n = m_clasters[0].Center.Length;
+
             for (int iteration = 0; iteration < iterations; iteration++)
             {
+                double[][] oldCenters = new double[m_k][];
+                for (int k = 0; k < m_k; k++)
+                    oldCenters[k] = (double[])m_clasters[k].Center.Clone();
+
                 for (int i = 0; i < m_N; i++)
                 {
                     double[] currentPoint = m_data[i];
@@ -91,6 +97,17 @@ namespace Chart5._1
                     for (int j = 0; j < m_k; j++)
                         m_clasters[j].RecalcCenter(Epsilon);
                 }
+
+                bool status = true;
+                for (int k = 0; k < m_k; k++)
+                    if (!status)
+                        break;
+                    else
+                        for (int l = 0; l < n; l++)
+                            status = (m_clasters[k].Center[l]-oldCenters[k][l]).Abs()<Epsilon;
+
+                if (status) 
+                    break;
 
                 if (iteration == iterations - 1)
                     break;

@@ -69,16 +69,19 @@
   <ItemGroup>
     <Compile Include="Anomalii.cs" />
     <Compile Include="ChildrensOfEventArgs.cs" />
-    <Compile Include="KAverage\Claster.cs" />
-    <Compile Include="KAverage\ClastersMetrics.cs" />
+    <Compile Include="Clustering\Agglomerative\AgglomerativeMethodOfClastering.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\ClasterMetricsBase.cs" />
+    <Compile Include="Clustering\Assessments.cs" />
+    <Compile Include="Clustering\Claster.cs" />
+    <Compile Include="Clustering\Agglomerative\ClastersMetrics.cs" />
     <Compile Include="DoubleHelper.cs" />
     <Compile Include="FactorsConnectionsTablesNM.cs" />
-    <Compile Include="KAverage\KPointsSelector\FirstKPointsSelector.cs" />
-    <Compile Include="KAverage\KPointsSelector\IKFirstPointsSelector.cs" />
-    <Compile Include="KAverage\KAverageMethod.cs" />
-    <Compile Include="KAverage\KPointsSelector\RandomKPointsSelector.cs" />
-    <Compile Include="KAverage\KPointsSelector\TheMostFarestKPointsSelector.cs" />
-    <Compile Include="KAverage\VisualizationOFClasterization.cs" />
+    <Compile Include="Clustering\KAverage\KPointsSelector\FirstKPointsSelector.cs" />
+    <Compile Include="Clustering\KAverage\KPointsSelector\IKFirstPointsSelector.cs" />
+    <Compile Include="Clustering\KAverage\KAverageMethod.cs" />
+    <Compile Include="Clustering\KAverage\KPointsSelector\RandomKPointsSelector.cs" />
+    <Compile Include="Clustering\KAverage\KPointsSelector\TheMostFarestKPointsSelector.cs" />
+    <Compile Include="Clustering\VisualizationOFClasterization.cs" />
     <Compile Include="LaverierFadeevaExtended.cs" />
     <Compile Include="MakeKndimGroup.cs">
       <SubType>Form</SubType>
@@ -86,7 +89,7 @@
     <Compile Include="MakeKndimGroup.Designer.cs">
       <DependentUpon>MakeKndimGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="KAverage\PointsMetrics.cs" />
+    <Compile Include="Clustering\PointsMetrics.cs" />
     <Compile Include="ModelTwoDimRegressionWindowParabol.cs">
       <SubType>Form</SubType>
     </Compile>

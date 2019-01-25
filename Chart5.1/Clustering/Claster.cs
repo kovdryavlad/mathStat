@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chart5._1.KAverage
+namespace Chart5._1
 {
     class Claster
     {
@@ -47,5 +47,26 @@ namespace Chart5._1.KAverage
         public void PrepareForVisualization() => Dimentions = ArrayMatrix.TransposeArr(Points.ToArray());
 
         public void ClearPoints() => Points.Clear();
+
+        public Matrix GetMatrixOfCovariations()
+        {
+            int n = Center.Length;
+            double[] averages = Dimentions.Select(dim => dim.Average()).ToArray();
+
+            double[][] cov = ArrayMatrix.GetJaggedArray(n, n);
+
+            for (int k = 0; k < n; k++)
+                for (int p = 0; p < n; p++)
+                {
+                    double v = 0;
+                    for (int l = 0; l < Nj; l++)
+                        v += (Points[k][l] - averages[k]) * (Points[p][l] - averages[p]);
+                    
+
+                    cov[k][p] = v / Nj;
+                }
+
+            return new Matrix(cov);
+        }
     }
 }
