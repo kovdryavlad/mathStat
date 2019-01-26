@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Chart5._1
 {
-    class Claster
+    public class Claster
     {
         public double[] Center { get; set; }
 
@@ -68,5 +68,9 @@ namespace Chart5._1
 
             return new Matrix(cov);
         }
+
+        public void AddPoint(double[] point) => Points.Add(point);
+
+        public void AddPointsFromClaster(Claster claster) => Points.AddRange(claster.Points);
     }
 }

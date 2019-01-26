@@ -21,16 +21,9 @@ namespace Chart5._1
         {
             m_clasters = new Claster[k];
             m_k = k;
-
-            int n = statNd.N;
-            m_N = statNd.GetStat(0).d.Length;
-
-            m_data = new double[n][];
-
-            for (int i = 0; i < n; i++)
-                m_data[i] = statNd.GetStat(i).d;
-
-            m_data = ArrayMatrix.TransposeArr(m_data);
+            
+            m_data = statNd.getJaggedArrayOfData();
+            m_N = m_data.GetLength(0);
 
             double[][] centers = KFirstPointsSelector.GetFirstKPoints(m_data, k);
 

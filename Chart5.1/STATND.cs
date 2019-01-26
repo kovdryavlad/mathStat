@@ -19,6 +19,20 @@ namespace Chart5._1
         double[][] R;   //кореляционная матрица
         double[][] DC;  //дисперсионно-ковариационная матрица
 
+        public double[][] getJaggedArrayOfData()
+        {
+            int m_N = stats[0].d.Length;
+
+            double[][] data = new double[n][];
+
+            for (int i = 0; i < n; i++)
+                data[i] = stats[i].d;
+
+            data = ArrayMatrix.TransposeArr(data);
+
+            return data;
+        }
+
         //вариационный ряд
         VariationalSeriesBuilder variationalSeries;
 
