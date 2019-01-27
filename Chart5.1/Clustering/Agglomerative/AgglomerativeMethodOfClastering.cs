@@ -12,20 +12,34 @@ namespace Chart5._1.Clustering.Agglomerative
     {
         public Claster[] Clasterize(STATND statNd, int needClasterCount, IClasterMetrics D)
         {
-            Claster[] clasters = formClasterForEachPoint(statNd);
-
-            while (clasters.Length > needClasterCount)
+            List<Claster> clasters = formClasterForEachPoint(statNd);
+            
+            while (clasters.Count > needClasterCount)
             {
                 Matrix distances = CalcMatrixOfDistances(clasters, D);
 
                 int[] ij = FindMinDistance(distances);
-                int i = ij[0], j = ij[1];
+                int l = ij[0], h = ij[1];   //l always bigger than h???
 
+                clasters[h].AppendPointsFromClater(clasters[l]);
 
+                clasters.RemoveAt(l);
+                distances.RemoveRow(l);
+                distances.RemoveColumn(l);
+
+                //go by row
+                for (int m = 0; m < h; m++)
+                    distances[h, m] = D.LansaWilliamsDistance(clasters[l], clasters[h], clasters[m]);
+
+                //go by column
+                for (int m = h+1; m < distances.Rows; m++)
+                    distances[m, h] = D.LansaWilliamsDistance(clasters[l], clasters[h], clasters[m]);
             }
+
+            return clasters.ToArray();
         }
 
-        private static Claster[] formClasterForEachPoint(STATND statNd)
+        private static List<Claster> formClasterForEachPoint(STATND statNd)
         {
             double[][] data = statNd.getJaggedArrayOfData();
             int N = data.GetLength(0);
@@ -35,12 +49,12 @@ namespace Chart5._1.Clustering.Agglomerative
             for (int i = 0; i < N; i++)
                 clasters[i].AddPoint(data[i]);
 
-            return clasters;
+            return clasters.ToList();
         }
 
-        private Matrix CalcMatrixOfDistances(Claster[] clasters, IClasterMetrics D)
+        private Matrix CalcMatrixOfDistances(List<Claster> clasters, IClasterMetrics D)
         {
-            int n = clasters.Length;
+            int n = clasters.Count;
             double[][] distances = ArrayMatrix.GetJaggedArray(n, n);
 
             for (int i = 0; i < n; i++)
@@ -65,7 +79,7 @@ namespace Chart5._1.Clustering.Agglomerative
             {
                 for (int j = 0; j < n; j++)
                 {
-                    if (j > i) break;
+                    if (j >= i) break;
 
                     if (data[i][j] < min)
                     {

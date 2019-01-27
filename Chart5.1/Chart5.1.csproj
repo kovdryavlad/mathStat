@@ -71,8 +71,11 @@
     <Compile Include="ChildrensOfEventArgs.cs" />
     <Compile Include="Clustering\Agglomerative\AgglomerativeMethodOfClastering.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\ClasterMetricsBase.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\FarestNeighbor.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\IClasterMetrics.cs" />
-    <Compile Include="Clustering\Agglomerative\ClasterMetrics\LansaWilliamsaObject.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\NearestNeighbor.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\WeightedAverage.cs" />
+    <Compile Include="Clustering\Agglomerative\LansaWilliamsaObject.cs" />
     <Compile Include="Clustering\Assessments.cs" />
     <Compile Include="Clustering\Claster.cs" />
     <Compile Include="Clustering\Agglomerative\ClastersMetrics.cs" />

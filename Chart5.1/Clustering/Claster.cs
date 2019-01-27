@@ -22,6 +22,7 @@ namespace Chart5._1
 
         public int Nj => Points.Count;
 
+        //returns true if abs of difference of all between new and old centers smaller then epsilon 
         public bool RecalcCenter(double eps)
         {
             if (Points.Count == 0)
@@ -71,6 +72,6 @@ namespace Chart5._1
 
         public void AddPoint(double[] point) => Points.Add(point);
 
-        public void AddPointsFromClaster(Claster claster) => Points.AddRange(claster.Points);
+        public void AppendPointsFromClater(Claster claster) => Points.AddRange(claster.Points);
     }
 }

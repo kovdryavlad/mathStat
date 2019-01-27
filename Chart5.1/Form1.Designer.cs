@@ -263,12 +263,14 @@ namespace Chart1._1
             this.label2 = new System.Windows.Forms.Label();
             this.MGKDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.AglomerativeRadioButton = new System.Windows.Forms.RadioButton();
+            this.McKinnaRadioButton = new System.Windows.Forms.RadioButton();
+            this.BollaHollaRadioButton = new System.Windows.Forms.RadioButton();
             this.KlasterizationtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.IterationsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.KnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.EpsilonClasterizationTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -284,8 +286,14 @@ namespace Chart1._1
             this.MinkovskogoradioButton = new System.Windows.Forms.RadioButton();
             this.ChebishevaradioButton = new System.Windows.Forms.RadioButton();
             this.ManhetenradioButton = new System.Windows.Forms.RadioButton();
+            this.MnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.WeightsTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.EvklidWeightedradioButton = new System.Windows.Forms.RadioButton();
             this.EvklidradioButton = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.EpsilonTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -323,10 +331,12 @@ namespace Chart1._1
             ((System.ComponentModel.ISupportInitialize)(this.MGKnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MGKDataGridView)).BeginInit();
             this.tabPage15.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IterationsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KnumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -1520,7 +1530,7 @@ namespace Chart1._1
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.StatusLabelNumberOfElements});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 564);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 939);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1198, 22);
             this.statusStrip1.TabIndex = 6;
@@ -1673,7 +1683,7 @@ namespace Chart1._1
             this.DimentionalTabControl.Location = new System.Drawing.Point(0, 24);
             this.DimentionalTabControl.Name = "DimentionalTabControl";
             this.DimentionalTabControl.SelectedIndex = 0;
-            this.DimentionalTabControl.Size = new System.Drawing.Size(1198, 540);
+            this.DimentionalTabControl.Size = new System.Drawing.Size(1198, 915);
             this.DimentionalTabControl.TabIndex = 8;
             // 
             // tabPage3
@@ -1685,7 +1695,7 @@ namespace Chart1._1
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1190, 514);
+            this.tabPage3.Size = new System.Drawing.Size(1190, 889);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Одновимірні дані";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -1701,7 +1711,7 @@ namespace Chart1._1
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1190, 514);
+            this.tabPage4.Size = new System.Drawing.Size(1190, 889);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Двовимірні дані";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -1945,7 +1955,7 @@ namespace Chart1._1
             this.tabPage7.Controls.Add(this.tableLayoutPanel3);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1190, 514);
+            this.tabPage7.Size = new System.Drawing.Size(1190, 889);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Багатовмірні дані";
             // 
@@ -1962,7 +1972,7 @@ namespace Chart1._1
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.98833F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.01167F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1190, 514);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1190, 889);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tabControl2
@@ -1971,10 +1981,10 @@ namespace Chart1._1
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Controls.Add(this.tabPage9);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 409);
+            this.tabControl2.Location = new System.Drawing.Point(3, 705);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1184, 102);
+            this.tabControl2.Size = new System.Drawing.Size(1184, 181);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage8
@@ -1983,7 +1993,7 @@ namespace Chart1._1
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1176, 76);
+            this.tabPage8.Size = new System.Drawing.Size(1176, 155);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Варіаційний ряд";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1995,7 +2005,7 @@ namespace Chart1._1
             this.VariationalServiceTextBox.Multiline = true;
             this.VariationalServiceTextBox.Name = "VariationalServiceTextBox";
             this.VariationalServiceTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.VariationalServiceTextBox.Size = new System.Drawing.Size(1170, 70);
+            this.VariationalServiceTextBox.Size = new System.Drawing.Size(1170, 149);
             this.VariationalServiceTextBox.TabIndex = 0;
             // 
             // tabPage9
@@ -2004,7 +2014,7 @@ namespace Chart1._1
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1176, 76);
+            this.tabPage9.Size = new System.Drawing.Size(1176, 155);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Журнал";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2016,7 +2026,7 @@ namespace Chart1._1
             this.NdimLogTextBox.Multiline = true;
             this.NdimLogTextBox.Name = "NdimLogTextBox";
             this.NdimLogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.NdimLogTextBox.Size = new System.Drawing.Size(1170, 70);
+            this.NdimLogTextBox.Size = new System.Drawing.Size(1170, 149);
             this.NdimLogTextBox.TabIndex = 0;
             // 
             // tabControl3
@@ -2032,7 +2042,7 @@ namespace Chart1._1
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1184, 400);
+            this.tabControl3.Size = new System.Drawing.Size(1184, 696);
             this.tabControl3.TabIndex = 1;
             this.tabControl3.SelectedIndexChanged += new System.EventHandler(this.tabControl3_SelectedIndexChanged);
             // 
@@ -2042,7 +2052,7 @@ namespace Chart1._1
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1176, 374);
+            this.tabPage10.Size = new System.Drawing.Size(1176, 670);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Матриця діаграм розкиду";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -2058,7 +2068,7 @@ namespace Chart1._1
             this.MatrixOfScatterDiagramsTableLayout.RowCount = 2;
             this.MatrixOfScatterDiagramsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.MatrixOfScatterDiagramsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.MatrixOfScatterDiagramsTableLayout.Size = new System.Drawing.Size(1170, 368);
+            this.MatrixOfScatterDiagramsTableLayout.Size = new System.Drawing.Size(1170, 664);
             this.MatrixOfScatterDiagramsTableLayout.TabIndex = 0;
             // 
             // tabPage11
@@ -2067,7 +2077,7 @@ namespace Chart1._1
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1176, 374);
+            this.tabPage11.Size = new System.Drawing.Size(1176, 670);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Паралельні координати";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -2079,7 +2089,7 @@ namespace Chart1._1
             this.ParallelCoordsChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ParallelCoordsChart.Location = new System.Drawing.Point(3, 3);
             this.ParallelCoordsChart.Name = "ParallelCoordsChart";
-            this.ParallelCoordsChart.Size = new System.Drawing.Size(1170, 368);
+            this.ParallelCoordsChart.Size = new System.Drawing.Size(1170, 664);
             this.ParallelCoordsChart.TabIndex = 0;
             this.ParallelCoordsChart.Text = "chart5";
             // 
@@ -2088,7 +2098,7 @@ namespace Chart1._1
             this.tabPage12.Controls.Add(this.BoubleChart);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(1176, 374);
+            this.tabPage12.Size = new System.Drawing.Size(1176, 670);
             this.tabPage12.TabIndex = 2;
             this.tabPage12.Text = "Бульбашкова діаграма";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -2107,7 +2117,7 @@ namespace Chart1._1
             series17.Name = "Series1";
             series17.YValuesPerPoint = 2;
             this.BoubleChart.Series.Add(series17);
-            this.BoubleChart.Size = new System.Drawing.Size(1176, 374);
+            this.BoubleChart.Size = new System.Drawing.Size(1176, 670);
             this.BoubleChart.TabIndex = 0;
             this.BoubleChart.Text = "chart5";
             // 
@@ -2116,7 +2126,7 @@ namespace Chart1._1
             this.tabPage13.Controls.Add(this.DiagnosticDiagramChart);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1176, 374);
+            this.tabPage13.Size = new System.Drawing.Size(1176, 670);
             this.tabPage13.TabIndex = 3;
             this.tabPage13.Text = "Діагностична діаграма";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -2132,7 +2142,7 @@ namespace Chart1._1
             series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series18.Name = "Series1";
             this.DiagnosticDiagramChart.Series.Add(series18);
-            this.DiagnosticDiagramChart.Size = new System.Drawing.Size(1176, 374);
+            this.DiagnosticDiagramChart.Size = new System.Drawing.Size(1176, 670);
             this.DiagnosticDiagramChart.TabIndex = 1;
             this.DiagnosticDiagramChart.Text = "chart5";
             // 
@@ -2146,7 +2156,7 @@ namespace Chart1._1
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(1176, 374);
+            this.tabPage14.Size = new System.Drawing.Size(1176, 670);
             this.tabPage14.TabIndex = 4;
             this.tabPage14.Text = "МГК";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -2212,21 +2222,66 @@ namespace Chart1._1
             // tabPage15
             // 
             this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage15.Controls.Add(this.groupBox3);
             this.tabPage15.Controls.Add(this.KlasterizationtableLayoutPanel);
             this.tabPage15.Controls.Add(this.button4);
             this.tabPage15.Controls.Add(this.IterationsNumericUpDown);
             this.tabPage15.Controls.Add(this.KnumericUpDown);
-            this.tabPage15.Controls.Add(this.EpsilonClasterizationTextBox);
-            this.tabPage15.Controls.Add(this.label5);
+            this.tabPage15.Controls.Add(this.EpsilonTextBox);
+            this.tabPage15.Controls.Add(this.label7);
             this.tabPage15.Controls.Add(this.label4);
             this.tabPage15.Controls.Add(this.label3);
             this.tabPage15.Controls.Add(this.groupBox2);
             this.tabPage15.Controls.Add(this.groupBox1);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(1176, 374);
+            this.tabPage15.Size = new System.Drawing.Size(1176, 670);
             this.tabPage15.TabIndex = 5;
             this.tabPage15.Text = "Кластеризація";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.AglomerativeRadioButton);
+            this.groupBox3.Controls.Add(this.McKinnaRadioButton);
+            this.groupBox3.Controls.Add(this.BollaHollaRadioButton);
+            this.groupBox3.Location = new System.Drawing.Point(3, 377);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(260, 98);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Метод";
+            // 
+            // AglomerativeRadioButton
+            // 
+            this.AglomerativeRadioButton.AutoSize = true;
+            this.AglomerativeRadioButton.Location = new System.Drawing.Point(16, 66);
+            this.AglomerativeRadioButton.Name = "AglomerativeRadioButton";
+            this.AglomerativeRadioButton.Size = new System.Drawing.Size(110, 17);
+            this.AglomerativeRadioButton.TabIndex = 0;
+            this.AglomerativeRadioButton.Text = "Агломеративний";
+            this.AglomerativeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // McKinnaRadioButton
+            // 
+            this.McKinnaRadioButton.AutoSize = true;
+            this.McKinnaRadioButton.Location = new System.Drawing.Point(16, 43);
+            this.McKinnaRadioButton.Name = "McKinnaRadioButton";
+            this.McKinnaRadioButton.Size = new System.Drawing.Size(70, 17);
+            this.McKinnaRadioButton.TabIndex = 0;
+            this.McKinnaRadioButton.Text = "Мак-Кіна";
+            this.McKinnaRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // BollaHollaRadioButton
+            // 
+            this.BollaHollaRadioButton.AutoSize = true;
+            this.BollaHollaRadioButton.Checked = true;
+            this.BollaHollaRadioButton.Location = new System.Drawing.Point(16, 20);
+            this.BollaHollaRadioButton.Name = "BollaHollaRadioButton";
+            this.BollaHollaRadioButton.Size = new System.Drawing.Size(90, 17);
+            this.BollaHollaRadioButton.TabIndex = 0;
+            this.BollaHollaRadioButton.TabStop = true;
+            this.BollaHollaRadioButton.Text = "Болла-Холла";
+            this.BollaHollaRadioButton.UseVisualStyleBackColor = true;
             // 
             // KlasterizationtableLayoutPanel
             // 
@@ -2241,12 +2296,12 @@ namespace Chart1._1
             this.KlasterizationtableLayoutPanel.RowCount = 2;
             this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KlasterizationtableLayoutPanel.Size = new System.Drawing.Size(905, 370);
+            this.KlasterizationtableLayoutPanel.Size = new System.Drawing.Size(905, 666);
             this.KlasterizationtableLayoutPanel.TabIndex = 6;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(190, 306);
+            this.button4.Location = new System.Drawing.Point(177, 487);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 5;
@@ -2256,7 +2311,7 @@ namespace Chart1._1
             // 
             // IterationsNumericUpDown
             // 
-            this.IterationsNumericUpDown.Location = new System.Drawing.Point(84, 329);
+            this.IterationsNumericUpDown.Location = new System.Drawing.Point(71, 510);
             this.IterationsNumericUpDown.Maximum = new decimal(new int[] {
             1316134912,
             2328,
@@ -2273,7 +2328,7 @@ namespace Chart1._1
             // 
             // KnumericUpDown
             // 
-            this.KnumericUpDown.Location = new System.Drawing.Point(84, 307);
+            this.KnumericUpDown.Location = new System.Drawing.Point(71, 488);
             this.KnumericUpDown.Name = "KnumericUpDown";
             this.KnumericUpDown.Size = new System.Drawing.Size(100, 20);
             this.KnumericUpDown.TabIndex = 4;
@@ -2283,27 +2338,10 @@ namespace Chart1._1
             0,
             0});
             // 
-            // EpsilonClasterizationTextBox
-            // 
-            this.EpsilonClasterizationTextBox.Location = new System.Drawing.Point(84, 351);
-            this.EpsilonClasterizationTextBox.Name = "EpsilonClasterizationTextBox";
-            this.EpsilonClasterizationTextBox.Size = new System.Drawing.Size(100, 20);
-            this.EpsilonClasterizationTextBox.TabIndex = 3;
-            this.EpsilonClasterizationTextBox.Text = "0.000001";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 354);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Epsilon =";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 333);
+            this.label4.Location = new System.Drawing.Point(3, 514);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 2;
@@ -2312,7 +2350,7 @@ namespace Chart1._1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 311);
+            this.label3.Location = new System.Drawing.Point(3, 492);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 13);
             this.label3.TabIndex = 2;
@@ -2327,9 +2365,9 @@ namespace Chart1._1
             this.groupBox2.Controls.Add(this.WeightedAverageradioButton);
             this.groupBox2.Controls.Add(this.FarestNeighbourradioButton);
             this.groupBox2.Controls.Add(this.NearestNeighbourradioButton);
-            this.groupBox2.Location = new System.Drawing.Point(3, 142);
+            this.groupBox2.Location = new System.Drawing.Point(3, 187);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 156);
+            this.groupBox2.Size = new System.Drawing.Size(260, 184);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Відстань між кластерами";
@@ -2337,11 +2375,10 @@ namespace Chart1._1
             // UordaradioButton
             // 
             this.UordaradioButton.AutoSize = true;
-            this.UordaradioButton.Location = new System.Drawing.Point(124, 134);
+            this.UordaradioButton.Location = new System.Drawing.Point(16, 157);
             this.UordaradioButton.Name = "UordaradioButton";
             this.UordaradioButton.Size = new System.Drawing.Size(57, 17);
             this.UordaradioButton.TabIndex = 0;
-            this.UordaradioButton.TabStop = true;
             this.UordaradioButton.Text = "Уорда";
             this.UordaradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2352,7 +2389,6 @@ namespace Chart1._1
             this.CentroidradioButton.Name = "CentroidradioButton";
             this.CentroidradioButton.Size = new System.Drawing.Size(83, 17);
             this.CentroidradioButton.TabIndex = 0;
-            this.CentroidradioButton.TabStop = true;
             this.CentroidradioButton.Text = "Центроїдна";
             this.CentroidradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2363,7 +2399,6 @@ namespace Chart1._1
             this.MedianradioButton.Name = "MedianradioButton";
             this.MedianradioButton.Size = new System.Drawing.Size(72, 17);
             this.MedianradioButton.TabIndex = 0;
-            this.MedianradioButton.TabStop = true;
             this.MedianradioButton.Text = "Медіанна";
             this.MedianradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2374,7 +2409,6 @@ namespace Chart1._1
             this.NotWeightedAverageradioButton.Name = "NotWeightedAverageradioButton";
             this.NotWeightedAverageradioButton.Size = new System.Drawing.Size(127, 17);
             this.NotWeightedAverageradioButton.TabIndex = 0;
-            this.NotWeightedAverageradioButton.TabStop = true;
             this.NotWeightedAverageradioButton.Text = "Середня незважена";
             this.NotWeightedAverageradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2385,7 +2419,6 @@ namespace Chart1._1
             this.WeightedAverageradioButton.Name = "WeightedAverageradioButton";
             this.WeightedAverageradioButton.Size = new System.Drawing.Size(115, 17);
             this.WeightedAverageradioButton.TabIndex = 0;
-            this.WeightedAverageradioButton.TabStop = true;
             this.WeightedAverageradioButton.Text = "Середня зважена";
             this.WeightedAverageradioButton.UseVisualStyleBackColor = true;
             // 
@@ -2396,13 +2429,13 @@ namespace Chart1._1
             this.FarestNeighbourradioButton.Name = "FarestNeighbourradioButton";
             this.FarestNeighbourradioButton.Size = new System.Drawing.Size(150, 17);
             this.FarestNeighbourradioButton.TabIndex = 0;
-            this.FarestNeighbourradioButton.TabStop = true;
             this.FarestNeighbourradioButton.Text = "Найвіддаленішого сусіда";
             this.FarestNeighbourradioButton.UseVisualStyleBackColor = true;
             // 
             // NearestNeighbourradioButton
             // 
             this.NearestNeighbourradioButton.AutoSize = true;
+            this.NearestNeighbourradioButton.Checked = true;
             this.NearestNeighbourradioButton.Location = new System.Drawing.Point(16, 19);
             this.NearestNeighbourradioButton.Name = "NearestNeighbourradioButton";
             this.NearestNeighbourradioButton.Size = new System.Drawing.Size(127, 17);
@@ -2417,14 +2450,19 @@ namespace Chart1._1
             this.groupBox1.Controls.Add(this.MinkovskogoradioButton);
             this.groupBox1.Controls.Add(this.ChebishevaradioButton);
             this.groupBox1.Controls.Add(this.ManhetenradioButton);
+            this.groupBox1.Controls.Add(this.MnumericUpDown);
+            this.groupBox1.Controls.Add(this.WeightsTextBox);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.EvklidWeightedradioButton);
             this.groupBox1.Controls.Add(this.EvklidradioButton);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 133);
+            this.groupBox1.Size = new System.Drawing.Size(260, 178);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Відстані між об\'єктами";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // MahalanobisaradioButton
             // 
@@ -2466,10 +2504,49 @@ namespace Chart1._1
             this.ManhetenradioButton.Text = "Манхетенська";
             this.ManhetenradioButton.UseVisualStyleBackColor = true;
             // 
+            // MnumericUpDown
+            // 
+            this.MnumericUpDown.Location = new System.Drawing.Point(183, 88);
+            this.MnumericUpDown.Maximum = new decimal(new int[] {
+            15000,
+            0,
+            0,
+            0});
+            this.MnumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MnumericUpDown.Name = "MnumericUpDown";
+            this.MnumericUpDown.Size = new System.Drawing.Size(66, 20);
+            this.MnumericUpDown.TabIndex = 4;
+            this.MnumericUpDown.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.MnumericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // WeightsTextBox
+            // 
+            this.WeightsTextBox.Location = new System.Drawing.Point(91, 152);
+            this.WeightsTextBox.Name = "WeightsTextBox";
+            this.WeightsTextBox.Size = new System.Drawing.Size(158, 20);
+            this.WeightsTextBox.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "weights =";
+            // 
             // EvklidWeightedradioButton
             // 
             this.EvklidWeightedradioButton.AutoSize = true;
-            this.EvklidWeightedradioButton.Location = new System.Drawing.Point(107, 19);
+            this.EvklidWeightedradioButton.Location = new System.Drawing.Point(16, 134);
             this.EvklidWeightedradioButton.Name = "EvklidWeightedradioButton";
             this.EvklidWeightedradioButton.Size = new System.Drawing.Size(123, 17);
             this.EvklidWeightedradioButton.TabIndex = 0;
@@ -2488,11 +2565,37 @@ namespace Chart1._1
             this.EvklidradioButton.Text = "Евклідова";
             this.EvklidradioButton.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(153, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "m =";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 539);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Epsilon =";
+            // 
+            // EpsilonTextBox
+            // 
+            this.EpsilonTextBox.Location = new System.Drawing.Point(71, 536);
+            this.EpsilonTextBox.Name = "EpsilonTextBox";
+            this.EpsilonTextBox.Size = new System.Drawing.Size(98, 20);
+            this.EpsilonTextBox.TabIndex = 3;
+            this.EpsilonTextBox.Text = "0.000001";
+            // 
             // MyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 586);
+            this.ClientSize = new System.Drawing.Size(1198, 961);
             this.Controls.Add(this.DimentionalTabControl);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -2548,12 +2651,15 @@ namespace Chart1._1
             ((System.ComponentModel.ISupportInitialize)(this.MGKDataGridView)).EndInit();
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IterationsNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KnumericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2771,7 +2877,7 @@ namespace Chart1._1
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NumericUpDown IterationsNumericUpDown;
         private System.Windows.Forms.NumericUpDown KnumericUpDown;
-        private System.Windows.Forms.TextBox EpsilonClasterizationTextBox;
+        private System.Windows.Forms.TextBox WeightsTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -2791,6 +2897,14 @@ namespace Chart1._1
         private System.Windows.Forms.RadioButton EvklidWeightedradioButton;
         private System.Windows.Forms.RadioButton EvklidradioButton;
         private System.Windows.Forms.TableLayoutPanel KlasterizationtableLayoutPanel;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton AglomerativeRadioButton;
+        private System.Windows.Forms.RadioButton McKinnaRadioButton;
+        private System.Windows.Forms.RadioButton BollaHollaRadioButton;
+        private System.Windows.Forms.NumericUpDown MnumericUpDown;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox EpsilonTextBox;
+        private System.Windows.Forms.Label label7;
     }
 }
 

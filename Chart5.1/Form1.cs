@@ -14,6 +14,7 @@ using System.Threading;
 using Chart5._1;
 using Stat2;
 using Chart5._1.KAverage;
+using Chart5._1.Clustering.Agglomerative.ClasterMetrics;
 
 namespace Chart1._1
 {
@@ -2279,14 +2280,71 @@ namespace Chart1._1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            ParseParametrsOfClasteriation();
+
             var d = PointsMetrics.Evklid(null);
 
             KAverageMethod kAverageMethod = new KAverageMethod(NDimStat, (int)KnumericUpDown.Value, new FirstKPointsSelector());
-            kAverageMethod.Epsilon = Convert.ToDouble(EpsilonClasterizationTextBox.Text.Replace(".", ","));
+            kAverageMethod.Epsilon = Convert.ToDouble(EpsilonTextBox.Text.Replace(".", ","));
 
             var clasters = kAverageMethod.McKinna(d, (int)IterationsNumericUpDown.Value);
 
             VisualizationOFClasterization.GetMatrixOfScatterDiagrams(KlasterizationtableLayoutPanel, clasters);
+        }
+
+        Func<double[], double[], double> d;
+        IClasterMetrics clasterDistance;
+
+        private void ParseParametrsOfClasteriation()
+        {
+            #region Парсинг расстояний между точками d 
+            if (EvklidradioButton.Checked)
+                d = PointsMetrics.Evklid(null);
+            else if (ManhetenradioButton.Checked)
+                d = PointsMetrics.Manheten(null);
+            else if (ChebishevaradioButton.Checked)
+                d = PointsMetrics.Chebishev(null);
+            else if (MinkovskogoradioButton.Checked)
+                d = PointsMetrics.Minkovskogo((double)MnumericUpDown.Value);
+            else if (MahalanobisaradioButton.Checked)
+                d = PointsMetrics.Mahalanobisa(null);
+            else if (EvklidWeightedradioButton.Checked)
+            {
+                string[] StringWeights = WeightsTextBox.Text.Split(new[] { "; \t" }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+
+                double[] weights = null;
+                try
+                {
+                    weights = StringWeights.Select(el => Convert.ToDouble(el)).ToArray();
+                }
+                catch {
+                    MessageBox.Show("Помилка зчитування вагів");
+                    return;
+                }
+
+                if (weights.Length < NDimStat.N)
+                {
+                    MessageBox.Show("Недостатня кылькість вагових коефіцієнтів");
+                    return;
+                }
+
+            }
+
+            #endregion
+            
+            //if(NearestNeighbourradioButton.Checked)
+
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 

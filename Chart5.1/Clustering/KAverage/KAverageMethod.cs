@@ -51,7 +51,7 @@ namespace Chart5._1
                 //recalc Centers of clasters and remember status
                 bool status = true;
                 for (int i = 0; i < m_k; i++)                
-                    status = status && m_clasters[i].RecalcCenter(Epsilon);
+                    status = m_clasters[i].RecalcCenter(Epsilon)&&status;
 
                 if (status && iteration==iterations-1)
                     break;
