@@ -33,7 +33,7 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
 
             SetLansaWiliamsParams(alpha_l, alpha_h, beta, 0);
 
-            return LansaWilliamsDistance(Sl, Sh, Sm);
+            return base.LansaWilliamsDistance(Sl, Sh, Sm);
         }
     }
 }

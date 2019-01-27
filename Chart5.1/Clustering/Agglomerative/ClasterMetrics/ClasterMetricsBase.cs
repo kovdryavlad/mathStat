@@ -32,11 +32,11 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
             int n = claster[0].Length;
             int N = claster.Count;
 
-            var arr = ArrayMatrix.GetJaggedArray(n, N);
+            var arr = ArrayMatrix.TransposeArr(claster.ToArray());
 
-            for (int i = 0; i < N; i++)
-                for (int j = 0; j < n; i++)
-                    arr[j][i] = claster[i][j];
+            //for (int i = 0; i < N; i++)
+            //    for (int j = 0; j < n; i++)
+            //        arr[j][i] = claster[i][j];
 
             double[] result = new double[n];
 

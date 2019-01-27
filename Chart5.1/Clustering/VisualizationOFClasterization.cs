@@ -19,7 +19,7 @@ namespace Chart5._1.KAverage
             tableLayout.ColumnStyles.Clear();
             tableLayout.RowStyles.Clear();
 
-            int n = tableLayout.ColumnCount = tableLayout.RowCount = clasters[0].Center.Length;
+            int n = tableLayout.ColumnCount = tableLayout.RowCount = clasters[0].Points[0].Length;
             int k = clasters.Length;
 
             for (int i = 0; i < n; i++)

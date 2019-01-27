@@ -13,19 +13,19 @@ namespace Chart5._1.Clustering.Agglomerative
         public Claster[] Clasterize(STATND statNd, int needClasterCount, IClasterMetrics D)
         {
             List<Claster> clasters = formClasterForEachPoint(statNd);
-            
+
+            Matrix distances = CalcMatrixOfDistances(clasters, D);
+
             while (clasters.Count > needClasterCount)
             {
-                Matrix distances = CalcMatrixOfDistances(clasters, D);
 
                 int[] ij = FindMinDistance(distances);
                 int l = ij[0], h = ij[1];   //l always bigger than h???
 
                 clasters[h].AppendPointsFromClater(clasters[l]);
 
-                clasters.RemoveAt(l);
-                distances.RemoveRow(l);
-                distances.RemoveColumn(l);
+                distances = distances.RemoveRow(l);
+                distances = distances.RemoveColumn(l);
 
                 //go by row
                 for (int m = 0; m < h; m++)
@@ -34,6 +34,8 @@ namespace Chart5._1.Clustering.Agglomerative
                 //go by column
                 for (int m = h+1; m < distances.Rows; m++)
                     distances[m, h] = D.LansaWilliamsDistance(clasters[l], clasters[h], clasters[m]);
+                
+                clasters.RemoveAt(l);
             }
 
             return clasters.ToArray();
@@ -44,7 +46,8 @@ namespace Chart5._1.Clustering.Agglomerative
             double[][] data = statNd.getJaggedArrayOfData();
             int N = data.GetLength(0);
 
-            Claster[] clasters = new Claster[N];
+            //Claster[] clasters = new Claster[N];
+            Claster[] clasters = Enumerable.Range(0, N).Select(el => new Claster()).ToArray();
 
             for (int i = 0; i < N; i++)
                 clasters[i].AddPoint(data[i]);
@@ -71,11 +74,11 @@ namespace Chart5._1.Clustering.Agglomerative
 
             int n = distances.Rows;
             double[][] data = distances.data;
-            double min = data[0][0];
 
-            int minIndex_i=0, minIndex_j = 0;
+            int minIndex_i=1, minIndex_j = 0;
+            double min = data[minIndex_i][minIndex_j];
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {

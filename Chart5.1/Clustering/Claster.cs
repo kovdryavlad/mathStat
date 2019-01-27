@@ -18,6 +18,8 @@ namespace Chart5._1
             Center = center;
         }
 
+        public Claster() { }
+
         public List<double[]> Points = new List<double[]>();
 
         public int Nj => Points.Count;

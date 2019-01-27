@@ -15,6 +15,7 @@ using Chart5._1;
 using Stat2;
 using Chart5._1.KAverage;
 using Chart5._1.Clustering.Agglomerative.ClasterMetrics;
+using Chart5._1.Clustering.Agglomerative;
 
 namespace Chart1._1
 {
@@ -2282,18 +2283,29 @@ namespace Chart1._1
         {
             ParseParametrsOfClasteriation();
 
-            var d = PointsMetrics.Evklid(null);
-
-            KAverageMethod kAverageMethod = new KAverageMethod(NDimStat, (int)KnumericUpDown.Value, new FirstKPointsSelector());
+            int k = (int)KnumericUpDown.Value;
+            Claster[] clasters = null;
+            KAverageMethod kAverageMethod = new KAverageMethod(NDimStat, k, kFirstPointsSelector);
             kAverageMethod.Epsilon = Convert.ToDouble(EpsilonTextBox.Text.Replace(".", ","));
 
-            var clasters = kAverageMethod.McKinna(d, (int)IterationsNumericUpDown.Value);
 
-            VisualizationOFClasterization.GetMatrixOfScatterDiagrams(KlasterizationtableLayoutPanel, clasters);
+            if (BollaHollaRadioButton.Checked)
+                clasters = kAverageMethod.BollaHolla(d, (int)IterationsNumericUpDown.Value);
+            else if (McKinnaRadioButton.Checked)
+                clasters = kAverageMethod.McKinna(d, (int)IterationsNumericUpDown.Value);
+            else if (AglomerativeRadioButton.Checked)
+            {
+                AgglomerativeMethodOfClastering agglomerativeMethod = new AgglomerativeMethodOfClastering();
+                clasterDistance.SetPointMetrics(d);
+                clasters = agglomerativeMethod.Clasterize(NDimStat, k, clasterDistance);
+            }
+
+             VisualizationOFClasterization.GetMatrixOfScatterDiagrams(KlasterizationtableLayoutPanel, clasters);
         }
 
         Func<double[], double[], double> d;
         IClasterMetrics clasterDistance;
+        IKFirstPointsSelector kFirstPointsSelector = new FirstKPointsSelector();
 
         private void ParseParametrsOfClasteriation()
         {
@@ -2331,10 +2343,23 @@ namespace Chart1._1
             }
 
             #endregion
-            
-            //if(NearestNeighbourradioButton.Checked)
 
-
+            #region Парсинг межкластерного расстояния
+            if (NearestNeighbourradioButton.Checked)
+                clasterDistance = new NearestNeighbor();
+            else if (FarestNeighbourradioButton.Checked)
+                clasterDistance = new FarestNeighbor();
+            else if (WeightedAverageradioButton.Checked)
+                clasterDistance = new WeightedAverage();
+            else if (NotWeightedAverageradioButton.Checked)
+                clasterDistance = new NotWeightedAverage();
+            else if (MedianradioButton.Checked)
+                clasterDistance = new Median();
+            else if (CentroidradioButton.Checked)
+                clasterDistance = new Centroid();
+            else if (UordaradioButton.Checked)
+                clasterDistance = new Uord();
+            #endregion
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
