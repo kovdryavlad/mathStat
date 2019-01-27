@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
 {
-    class WeightedAverage:ClasterMetricsBase
+    class NotWeightedAverage : ClasterMetricsBase
     {
+        public NotWeightedAverage()
+        {
+            SetLansaWiliamsParams(0.5, 0.5, 0, 0);
+        }
         public override double GetClasterDistance(List<double[]> S1, List<double[]> S2)
         {
             double dSum = 0;
@@ -19,19 +23,7 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
                 for (int j = 0; j < N2; j++)
                     dSum += d(S1[i], S2[j]);
 
-            return dSum / (N1 * N2);
-        }
-
-        public override double LansaWilliamsDistance(Claster Sl, Claster Sh, Claster Sm)
-        {
-            int Nl = Sl.Points.Count;
-            int Nh = Sh.Points.Count;
-            
-            double den = Nl + Nh;
-
-            SetLansaWiliamsParams(Nl / den, Nh / den,0,0);
-
-            return LansaWilliamsDistance(Sl,Sh,Sm);
+            return dSum / (4);
         }
     }
 }

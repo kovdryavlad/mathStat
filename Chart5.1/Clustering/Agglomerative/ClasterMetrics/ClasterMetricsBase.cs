@@ -10,15 +10,6 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
 {
     public abstract class ClasterMetricsBase : IClasterMetrics
     {
-        LansaWilliamsaParamsType lwParams;
-        public LansaWilliamsaParamsType LansaWilliamsaParamsType 
-        {
-            get => lwParams;
-            protected set {
-                lwParams = value;
-            }
-        }
-
         protected Func<double[], double[], double> d;
         protected LansaWilliamsaObject lansaWilliamsaObject = new LansaWilliamsaObject();
 
@@ -32,33 +23,9 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
             return lansaWilliamsaObject.Distance(Sl, Sh, Sm);
         }
 
-        //public virtual double LansaWilliamsDistance(Claster Sl, Claster Sh, Claster Sm, double Nl, double Nh)
-        //{
-        //    CheckingOnLansaWilliamsaParamsType(LansaWilliamsaParamsType.SpecialType2);
-        //
-        //    return 0;
-        //}
-        //
-        //public virtual double LansaWilliamsDistance(Claster Sl, Claster Sh, Claster Sm, double Nl, double Nh, double Nm)
-        //{
-        //    CheckingOnLansaWilliamsaParamsType(LansaWilliamsaParamsType.SpecialType3);
-        //
-        //    return 0;
-        //}
-
         //проброс параметров
-        protected void SetLansaWiliamsParams(double alpha_l, double alpha_h, double beta, double gama)
-        {
-            lwParams = LansaWilliamsaParamsType.CommonType;
-            lansaWilliamsaObject.SetParams(alpha_l, alpha_h, beta, gama);
-        }
-
-        protected void CheckingOnLansaWilliamsaParamsType(LansaWilliamsaParamsType ParamsNededInMethodType)
-        {
-            if (lwParams!=ParamsNededInMethodType)
-                throw new Exception("This is incorrect method for this metrics");
-
-        }
+        protected void SetLansaWiliamsParams(double alpha_l, double alpha_h, double beta, double gama)=> lansaWilliamsaObject.SetParams(alpha_l, alpha_h, beta, gama);
+        
 
         protected double[] PrecessClasterByDimentions(List<double[]> claster, Func<STAT, double> geterResultValueFunc, Action<STAT> provessAction)
         {

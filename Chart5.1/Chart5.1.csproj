@@ -70,10 +70,14 @@
     <Compile Include="Anomalii.cs" />
     <Compile Include="ChildrensOfEventArgs.cs" />
     <Compile Include="Clustering\Agglomerative\AgglomerativeMethodOfClastering.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\Centroid.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\ClasterMetricsBase.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\FarestNeighbor.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\IClasterMetrics.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\Median.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\NearestNeighbor.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\NotWeightedAverage.cs" />
+    <Compile Include="Clustering\Agglomerative\ClasterMetrics\Uord.cs" />
     <Compile Include="Clustering\Agglomerative\ClasterMetrics\WeightedAverage.cs" />
     <Compile Include="Clustering\Agglomerative\LansaWilliamsaObject.cs" />
     <Compile Include="Clustering\Assessments.cs" />

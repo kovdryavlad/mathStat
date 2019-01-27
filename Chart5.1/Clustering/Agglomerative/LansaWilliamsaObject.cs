@@ -28,10 +28,4 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
 
         public double Distance(Claster Sl, Claster Sh, Claster Sm) => Distance(Sl.Points, Sh.Points, Sm.Points);
     }
-
-    public enum LansaWilliamsaParamsType {
-        CommonType,
-        SpecialType2,
-        SpecialType3
-    }
 }
