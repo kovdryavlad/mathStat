@@ -9,7 +9,7 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
     public class LansaWilliamsaObject
     {
         double alpha_l, alpha_h, beta, gama;
-        Func<Claster, Claster, double> D;
+        Func<List<double[]>, List<double[]>, double> D;
 
         public void SetParams(double alpha_l, double alpha_h, double beta, double gama)
         {
@@ -19,12 +19,14 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
             this.gama = gama;
         }
 
-        public void SetDistanceDelegat(Func<Claster, Claster, double> D) => this.D = D;
+        public void SetDistanceDelegat(Func<List<double[]>, List<double[]>, double> D) => this.D = D;
 
-        public double Distance(Claster Sl, Claster Sh, Claster Sm)
+        public double Distance(List<double[]> Sl, List<double[]> Sh, List<double[]> Sm)
         {
             return alpha_l * D(Sl, Sm) + alpha_h * D(Sh, Sm) + beta * D(Sl, Sh) + gama * (D(Sl, Sm) - D(Sh, Sm)).Abs();
         }
+
+        public double Distance(Claster Sl, Claster Sh, Claster Sm) => Distance(Sl.Points, Sh.Points, Sm.Points);
     }
 
     public enum LansaWilliamsaParamsType {

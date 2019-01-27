@@ -16,13 +16,28 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
         protected Func<double[], double[], double> d;
         protected LansaWilliamsaObject lansaWilliamsaObject = new LansaWilliamsaObject();
 
-        public abstract double GetClasterDistance(Claster S1, Claster S2);
+        public abstract double GetClasterDistance(List<double[]> S1, List<double[]> S2);
+        public double GetClasterDistance(Claster S1, Claster S2)=> GetClasterDistance(S1.Points, S2.Points);
 
         public void SetPointMetrics(Func<double[], double[], double> d) => this.d = d;
 
         public double LansaWilliamsDistance(Claster Sl, Claster Sh, Claster Sm)
         {
             return lansaWilliamsaObject.Distance(Sl, Sh, Sm);
+        }
+
+        public virtual double LansaWilliamsDistance(Claster Sl, Claster Sh, Claster Sm, double Nl, double Nh)
+        {
+            CheckingOnLansaWilliamsaParamsType(LansaWilliamsaParamsType.SpecialType2);
+
+            return 0;
+        }
+
+        public virtual double LansaWilliamsDistance(Claster Sl, Claster Sh, Claster Sm, double Nl, double Nh, double Nm)
+        {
+            CheckingOnLansaWilliamsaParamsType(LansaWilliamsaParamsType.SpecialType3);
+
+            return 0;
         }
 
         //проброс параметров
