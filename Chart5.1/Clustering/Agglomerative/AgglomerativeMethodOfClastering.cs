@@ -12,6 +12,8 @@ namespace Chart5._1.Clustering.Agglomerative
     {
         public Claster[] Clasterize(STATND statNd, int needClasterCount, IClasterMetrics D)
         {
+
+
             List<Claster> clasters = formClasterForEachPoint(statNd);
 
             Matrix distances = CalcMatrixOfDistances(clasters, D);
@@ -32,10 +34,15 @@ namespace Chart5._1.Clustering.Agglomerative
                     distances[h, m] = D.LansaWilliamsDistance(clasters[l], clasters[h], clasters[m]);
 
                 //go by column
-                for (int m = h+1; m < distances.Rows; m++)
-                    distances[m, h] = D.LansaWilliamsDistance(clasters[l], clasters[h], clasters[m]);
-                
+                for (int m = h + 1; m < distances.Rows; m++)
+                {
+                    int mReal = m >= l ? m + 1 : m; //in array of clasters
+                    distances[m, h] = D.LansaWilliamsDistance(clasters[l], clasters[h], clasters[mReal]);
+                }
+
+                //it is here, cause we need in Sl, Sh, Sm for Lansa Williamsa
                 clasters.RemoveAt(l);
+
             }
 
             return clasters.ToArray();
@@ -60,11 +67,11 @@ namespace Chart5._1.Clustering.Agglomerative
             int n = clasters.Count;
             double[][] distances = ArrayMatrix.GetJaggedArray(n, n);
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < n; i++)
                 for (int j = 0; j < n; j++)
-                    if (j > i) break;
+                    if (j == i) break;  //дальше диагонали не считать
                     else
-                        distances[i][j] = i == j ? 0 : D.GetClasterDistance(clasters[i], clasters[j]);
+                        distances[i][j] = D.GetClasterDistance(clasters[i], clasters[j]);
 
             return new Matrix(distances);
         }
