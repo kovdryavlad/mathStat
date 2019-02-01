@@ -56,6 +56,11 @@ namespace Chart1._1
             System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -65,6 +70,7 @@ namespace Chart1._1
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зчитатиДвовимірнуВибіркуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зчитатиЬагатовимірнуВибіркуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зчитатиЧасовиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.видалитиДійснуВибіркуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
@@ -271,6 +277,8 @@ namespace Chart1._1
             this.button4 = new System.Windows.Forms.Button();
             this.IterationsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.KnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.EpsilonTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -292,8 +300,20 @@ namespace Chart1._1
             this.EvklidWeightedradioButton = new System.Windows.Forms.RadioButton();
             this.EvklidradioButton = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.EpsilonTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.TimeDataTextBox = new System.Windows.Forms.TextBox();
+            this.TimeDataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -337,6 +357,9 @@ namespace Chart1._1
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).BeginInit();
+            this.tabPage16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeDataChart)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -360,7 +383,7 @@ namespace Chart1._1
             series2.Name = "Plotnost";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(582, 321);
+            this.chart1.Size = new System.Drawing.Size(582, 109);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
@@ -397,7 +420,7 @@ namespace Chart1._1
             this.chart2.Series.Add(series5);
             this.chart2.Series.Add(series6);
             this.chart2.Series.Add(series7);
-            this.chart2.Size = new System.Drawing.Size(582, 321);
+            this.chart2.Size = new System.Drawing.Size(582, 109);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart1";
             // 
@@ -415,7 +438,7 @@ namespace Chart1._1
             this.logTextBox.Name = "logTextBox";
             this.logTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.logTextBox.ShortcutsEnabled = false;
-            this.logTextBox.Size = new System.Drawing.Size(218, 158);
+            this.logTextBox.Size = new System.Drawing.Size(218, 0);
             this.logTextBox.TabIndex = 2;
             // 
             // menuStrip1
@@ -445,6 +468,7 @@ namespace Chart1._1
             this.открытьToolStripMenuItem,
             this.зчитатиДвовимірнуВибіркуToolStripMenuItem,
             this.зчитатиЬагатовимірнуВибіркуToolStripMenuItem,
+            this.зчитатиЧасовиToolStripMenuItem,
             this.toolStripSeparator6,
             this.видалитиДійснуВибіркуToolStripMenuItem,
             this.toolStripSeparator9,
@@ -474,6 +498,13 @@ namespace Chart1._1
             this.зчитатиЬагатовимірнуВибіркуToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.зчитатиЬагатовимірнуВибіркуToolStripMenuItem.Text = "Зчитати багатовимірну вибірку";
             this.зчитатиЬагатовимірнуВибіркуToolStripMenuItem.Click += new System.EventHandler(this.зчитатиЬагатовимірнуВибіркуToolStripMenuItem_Click);
+            // 
+            // зчитатиЧасовиToolStripMenuItem
+            // 
+            this.зчитатиЧасовиToolStripMenuItem.Name = "зчитатиЧасовиToolStripMenuItem";
+            this.зчитатиЧасовиToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.зчитатиЧасовиToolStripMenuItem.Text = "Зчитати часовий ряд";
+            this.зчитатиЧасовиToolStripMenuItem.Click += new System.EventHandler(this.зчитатиЧасовиToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
@@ -1522,7 +1553,7 @@ namespace Chart1._1
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1176, 327);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1176, 115);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // statusStrip1
@@ -1530,7 +1561,7 @@ namespace Chart1._1
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.StatusLabelNumberOfElements});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 939);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 727);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1198, 22);
             this.statusStrip1.TabIndex = 6;
@@ -1554,7 +1585,7 @@ namespace Chart1._1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabcontrol.Controls.Add(this.tabPage1);
             this.tabcontrol.Controls.Add(this.tabPage2);
-            this.tabcontrol.Location = new System.Drawing.Point(6, 317);
+            this.tabcontrol.Location = new System.Drawing.Point(6, 105);
             this.tabcontrol.Name = "tabcontrol";
             this.tabcontrol.SelectedIndex = 0;
             this.tabcontrol.Size = new System.Drawing.Size(903, 183);
@@ -1679,11 +1710,12 @@ namespace Chart1._1
             this.DimentionalTabControl.Controls.Add(this.tabPage3);
             this.DimentionalTabControl.Controls.Add(this.tabPage4);
             this.DimentionalTabControl.Controls.Add(this.tabPage7);
+            this.DimentionalTabControl.Controls.Add(this.tabPage16);
             this.DimentionalTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DimentionalTabControl.Location = new System.Drawing.Point(0, 24);
             this.DimentionalTabControl.Name = "DimentionalTabControl";
             this.DimentionalTabControl.SelectedIndex = 0;
-            this.DimentionalTabControl.Size = new System.Drawing.Size(1198, 915);
+            this.DimentionalTabControl.Size = new System.Drawing.Size(1198, 703);
             this.DimentionalTabControl.TabIndex = 8;
             // 
             // tabPage3
@@ -1695,7 +1727,7 @@ namespace Chart1._1
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1190, 889);
+            this.tabPage3.Size = new System.Drawing.Size(1190, 677);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Одновимірні дані";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -1711,7 +1743,7 @@ namespace Chart1._1
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1190, 889);
+            this.tabPage4.Size = new System.Drawing.Size(1190, 677);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Двовимірні дані";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -1719,7 +1751,7 @@ namespace Chart1._1
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(280, 341);
+            this.button1.Location = new System.Drawing.Point(280, 129);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -1730,7 +1762,7 @@ namespace Chart1._1
             // AlphaTextBox
             // 
             this.AlphaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AlphaTextBox.Location = new System.Drawing.Point(211, 342);
+            this.AlphaTextBox.Location = new System.Drawing.Point(211, 130);
             this.AlphaTextBox.Name = "AlphaTextBox";
             this.AlphaTextBox.Size = new System.Drawing.Size(63, 20);
             this.AlphaTextBox.TabIndex = 6;
@@ -1739,7 +1771,7 @@ namespace Chart1._1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 346);
+            this.label1.Location = new System.Drawing.Point(159, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 5;
@@ -1751,7 +1783,7 @@ namespace Chart1._1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(11, 342);
+            this.tabControl1.Location = new System.Drawing.Point(11, 130);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1176, 169);
@@ -1843,8 +1875,8 @@ namespace Chart1._1
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 330F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1176, 330);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1176, 118);
             this.tableLayoutPanel2.TabIndex = 0;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
@@ -1862,7 +1894,7 @@ namespace Chart1._1
             series8.Legend = "Legend1";
             series8.Name = "Series1";
             this.chart3.Series.Add(series8);
-            this.chart3.Size = new System.Drawing.Size(528, 324);
+            this.chart3.Size = new System.Drawing.Size(528, 112);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
             // 
@@ -1931,7 +1963,7 @@ namespace Chart1._1
             this.chart4.Series.Add(series14);
             this.chart4.Series.Add(series15);
             this.chart4.Series.Add(series16);
-            this.chart4.Size = new System.Drawing.Size(530, 324);
+            this.chart4.Size = new System.Drawing.Size(530, 112);
             this.chart4.TabIndex = 1;
             this.chart4.Text = "chart4";
             // 
@@ -1946,7 +1978,7 @@ namespace Chart1._1
             this.ColorScaleLayoutPanel.RowCount = 2;
             this.ColorScaleLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.ColorScaleLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ColorScaleLayoutPanel.Size = new System.Drawing.Size(100, 324);
+            this.ColorScaleLayoutPanel.Size = new System.Drawing.Size(100, 112);
             this.ColorScaleLayoutPanel.TabIndex = 3;
             // 
             // tabPage7
@@ -1955,7 +1987,7 @@ namespace Chart1._1
             this.tabPage7.Controls.Add(this.tableLayoutPanel3);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1190, 889);
+            this.tabPage7.Size = new System.Drawing.Size(1190, 677);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Багатовмірні дані";
             // 
@@ -1972,7 +2004,7 @@ namespace Chart1._1
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.98833F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.01167F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1190, 889);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1190, 677);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tabControl2
@@ -1981,10 +2013,10 @@ namespace Chart1._1
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Controls.Add(this.tabPage9);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 705);
+            this.tabControl2.Location = new System.Drawing.Point(3, 537);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1184, 181);
+            this.tabControl2.Size = new System.Drawing.Size(1184, 137);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage8
@@ -1993,7 +2025,7 @@ namespace Chart1._1
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1176, 155);
+            this.tabPage8.Size = new System.Drawing.Size(1176, 111);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Варіаційний ряд";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2005,7 +2037,7 @@ namespace Chart1._1
             this.VariationalServiceTextBox.Multiline = true;
             this.VariationalServiceTextBox.Name = "VariationalServiceTextBox";
             this.VariationalServiceTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.VariationalServiceTextBox.Size = new System.Drawing.Size(1170, 149);
+            this.VariationalServiceTextBox.Size = new System.Drawing.Size(1170, 105);
             this.VariationalServiceTextBox.TabIndex = 0;
             // 
             // tabPage9
@@ -2014,7 +2046,7 @@ namespace Chart1._1
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1176, 155);
+            this.tabPage9.Size = new System.Drawing.Size(1176, 111);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Журнал";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2026,7 +2058,7 @@ namespace Chart1._1
             this.NdimLogTextBox.Multiline = true;
             this.NdimLogTextBox.Name = "NdimLogTextBox";
             this.NdimLogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.NdimLogTextBox.Size = new System.Drawing.Size(1170, 149);
+            this.NdimLogTextBox.Size = new System.Drawing.Size(1170, 105);
             this.NdimLogTextBox.TabIndex = 0;
             // 
             // tabControl3
@@ -2042,7 +2074,7 @@ namespace Chart1._1
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1184, 696);
+            this.tabControl3.Size = new System.Drawing.Size(1184, 528);
             this.tabControl3.TabIndex = 1;
             this.tabControl3.SelectedIndexChanged += new System.EventHandler(this.tabControl3_SelectedIndexChanged);
             // 
@@ -2052,7 +2084,7 @@ namespace Chart1._1
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1176, 670);
+            this.tabPage10.Size = new System.Drawing.Size(1176, 502);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Матриця діаграм розкиду";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -2068,7 +2100,7 @@ namespace Chart1._1
             this.MatrixOfScatterDiagramsTableLayout.RowCount = 2;
             this.MatrixOfScatterDiagramsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.MatrixOfScatterDiagramsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.MatrixOfScatterDiagramsTableLayout.Size = new System.Drawing.Size(1170, 664);
+            this.MatrixOfScatterDiagramsTableLayout.Size = new System.Drawing.Size(1170, 496);
             this.MatrixOfScatterDiagramsTableLayout.TabIndex = 0;
             // 
             // tabPage11
@@ -2077,7 +2109,7 @@ namespace Chart1._1
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1176, 670);
+            this.tabPage11.Size = new System.Drawing.Size(1176, 502);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Паралельні координати";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -2089,7 +2121,7 @@ namespace Chart1._1
             this.ParallelCoordsChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ParallelCoordsChart.Location = new System.Drawing.Point(3, 3);
             this.ParallelCoordsChart.Name = "ParallelCoordsChart";
-            this.ParallelCoordsChart.Size = new System.Drawing.Size(1170, 664);
+            this.ParallelCoordsChart.Size = new System.Drawing.Size(1170, 496);
             this.ParallelCoordsChart.TabIndex = 0;
             this.ParallelCoordsChart.Text = "chart5";
             // 
@@ -2098,7 +2130,7 @@ namespace Chart1._1
             this.tabPage12.Controls.Add(this.BoubleChart);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(1176, 670);
+            this.tabPage12.Size = new System.Drawing.Size(1176, 502);
             this.tabPage12.TabIndex = 2;
             this.tabPage12.Text = "Бульбашкова діаграма";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -2117,7 +2149,7 @@ namespace Chart1._1
             series17.Name = "Series1";
             series17.YValuesPerPoint = 2;
             this.BoubleChart.Series.Add(series17);
-            this.BoubleChart.Size = new System.Drawing.Size(1176, 670);
+            this.BoubleChart.Size = new System.Drawing.Size(1176, 502);
             this.BoubleChart.TabIndex = 0;
             this.BoubleChart.Text = "chart5";
             // 
@@ -2126,7 +2158,7 @@ namespace Chart1._1
             this.tabPage13.Controls.Add(this.DiagnosticDiagramChart);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1176, 670);
+            this.tabPage13.Size = new System.Drawing.Size(1176, 502);
             this.tabPage13.TabIndex = 3;
             this.tabPage13.Text = "Діагностична діаграма";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -2142,7 +2174,7 @@ namespace Chart1._1
             series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series18.Name = "Series1";
             this.DiagnosticDiagramChart.Series.Add(series18);
-            this.DiagnosticDiagramChart.Size = new System.Drawing.Size(1176, 670);
+            this.DiagnosticDiagramChart.Size = new System.Drawing.Size(1176, 502);
             this.DiagnosticDiagramChart.TabIndex = 1;
             this.DiagnosticDiagramChart.Text = "chart5";
             // 
@@ -2156,7 +2188,7 @@ namespace Chart1._1
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(1176, 670);
+            this.tabPage14.Size = new System.Drawing.Size(1176, 502);
             this.tabPage14.TabIndex = 4;
             this.tabPage14.Text = "МГК";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -2235,7 +2267,7 @@ namespace Chart1._1
             this.tabPage15.Controls.Add(this.groupBox1);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(1176, 670);
+            this.tabPage15.Size = new System.Drawing.Size(1176, 502);
             this.tabPage15.TabIndex = 5;
             this.tabPage15.Text = "Кластеризація";
             // 
@@ -2296,7 +2328,7 @@ namespace Chart1._1
             this.KlasterizationtableLayoutPanel.RowCount = 2;
             this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.KlasterizationtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KlasterizationtableLayoutPanel.Size = new System.Drawing.Size(905, 666);
+            this.KlasterizationtableLayoutPanel.Size = new System.Drawing.Size(905, 498);
             this.KlasterizationtableLayoutPanel.TabIndex = 6;
             // 
             // button4
@@ -2337,6 +2369,23 @@ namespace Chart1._1
             0,
             0,
             0});
+            // 
+            // EpsilonTextBox
+            // 
+            this.EpsilonTextBox.Location = new System.Drawing.Point(71, 536);
+            this.EpsilonTextBox.Name = "EpsilonTextBox";
+            this.EpsilonTextBox.Size = new System.Drawing.Size(98, 20);
+            this.EpsilonTextBox.TabIndex = 3;
+            this.EpsilonTextBox.Text = "0.000001";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 539);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Epsilon =";
             // 
             // label4
             // 
@@ -2574,28 +2623,180 @@ namespace Chart1._1
             this.label6.TabIndex = 2;
             this.label6.Text = "m =";
             // 
-            // label7
+            // tabPage16
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 539);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Epsilon =";
+            this.tabPage16.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage16.Controls.Add(this.button14);
+            this.tabPage16.Controls.Add(this.button13);
+            this.tabPage16.Controls.Add(this.button11);
+            this.tabPage16.Controls.Add(this.button12);
+            this.tabPage16.Controls.Add(this.button10);
+            this.tabPage16.Controls.Add(this.button9);
+            this.tabPage16.Controls.Add(this.button7);
+            this.tabPage16.Controls.Add(this.button8);
+            this.tabPage16.Controls.Add(this.numericUpDown1);
+            this.tabPage16.Controls.Add(this.button6);
+            this.tabPage16.Controls.Add(this.button5);
+            this.tabPage16.Controls.Add(this.TimeDataTextBox);
+            this.tabPage16.Controls.Add(this.TimeDataChart);
+            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Size = new System.Drawing.Size(1190, 677);
+            this.tabPage16.TabIndex = 3;
+            this.tabPage16.Text = "Часові ряди";
             // 
-            // EpsilonTextBox
+            // button13
             // 
-            this.EpsilonTextBox.Location = new System.Drawing.Point(71, 536);
-            this.EpsilonTextBox.Name = "EpsilonTextBox";
-            this.EpsilonTextBox.Size = new System.Drawing.Size(98, 20);
-            this.EpsilonTextBox.TabIndex = 3;
-            this.EpsilonTextBox.Text = "0.000001";
+            this.button13.Location = new System.Drawing.Point(1107, 109);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 9;
+            this.button13.Text = "DMA2";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(1026, 109);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 9;
+            this.button11.Text = "EMA2";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(1107, 80);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 9;
+            this.button12.Text = "DMA1";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(1026, 80);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "EMA1";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(945, 109);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "WMA";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(945, 80);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "SMA";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(923, 216);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(259, 23);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "Вилучити лінійний тренд";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(923, 43);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(108, 20);
+            this.numericUpDown1.TabIndex = 3;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1067, 14);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(120, 23);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Автокореляція";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(919, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(139, 23);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Автоковаріація";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // TimeDataTextBox
+            // 
+            this.TimeDataTextBox.Location = new System.Drawing.Point(923, 287);
+            this.TimeDataTextBox.Multiline = true;
+            this.TimeDataTextBox.Name = "TimeDataTextBox";
+            this.TimeDataTextBox.Size = new System.Drawing.Size(259, 375);
+            this.TimeDataTextBox.TabIndex = 1;
+            // 
+            // TimeDataChart
+            // 
+            chartArea8.Name = "ChartArea1";
+            this.TimeDataChart.ChartAreas.Add(chartArea8);
+            legend3.Name = "Legend1";
+            this.TimeDataChart.Legends.Add(legend3);
+            this.TimeDataChart.Location = new System.Drawing.Point(8, 14);
+            this.TimeDataChart.Name = "TimeDataChart";
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series19.Legend = "Legend1";
+            series19.Name = "Ряд";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series20.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            series20.Legend = "Legend1";
+            series20.Name = " Ряд";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series21.Color = System.Drawing.Color.Red;
+            series21.Legend = "Legend1";
+            series21.Name = "Тренд";
+            this.TimeDataChart.Series.Add(series19);
+            this.TimeDataChart.Series.Add(series20);
+            this.TimeDataChart.Series.Add(series21);
+            this.TimeDataChart.Size = new System.Drawing.Size(895, 636);
+            this.TimeDataChart.TabIndex = 0;
+            this.TimeDataChart.Text = "chart5";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(923, 246);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(108, 23);
+            this.button14.TabIndex = 10;
+            this.button14.Text = "Реконструкція";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // MyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 961);
+            this.ClientSize = new System.Drawing.Size(1198, 749);
             this.Controls.Add(this.DimentionalTabControl);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -2660,6 +2861,10 @@ namespace Chart1._1
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).EndInit();
+            this.tabPage16.ResumeLayout(false);
+            this.tabPage16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeDataChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2905,6 +3110,21 @@ namespace Chart1._1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox EpsilonTextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolStripMenuItem зчитатиЧасовиToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox TimeDataTextBox;
+        private Chart TimeDataChart;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button14;
     }
 }
 
