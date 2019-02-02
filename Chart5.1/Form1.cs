@@ -16,6 +16,7 @@ using Stat2;
 using Chart5._1.KAverage;
 using Chart5._1.Clustering.Agglomerative.ClasterMetrics;
 using Chart5._1.Clustering.Agglomerative;
+using Chart5._1.TimeData;
 
 namespace Chart1._1
 {
@@ -2370,6 +2371,64 @@ namespace Chart1._1
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        TimeDataAnalizer timeData = new TimeDataAnalizer(); 
+        private void зчитатиЧасовиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DimentionalTabControl.SelectedIndex = 3;
+            timeData.Read();
+
+            timeData.ouyputOnChart(TimeDataChart);
+        }
+
+        int n_ForTimeData = 5;
+        double alpha_ForTimeData = 0.33;
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            timeData.SMA(n_ForTimeData);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            timeData.WMA(n_ForTimeData);
+        }
+
+      
+        private void button10_Click(object sender, EventArgs e)
+        {
+            timeData.SmotheEMA_1(n_ForTimeData, alpha_ForTimeData);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            timeData.SmotheEMA_2(n_ForTimeData, alpha_ForTimeData);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            timeData.SmotheDMA_1(n_ForTimeData, alpha_ForTimeData);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            timeData.SmotheDMA_2(n_ForTimeData, alpha_ForTimeData);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            timeData.RemoveTrendByOSM();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            timeData.Reconstruct(13, new[] { 1, 2});
         }
     }
 

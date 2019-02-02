@@ -24,10 +24,10 @@ namespace Chart5._1.Clustering.Agglomerative.ClasterMetrics
         }
 
         //проброс параметров
-        protected void SetLansaWiliamsParams(double alpha_l, double alpha_h, double beta, double gama)=> lansaWilliamsaObject.SetParams(alpha_l, alpha_h, beta, gama);
+        protected void SetLansaWiliamsParams(double alpha_l, double alpha_h, double beta, double gama) => lansaWilliamsaObject.SetParams(alpha_l, alpha_h, beta, gama);
         
 
-        protected double[] PrecessClasterByDimentions(List<double[]> claster, Func<STAT, double> geterResultValueFunc, Action<STAT> provessAction)
+        protected double[] PrecessClasterByDimentions(List<double[]> claster, Func<STAT, double> geterResultValueFunc, Action<STAT> provessAction = null)
         {
             int n = claster[0].Length;
             int N = claster.Count;
