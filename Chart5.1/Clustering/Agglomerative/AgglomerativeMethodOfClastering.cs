@@ -12,8 +12,6 @@ namespace Chart5._1.Clustering.Agglomerative
     {
         public Claster[] Clasterize(STATND statNd, int needClasterCount, IClasterMetrics D)
         {
-
-
             List<Claster> clasters = formClasterForEachPoint(statNd);
 
             Matrix distances = CalcMatrixOfDistances(clasters, D);
