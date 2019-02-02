@@ -301,6 +301,9 @@ namespace Chart1._1
             this.EvklidradioButton = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.TauNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -308,12 +311,10 @@ namespace Chart1._1
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.TimeDataTextBox = new System.Windows.Forms.TextBox();
             this.TimeDataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -358,7 +359,7 @@ namespace Chart1._1
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).BeginInit();
             this.tabPage16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TauNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeDataChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -2626,6 +2627,8 @@ namespace Chart1._1
             // tabPage16
             // 
             this.tabPage16.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage16.Controls.Add(this.TauNumericUpDown);
+            this.tabPage16.Controls.Add(this.label8);
             this.tabPage16.Controls.Add(this.button14);
             this.tabPage16.Controls.Add(this.button13);
             this.tabPage16.Controls.Add(this.button11);
@@ -2634,7 +2637,6 @@ namespace Chart1._1
             this.tabPage16.Controls.Add(this.button9);
             this.tabPage16.Controls.Add(this.button7);
             this.tabPage16.Controls.Add(this.button8);
-            this.tabPage16.Controls.Add(this.numericUpDown1);
             this.tabPage16.Controls.Add(this.button6);
             this.tabPage16.Controls.Add(this.button5);
             this.tabPage16.Controls.Add(this.TimeDataTextBox);
@@ -2645,9 +2647,40 @@ namespace Chart1._1
             this.tabPage16.TabIndex = 3;
             this.tabPage16.Text = "Часові ряди";
             // 
+            // TauNumericUpDown
+            // 
+            this.TauNumericUpDown.Location = new System.Drawing.Point(1123, 11);
+            this.TauNumericUpDown.Name = "TauNumericUpDown";
+            this.TauNumericUpDown.Size = new System.Drawing.Size(62, 20);
+            this.TauNumericUpDown.TabIndex = 3;
+            this.TauNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1090, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "tau = ";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(923, 179);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(108, 23);
+            this.button14.TabIndex = 10;
+            this.button14.Text = "Реконструкція";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(1107, 109);
+            this.button13.Location = new System.Drawing.Point(1093, 109);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(75, 23);
             this.button13.TabIndex = 9;
@@ -2657,7 +2690,7 @@ namespace Chart1._1
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(1026, 109);
+            this.button11.Location = new System.Drawing.Point(1012, 109);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 9;
@@ -2667,7 +2700,7 @@ namespace Chart1._1
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(1107, 80);
+            this.button12.Location = new System.Drawing.Point(1093, 80);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 23);
             this.button12.TabIndex = 9;
@@ -2677,7 +2710,7 @@ namespace Chart1._1
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(1026, 80);
+            this.button10.Location = new System.Drawing.Point(1012, 80);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 9;
@@ -2687,7 +2720,7 @@ namespace Chart1._1
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(945, 109);
+            this.button9.Location = new System.Drawing.Point(931, 109);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 8;
@@ -2697,7 +2730,7 @@ namespace Chart1._1
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(945, 80);
+            this.button7.Location = new System.Drawing.Point(931, 80);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 7;
@@ -2707,50 +2740,40 @@ namespace Chart1._1
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(923, 216);
+            this.button8.Location = new System.Drawing.Point(923, 149);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(259, 23);
+            this.button8.Size = new System.Drawing.Size(264, 23);
             this.button8.TabIndex = 6;
             this.button8.Text = "Вилучити лінійний тренд";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(923, 43);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(108, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1067, 14);
+            this.button6.Location = new System.Drawing.Point(1067, 40);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(120, 23);
             this.button6.TabIndex = 2;
             this.button6.Text = "Автокореляція";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(919, 14);
+            this.button5.Location = new System.Drawing.Point(919, 40);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(139, 23);
             this.button5.TabIndex = 2;
             this.button5.Text = "Автоковаріація";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // TimeDataTextBox
             // 
-            this.TimeDataTextBox.Location = new System.Drawing.Point(923, 287);
+            this.TimeDataTextBox.Location = new System.Drawing.Point(923, 218);
             this.TimeDataTextBox.Multiline = true;
             this.TimeDataTextBox.Name = "TimeDataTextBox";
-            this.TimeDataTextBox.Size = new System.Drawing.Size(259, 375);
+            this.TimeDataTextBox.Size = new System.Drawing.Size(259, 444);
             this.TimeDataTextBox.TabIndex = 1;
             // 
             // TimeDataChart
@@ -2781,16 +2804,6 @@ namespace Chart1._1
             this.TimeDataChart.Size = new System.Drawing.Size(895, 636);
             this.TimeDataChart.TabIndex = 0;
             this.TimeDataChart.Text = "chart5";
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(923, 246);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(108, 23);
-            this.button14.TabIndex = 10;
-            this.button14.Text = "Реконструкція";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // MyForm
             // 
@@ -2863,7 +2876,7 @@ namespace Chart1._1
             ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TauNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeDataChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -3117,7 +3130,7 @@ namespace Chart1._1
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown TauNumericUpDown;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox TimeDataTextBox;
@@ -3125,6 +3138,7 @@ namespace Chart1._1
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Label label8;
     }
 }
 

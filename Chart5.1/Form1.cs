@@ -2381,10 +2381,12 @@ namespace Chart1._1
         TimeDataAnalizer timeData = new TimeDataAnalizer(); 
         private void зчитатиЧасовиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TimeDataTextBox.Text = string.Empty;
+
             DimentionalTabControl.SelectedIndex = 3;
             timeData.Read();
 
-            timeData.ouyputOnChart(TimeDataChart);
+            timeData.ouyputOnChart(TimeDataChart, TimeDataTextBox);
         }
 
         int n_ForTimeData = 5;
@@ -2429,6 +2431,16 @@ namespace Chart1._1
         private void button14_Click(object sender, EventArgs e)
         {
             timeData.Reconstruct(13, new[] { 1, 2});
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            timeData.AvtoCovatation((int)TauNumericUpDown.Value);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            timeData.AvtoCorelation((int)TauNumericUpDown.Value);
         }
     }
 

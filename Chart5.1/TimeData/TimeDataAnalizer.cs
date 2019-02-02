@@ -19,43 +19,68 @@ namespace Chart5._1.TimeData
                 m_stat.Setd(ofd.FileName);
             }
         }
-
-
+        
         Chart m_chart;
-        internal void ouyputOnChart(Chart chart)
+        TextBox m_textBox;
+        internal void ouyputOnChart(Chart chart, TextBox textBox)
         {
+            m_textBox = textBox;
             m_chart = chart;
             RefreshChart();
+
+            OutMainParams();
         }
 
-        public Func<int, double> AvtoCovatation_New()
+        public void OutMainParams() {
+
+            add2log("Середнє арифметичне:" + m_stat.Expectation.Round(4));
+            add2log("Сер. Кв. Відхилення:" + m_stat.Sigma.Round(4));
+
+        }
+
+        void add2log(string message) => m_textBox.Text += message + Environment.NewLine;
+
+        private void RefreshChart()
+        {
+            m_chart.Series[0].Points.Clear();
+            m_chart.Series[1].Points.Clear();
+
+
+            var data = m_stat.d;
+
+            m_chart.Series[0].Points.DataBindXY(Enumerable.Range(1, data.Length).ToArray(), data);
+            m_chart.Series[1].Points.DataBindXY(Enumerable.Range(1, data.Length).ToArray(), data);
+
+            //chart Design
+            m_chart.ChartAreas[0].AxisY.Minimum = data.Min();
+            m_chart.ChartAreas[0].AxisY.Maximum = data.Max();
+
+        }
+
+        public double AvtoCovatation(int t)
         {
             var data = m_stat.d;
 
-            return (t) =>
-            {
-                int N = data.Length;
-                double m = m_stat.Expectation;
-                double sum = 0;
+            int N = data.Length;
+            double m = m_stat.Expectation;
+            double sum = 0;
 
-                for (int i = 0; i < N - t; i++)
-                    sum += (data[i] - m) * (data[i + t] - m);
+            for (int i = 0; i < N - t; i++)
+                sum += (data[i] - m) * (data[i + t] - m);
 
-                return sum / (N - t);
+            var res = sum / (N - t);
+            add2log(String.Format("AvtoCovariation({0}): {1}",t,  res.Round(4)));
 
-            };
+            return res;
         }
 
-        public Func<int, double> AvtoCorelation_New()
-        {
-            return (t) =>
-            {
-                var y = AvtoCovatation_New();
-                return y(t) / y(0);
+        public double AvtoCorelation(int t) {
+            var res = AvtoCovatation(t) / AvtoCovatation(0);
 
-            };
+            add2log(String.Format("AvtoCorrelation({0}): {1}", t, res.Round(4)));
+            return res;
         }
-
+        
         internal void SMA(int n)
         {
             var d = m_stat.d;
@@ -83,24 +108,7 @@ namespace Chart5._1.TimeData
             
             RefreshChart();
         }
-
-        private void RefreshChart()
-        {
-            m_chart.Series[0].Points.Clear();
-            m_chart.Series[1].Points.Clear();
-
-
-            var data = m_stat.d;
-
-           m_chart.Series[0].Points.DataBindXY(Enumerable.Range(1, data.Length).ToArray(), data);
-           m_chart.Series[1].Points.DataBindXY(Enumerable.Range(1, data.Length).ToArray(), data);
-
-            //chart Design
-            m_chart.ChartAreas[0].AxisY.Minimum = data.Min();
-            m_chart.ChartAreas[0].AxisY.Maximum = data.Max();
-
-        }
-
+        
         internal void WMA(int n)
         {
             int N = m_stat.d.Length;
