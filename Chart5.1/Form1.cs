@@ -2383,6 +2383,11 @@ namespace Chart1._1
         TimeDataAnalizer timeData = new TimeDataAnalizer(); 
         private void зчитатиЧасовиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ////////
+            TimeDataChart.ChartAreas[0].AxisY.LabelStyle.Format = "{0:0.00}";
+            TimeDataChart.ChartAreas[0].AxisY.LabelStyle.Format = "{0:0.00}";
+            ////////
+
             TimeDataTextBox.Text = string.Empty;
 
             DimentionalTabControl.SelectedIndex = 3;

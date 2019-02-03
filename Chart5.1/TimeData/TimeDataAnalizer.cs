@@ -36,7 +36,7 @@ namespace Chart5._1.TimeData
 
         public void OutMainParams() {
 
-            add2log("Середнє арифметичне:" + m_stat.Expectation.Round(4));
+            add2log("Мат. сподівання:" + m_stat.Expectation.Round(4));
             add2log("Сер. Кв. Відхилення:" + m_stat.Sigma.Round(4));
 
         }
