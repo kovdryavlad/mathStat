@@ -17,6 +17,7 @@ using Chart5._1.KAverage;
 using Chart5._1.Clustering.Agglomerative.ClasterMetrics;
 using Chart5._1.Clustering.Agglomerative;
 using Chart5._1.TimeData;
+using Chart5._1.Clustering;
 
 namespace Chart1._1
 {
@@ -2263,7 +2264,9 @@ namespace Chart1._1
 
         private void рФАToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NDimStat.doRFA(0.0000001);
+            var res = NDimStat.doRFA(0.0000001);
+
+            NdimLogTextBox.Text += Environment.NewLine+"Матриця факторних навантажень:" + Environment.NewLine + res + Environment.NewLine;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -2279,13 +2282,12 @@ namespace Chart1._1
                 AddViborka("Back Transition Stat MGK#" + i, backTransiotionStats[i]);
             }
         }
-
+        Claster[] clasters = null;
         private void button4_Click(object sender, EventArgs e)
         {
             ParseParametrsOfClasteriation();
 
             int k = (int)KnumericUpDown.Value;
-            Claster[] clasters = null;
             KAverageMethod kAverageMethod = new KAverageMethod(NDimStat, k, kFirstPointsSelector);
             kAverageMethod.Epsilon = Convert.ToDouble(EpsilonTextBox.Text.Replace(".", ","));
 
@@ -2386,7 +2388,7 @@ namespace Chart1._1
             DimentionalTabControl.SelectedIndex = 3;
             timeData.Read();
 
-            timeData.ouyputOnChart(TimeDataChart, TimeDataTextBox);
+            timeData.ouyputOnChart(TimeDataChart, TimeDataTextBox,StatusLabelNumberOfElements);
         }
 
         int n_ForTimeData = 5;
@@ -2394,32 +2396,38 @@ namespace Chart1._1
 
         private void button7_Click(object sender, EventArgs e)
         {
+            n_ForTimeData = (int)nTimeDataNumeric.Value;
             timeData.SMA(n_ForTimeData);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            n_ForTimeData = (int)nTimeDataNumeric.Value;
             timeData.WMA(n_ForTimeData);
         }
 
       
         private void button10_Click(object sender, EventArgs e)
         {
+            n_ForTimeData = (int)nTimeDataNumeric.Value;
             timeData.SmotheEMA_1(n_ForTimeData, alpha_ForTimeData);
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            n_ForTimeData = (int)nTimeDataNumeric.Value;
             timeData.SmotheEMA_2(n_ForTimeData, alpha_ForTimeData);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            n_ForTimeData = (int)nTimeDataNumeric.Value;
             timeData.SmotheDMA_1(n_ForTimeData, alpha_ForTimeData);
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
+            n_ForTimeData = (int)nTimeDataNumeric.Value;
             timeData.SmotheDMA_2(n_ForTimeData, alpha_ForTimeData);
         }
 
@@ -2430,17 +2438,111 @@ namespace Chart1._1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            timeData.Reconstruct(13, new[] { 1, 2});
+            int m = (int)MnumericUpDownTimeData.Value;
+            int[] indexes = IndexesTextBox.Text.Split(new[] { ' ', ';',',' }, StringSplitOptions.RemoveEmptyEntries).Select(el=>Convert.ToInt32(el)).ToArray();
+
+            //timeData.Reconstruct(13, new[] { 1, 2});
+            timeData.Reconstruct(m, indexes);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            timeData.AvtoCovatation((int)TauNumericUpDown.Value);
+            var nl = Environment.NewLine;
+            int tau = (int)TauNumericUpDown.Value;
+            var res = timeData.AvtoCovatation(tau);
+
+            TimeDataTextBox.Text += String.Format("{2}AutoCovatiation({0}): {1}{2}", tau, res.Round(4), nl);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            timeData.AvtoCorelation((int)TauNumericUpDown.Value);
+            var nl = Environment.NewLine;
+            int tau = (int)TauNumericUpDown.Value;
+            var res = timeData.AvtoCorelation((tau));
+
+            TimeDataTextBox.Text += String.Format("{2}AutoCorrelation({0}): {1}{2}", tau, res.Round(4), nl);
+        }
+
+        Assessments assestments = new Assessments();
+
+        private void сумаВнутрішньокластернихДисперсійToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var n = Environment.NewLine;
+            NdimLogTextBox.Text += n + "Cума внутрішньокластерних дисперсій: " + assestments.SumOfTheInternalDispersions(clasters, d).Round(4) + n;
+        }
+
+        private void сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var n = Environment.NewLine;
+            NdimLogTextBox.Text += n + "Cума попарних внутрішньокластерних відстаней: " + assestments.SumOfPairwiseInternalDistances(clasters, d).Round(4) + n;
+        }
+
+        private void загальнаВнутрішньокластернаДисперсіяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var n = Environment.NewLine;
+            NdimLogTextBox.Text += n + "Загальна внутрішньокластерна дисперсія: " + assestments.TotalIntroClusterDispersion(clasters, d).Round(4) + n;
+        }
+
+        private void відношенняФункціоналівToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var n = Environment.NewLine;
+            NdimLogTextBox.Text += n + "Відношення функціонлів: " + assestments.RatiOfFunctionals(clasters, d).Round(4) + n;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            double alpha = Convert.ToDouble(AlphaTrendTextBox.Text.Replace(".", ","));
+            var res = TrendHelper.ExtremalPoint(timeData.m_stat, alpha);
+            string resText = "";
+
+            switch (res) {
+                case TrendHelper.TrendType.Falling: resText = "Спадний тренд"; break;
+                case TrendHelper.TrendType.Growing: resText = "Зростаючий тренд"; break;
+                case TrendHelper.TrendType.Flat: resText = "Тренд відсутній"; break;
+            }
+
+            var n = Environment.NewLine;
+            TimeDataTextBox.Text += n + "Критерій екстремальних точок: " + resText + n;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            double alpha = Convert.ToDouble(AlphaTrendTextBox.Text.Replace(".", ","));
+            var res = TrendHelper.Sign(timeData.m_stat, alpha);
+            string resText = "";
+
+            switch (res)
+            {
+                case TrendHelper.TrendType.Falling: resText = "Спадний тренд"; break;
+                case TrendHelper.TrendType.Growing: resText = "Зростаючий тренд"; break;
+                case TrendHelper.TrendType.Flat: resText = "Тренд відсутній"; break;
+            }
+
+            var n = Environment.NewLine;
+            TimeDataTextBox.Text += n + "Критерій знаків: " + resText + n;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            double alpha = Convert.ToDouble(AlphaTrendTextBox.Text.Replace(".", ","));
+            var res = TrendHelper.Sign(timeData.m_stat, alpha);
+            string resText = "";
+
+            switch (res)
+            {
+                case TrendHelper.TrendType.Falling: resText = "Спадний тренд"; break;
+                case TrendHelper.TrendType.Growing: resText = "Зростаючий тренд"; break;
+                case TrendHelper.TrendType.Flat: resText = "Тренд відсутній"; break;
+            }
+
+            var n = Environment.NewLine;
+            TimeDataTextBox.Text += n + "Критерій аббе: " + resText + n;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            timeData.m_stat.RestoreInputData();
+            timeData.RefreshChart();
         }
     }
 

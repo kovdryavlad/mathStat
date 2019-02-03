@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Chart5._1.Claster">
+    <Position X="3" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAASgAAgAAAAAAIAQAABAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Clustering\Claster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.PointsMetrics">
+    <Position X="5.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAQAAAAAAAABAAAAAAAAAAAAAAAAAAAABgA=</HashCode>
+      <FileName>Clustering\PointsMetrics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.KAverageMethod">
+    <Position X="7.25" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAQAAAIEAAAAAQAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clustering\KAverage\KAverageMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.ClasterMetricsBase">
+    <Position X="8" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QIAACAAAAAAAAAAIAAAAAAAAAAAAAAAEAQAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\ClasterMetricsBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.AgglomerativeMethodOfClastering">
+    <Position X="10.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAhAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\AgglomerativeMethodOfClastering.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.Centroid" Collapsed="true">
+    <Position X="3.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\Centroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.FarestNeighbor" Collapsed="true">
+    <Position X="3.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\FarestNeighbor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.Median" Collapsed="true">
+    <Position X="8.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\Median.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.NearestNeighbor" Collapsed="true">
+    <Position X="3.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\NearestNeighbor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.NotWeightedAverage" Collapsed="true">
+    <Position X="5.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\NotWeightedAverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.Uord" Collapsed="true">
+    <Position X="11" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\Uord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.WeightedAverage" Collapsed="true">
+    <Position X="3.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\WeightedAverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Chart5._1.Clustering.Agglomerative.ClasterMetrics.IClasterMetrics">
+    <Position X="3.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAQAQAAAAAAA=</HashCode>
+      <FileName>Clustering\Agglomerative\ClasterMetrics\IClasterMetrics.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

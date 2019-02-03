@@ -9,7 +9,7 @@ namespace Chart5._1
 {
     public static class RFA
     {
-        public static void Solve(Matrix R, double epsilon)
+        public static Matrix Solve(Matrix R, double epsilon)
         {
             int wMin = getW(R);
 
@@ -97,6 +97,7 @@ namespace Chart5._1
                 fPrev = fCurr;
             }
 
+            return Aprev;
         }
 
         private static double[] FindFVector(Matrix R, int wMin, List<double[]> hCommon)

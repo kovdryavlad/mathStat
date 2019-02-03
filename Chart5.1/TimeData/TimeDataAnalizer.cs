@@ -11,19 +11,22 @@ namespace Chart5._1.TimeData
 {
     class TimeDataAnalizer
     {
-        STAT m_stat = new STAT();
+        public STAT m_stat = new STAT();
 
         public void Read() {
             var ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK) {
                 m_stat.Setd(ofd.FileName);
+                m_stat.CalcMainParams();
             }
         }
         
         Chart m_chart;
         TextBox m_textBox;
-        internal void ouyputOnChart(Chart chart, TextBox textBox)
+        ToolStripStatusLabel m_statusLabel;
+        internal void ouyputOnChart(Chart chart, TextBox textBox, ToolStripStatusLabel l)
         {
+            m_statusLabel = l;
             m_textBox = textBox;
             m_chart = chart;
             RefreshChart();
@@ -40,7 +43,7 @@ namespace Chart5._1.TimeData
 
         void add2log(string message) => m_textBox.Text += message + Environment.NewLine;
 
-        private void RefreshChart()
+        public  void RefreshChart()
         {
             m_chart.Series[0].Points.Clear();
             m_chart.Series[1].Points.Clear();
@@ -55,6 +58,8 @@ namespace Chart5._1.TimeData
             m_chart.ChartAreas[0].AxisY.Minimum = data.Min();
             m_chart.ChartAreas[0].AxisY.Maximum = data.Max();
 
+            //
+            m_statusLabel.Text = m_stat.d.Length.ToString();
         }
 
         public double AvtoCovatation(int t)
@@ -69,15 +74,12 @@ namespace Chart5._1.TimeData
                 sum += (data[i] - m) * (data[i + t] - m);
 
             var res = sum / (N - t);
-            add2log(String.Format("AvtoCovariation({0}): {1}",t,  res.Round(4)));
 
             return res;
         }
 
         public double AvtoCorelation(int t) {
             var res = AvtoCovatation(t) / AvtoCovatation(0);
-
-            add2log(String.Format("AvtoCorrelation({0}): {1}", t, res.Round(4)));
             return res;
         }
         

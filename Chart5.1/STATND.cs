@@ -616,9 +616,9 @@ namespace Chart5._1
             return BackTransiotionStats;
         }
 
-        internal void doRFA(double epsilon)
+        internal Matrix doRFA(double epsilon)
         {
-            RFA.Solve(new Matrix(R), epsilon);
+            return RFA.Solve(new Matrix(R), epsilon);
         }
 
     }

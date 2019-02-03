@@ -60,7 +60,6 @@ namespace Chart1._1
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -102,6 +101,11 @@ namespace Chart1._1
             this.рівномірнийToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ClearReproductRozpodil = new System.Windows.Forms.ToolStripMenuItem();
+            this.критеріїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.колмогоровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пірсонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.автоматичноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регресіяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.перевіркаЗначенняДисперсіїКритеріійБартлеттаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.лінійToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,25 +149,6 @@ namespace Chart1._1
             this.очиститиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.моделюванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.моделюванняToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.критеріїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.колмогоровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пірсонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.автоматичноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuViborki = new System.Windows.Forms.ToolStripMenuItem();
-            this.дляДвохВибірокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.параметриToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.критерійЗнаківToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.незалежніВибіркиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.критерійВілкоксонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дляKВибірокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.критерійБартлетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.перевіркаГіпотезToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.хіквадратToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -208,6 +193,13 @@ namespace Chart1._1
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.мГКToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.рФАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кластериToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuViborki = new System.Windows.Forms.ToolStripMenuItem();
+            this.кластеризаціяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сумаВнутрішньокластернихДисперсійToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.відношенняФункціоналівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -301,6 +293,18 @@ namespace Chart1._1
             this.EvklidradioButton = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.IndexesTextBox = new System.Windows.Forms.TextBox();
+            this.AlphaTrendTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.MnumericUpDownTimeData = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nTimeDataNumeric = new System.Windows.Forms.NumericUpDown();
             this.TauNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
@@ -359,6 +363,8 @@ namespace Chart1._1
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).BeginInit();
             this.tabPage16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDownTimeData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTimeDataNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TauNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeDataChart)).BeginInit();
             this.SuspendLayout();
@@ -449,13 +455,12 @@ namespace Chart1._1
             this.перетворенняToolStripMenuItem,
             this.моделированиеToolStripMenuItem,
             this.выдтворенняРозподілівToolStripMenuItem,
-            this.регресіяToolStripMenuItem,
             this.критеріїToolStripMenuItem,
-            this.MenuViborki,
-            this.дляДвохВибірокToolStripMenuItem,
-            this.дляKВибірокToolStripMenuItem,
+            this.регресіяToolStripMenuItem,
             this.toolStripMenuItem3,
-            this.багатовимірніДаніToolStripMenuItem});
+            this.багатовимірніДаніToolStripMenuItem,
+            this.MenuViborki,
+            this.кластеризаціяToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1198, 24);
@@ -733,6 +738,43 @@ namespace Chart1._1
             this.ClearReproductRozpodil.Size = new System.Drawing.Size(176, 22);
             this.ClearReproductRozpodil.Text = "Очистити";
             this.ClearReproductRozpodil.Click += new System.EventHandler(this.ClearReproductRozpodil_Click);
+            // 
+            // критеріїToolStripMenuItem
+            // 
+            this.критеріїToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.колмогоровToolStripMenuItem,
+            this.пірсонаToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.автоматичноToolStripMenuItem});
+            this.критеріїToolStripMenuItem.Name = "критеріїToolStripMenuItem";
+            this.критеріїToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.критеріїToolStripMenuItem.Text = "Критерії згоди";
+            // 
+            // колмогоровToolStripMenuItem
+            // 
+            this.колмогоровToolStripMenuItem.Name = "колмогоровToolStripMenuItem";
+            this.колмогоровToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.колмогоровToolStripMenuItem.Text = "Колмогоров";
+            this.колмогоровToolStripMenuItem.Click += new System.EventHandler(this.колмогоровToolStripMenuItem_Click);
+            // 
+            // пірсонаToolStripMenuItem
+            // 
+            this.пірсонаToolStripMenuItem.Name = "пірсонаToolStripMenuItem";
+            this.пірсонаToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.пірсонаToolStripMenuItem.Text = "Пірсона";
+            this.пірсонаToolStripMenuItem.Click += new System.EventHandler(this.пірсонаToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(145, 6);
+            // 
+            // автоматичноToolStripMenuItem
+            // 
+            this.автоматичноToolStripMenuItem.Name = "автоматичноToolStripMenuItem";
+            this.автоматичноToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.автоматичноToolStripMenuItem.Text = "Автоматично";
+            this.автоматичноToolStripMenuItem.Click += new System.EventHandler(this.автоматичноToolStripMenuItem_Click);
             // 
             // регресіяToolStripMenuItem
             // 
@@ -1065,149 +1107,6 @@ namespace Chart1._1
             this.моделюванняToolStripMenuItem1.Text = "Моделювання (Параболічна)";
             this.моделюванняToolStripMenuItem1.Click += new System.EventHandler(this.моделюванняToolStripMenuItem1_Click);
             // 
-            // критеріїToolStripMenuItem
-            // 
-            this.критеріїToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.колмогоровToolStripMenuItem,
-            this.пірсонаToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.автоматичноToolStripMenuItem});
-            this.критеріїToolStripMenuItem.Name = "критеріїToolStripMenuItem";
-            this.критеріїToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.критеріїToolStripMenuItem.Text = "Критерії згоди";
-            // 
-            // колмогоровToolStripMenuItem
-            // 
-            this.колмогоровToolStripMenuItem.Name = "колмогоровToolStripMenuItem";
-            this.колмогоровToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.колмогоровToolStripMenuItem.Text = "Колмогоров";
-            this.колмогоровToolStripMenuItem.Click += new System.EventHandler(this.колмогоровToolStripMenuItem_Click);
-            // 
-            // пірсонаToolStripMenuItem
-            // 
-            this.пірсонаToolStripMenuItem.Name = "пірсонаToolStripMenuItem";
-            this.пірсонаToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.пірсонаToolStripMenuItem.Text = "Пірсона";
-            this.пірсонаToolStripMenuItem.Click += new System.EventHandler(this.пірсонаToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(145, 6);
-            // 
-            // автоматичноToolStripMenuItem
-            // 
-            this.автоматичноToolStripMenuItem.Name = "автоматичноToolStripMenuItem";
-            this.автоматичноToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.автоматичноToolStripMenuItem.Text = "Автоматично";
-            this.автоматичноToolStripMenuItem.Click += new System.EventHandler(this.автоматичноToolStripMenuItem_Click);
-            // 
-            // MenuViborki
-            // 
-            this.MenuViborki.Name = "MenuViborki";
-            this.MenuViborki.Size = new System.Drawing.Size(63, 20);
-            this.MenuViborki.Text = "Вибірки";
-            // 
-            // дляДвохВибірокToolStripMenuItem
-            // 
-            this.дляДвохВибірокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.параметриToolStripMenuItem,
-            this.toolStripSeparator8,
-            this.toolStripMenuItem2,
-            this.незалежніВибіркиToolStripMenuItem});
-            this.дляДвохВибірокToolStripMenuItem.Name = "дляДвохВибірокToolStripMenuItem";
-            this.дляДвохВибірокToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
-            this.дляДвохВибірокToolStripMenuItem.Text = "Критерії для двох вибірок";
-            // 
-            // параметриToolStripMenuItem
-            // 
-            this.параметриToolStripMenuItem.Name = "параметриToolStripMenuItem";
-            this.параметриToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.параметриToolStripMenuItem.Text = "Параметри";
-            this.параметриToolStripMenuItem.Click += new System.EventHandler(this.параметриToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(175, 6);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1,
-            this.критерійЗнаківToolStripMenuItem});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(178, 22);
-            this.toolStripMenuItem2.Text = "Залежні вибірки";
-            // 
-            // перевіркаЗбігуСередніхЗалежніToolStripMenuItem1
-            // 
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Name = "перевіркаЗбігуСередніхЗалежніToolStripMenuItem1";
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Size = new System.Drawing.Size(208, 22);
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Text = "Перевірка збігу середніх";
-            this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1.Click += new System.EventHandler(this.перевіркаЗбігуСередніхЗалежніToolStripMenuItem1_Click);
-            // 
-            // критерійЗнаківToolStripMenuItem
-            // 
-            this.критерійЗнаківToolStripMenuItem.Name = "критерійЗнаківToolStripMenuItem";
-            this.критерійЗнаківToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.критерійЗнаківToolStripMenuItem.Text = "Критерій знаків";
-            this.критерійЗнаківToolStripMenuItem.Click += new System.EventHandler(this.критерійЗнаківToolStripMenuItem_Click);
-            // 
-            // незалежніВибіркиToolStripMenuItem
-            // 
-            this.незалежніВибіркиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2,
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1,
-            this.критерійВілкоксонаToolStripMenuItem});
-            this.незалежніВибіркиToolStripMenuItem.Name = "незалежніВибіркиToolStripMenuItem";
-            this.незалежніВибіркиToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.незалежніВибіркиToolStripMenuItem.Text = "Незалежні вибірки";
-            // 
-            // перевіркаЗбігуСередніхНезалToolStripMenuItem2
-            // 
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Name = "перевіркаЗбігуСередніхНезалToolStripMenuItem2";
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Size = new System.Drawing.Size(217, 22);
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Text = "Перевірка збігу середніх";
-            this.перевіркаЗбігуСередніхНезалToolStripMenuItem2.Click += new System.EventHandler(this.перевіркаЗбігуСередніхНезалToolStripMenuItem2_Click);
-            // 
-            // перевіркаЗбігуДисперсійToolStripMenuItem1
-            // 
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Name = "перевіркаЗбігуДисперсійToolStripMenuItem1";
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Size = new System.Drawing.Size(217, 22);
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Text = "Перевірка збігу дисперсій";
-            this.перевіркаЗбігуДисперсійToolStripMenuItem1.Click += new System.EventHandler(this.перевіркаЗбігуДисперсійToolStripMenuItem1_Click);
-            // 
-            // критерійВілкоксонаToolStripMenuItem
-            // 
-            this.критерійВілкоксонаToolStripMenuItem.Name = "критерійВілкоксонаToolStripMenuItem";
-            this.критерійВілкоксонаToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.критерійВілкоксонаToolStripMenuItem.Text = "Критерій Вілкоксона";
-            this.критерійВілкоксонаToolStripMenuItem.Click += new System.EventHandler(this.критерійВілкоксонаToolStripMenuItem_Click);
-            // 
-            // дляKВибірокToolStripMenuItem
-            // 
-            this.дляKВибірокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.критерійБартлетаToolStripMenuItem,
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem});
-            this.дляKВибірокToolStripMenuItem.Name = "дляKВибірокToolStripMenuItem";
-            this.дляKВибірокToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
-            this.дляKВибірокToolStripMenuItem.Text = "Еритерії для k вибірок";
-            // 
-            // критерійБартлетаToolStripMenuItem
-            // 
-            this.критерійБартлетаToolStripMenuItem.Name = "критерійБартлетаToolStripMenuItem";
-            this.критерійБартлетаToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
-            this.критерійБартлетаToolStripMenuItem.Text = "Критерій Бартлетта";
-            this.критерійБартлетаToolStripMenuItem.Click += new System.EventHandler(this.критерійБартлетаToolStripMenuItem_Click);
-            // 
-            // однофакторнийДисперсійнийАналізToolStripMenuItem
-            // 
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Name = "однофакторнийДисперсійнийАналізToolStripMenuItem";
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Text = "Однофакторний дисперсійний аналіз";
-            this.однофакторнийДисперсійнийАналізToolStripMenuItem.Click += new System.EventHandler(this.однофакторнийДисперсійнийАналізToolStripMenuItem_Click);
-            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1349,7 +1248,8 @@ namespace Chart1._1
             this.багатовимірнаРегрессіяToolStripMenuItem,
             this.toolStripMenuItem6,
             this.мГКToolStripMenuItem1,
-            this.рФАToolStripMenuItem});
+            this.рФАToolStripMenuItem,
+            this.кластериToolStripMenuItem});
             this.багатовимірніДаніToolStripMenuItem.Name = "багатовимірніДаніToolStripMenuItem";
             this.багатовимірніДаніToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.багатовимірніДаніToolStripMenuItem.Text = "Багатовимірні дані";
@@ -1539,6 +1439,57 @@ namespace Chart1._1
             this.рФАToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.рФАToolStripMenuItem.Text = "РФА";
             this.рФАToolStripMenuItem.Click += new System.EventHandler(this.рФАToolStripMenuItem_Click);
+            // 
+            // кластериToolStripMenuItem
+            // 
+            this.кластериToolStripMenuItem.Name = "кластериToolStripMenuItem";
+            this.кластериToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.кластериToolStripMenuItem.Text = "Кластери";
+            // 
+            // MenuViborki
+            // 
+            this.MenuViborki.Name = "MenuViborki";
+            this.MenuViborki.Size = new System.Drawing.Size(63, 20);
+            this.MenuViborki.Text = "Вибірки";
+            // 
+            // кластеризаціяToolStripMenuItem
+            // 
+            this.кластеризаціяToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сумаВнутрішньокластернихДисперсійToolStripMenuItem,
+            this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem,
+            this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem,
+            this.відношенняФункціоналівToolStripMenuItem});
+            this.кластеризаціяToolStripMenuItem.Name = "кластеризаціяToolStripMenuItem";
+            this.кластеризаціяToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.кластеризаціяToolStripMenuItem.Text = "Оцінка кластеризації";
+            // 
+            // сумаВнутрішньокластернихДисперсійToolStripMenuItem
+            // 
+            this.сумаВнутрішньокластернихДисперсійToolStripMenuItem.Name = "сумаВнутрішньокластернихДисперсійToolStripMenuItem";
+            this.сумаВнутрішньокластернихДисперсійToolStripMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.сумаВнутрішньокластернихДисперсійToolStripMenuItem.Text = "Сума внутрішньокластерних дисперсій";
+            this.сумаВнутрішньокластернихДисперсійToolStripMenuItem.Click += new System.EventHandler(this.сумаВнутрішньокластернихДисперсійToolStripMenuItem_Click);
+            // 
+            // сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem
+            // 
+            this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem.Name = "сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem";
+            this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem.Text = "Сума попарних внутрішньокластерних відстаней";
+            this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem.Click += new System.EventHandler(this.сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem_Click);
+            // 
+            // загальнаВнутрішньокластернаДисперсіяToolStripMenuItem
+            // 
+            this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem.Name = "загальнаВнутрішньокластернаДисперсіяToolStripMenuItem";
+            this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem.Text = "Загальна внутрішньокластерна дисперсія ";
+            this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem.Click += new System.EventHandler(this.загальнаВнутрішньокластернаДисперсіяToolStripMenuItem_Click);
+            // 
+            // відношенняФункціоналівToolStripMenuItem
+            // 
+            this.відношенняФункціоналівToolStripMenuItem.Name = "відношенняФункціоналівToolStripMenuItem";
+            this.відношенняФункціоналівToolStripMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.відношенняФункціоналівToolStripMenuItem.Text = "Відношення функціоналів";
+            this.відношенняФункціоналівToolStripMenuItem.Click += new System.EventHandler(this.відношенняФункціоналівToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -2627,6 +2578,18 @@ namespace Chart1._1
             // tabPage16
             // 
             this.tabPage16.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage16.Controls.Add(this.button18);
+            this.tabPage16.Controls.Add(this.button17);
+            this.tabPage16.Controls.Add(this.button16);
+            this.tabPage16.Controls.Add(this.button15);
+            this.tabPage16.Controls.Add(this.label12);
+            this.tabPage16.Controls.Add(this.label10);
+            this.tabPage16.Controls.Add(this.IndexesTextBox);
+            this.tabPage16.Controls.Add(this.AlphaTrendTextBox);
+            this.tabPage16.Controls.Add(this.label11);
+            this.tabPage16.Controls.Add(this.MnumericUpDownTimeData);
+            this.tabPage16.Controls.Add(this.label9);
+            this.tabPage16.Controls.Add(this.nTimeDataNumeric);
             this.tabPage16.Controls.Add(this.TauNumericUpDown);
             this.tabPage16.Controls.Add(this.label8);
             this.tabPage16.Controls.Add(this.button14);
@@ -2646,6 +2609,122 @@ namespace Chart1._1
             this.tabPage16.Size = new System.Drawing.Size(1190, 677);
             this.tabPage16.TabIndex = 3;
             this.tabPage16.Text = "Часові ряди";
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(923, 364);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(259, 23);
+            this.button18.TabIndex = 17;
+            this.button18.Text = "Повернутися до вхідних даних";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(957, 204);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(193, 23);
+            this.button17.TabIndex = 16;
+            this.button17.Text = "Критерій знаків";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(957, 233);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(193, 23);
+            this.button16.TabIndex = 15;
+            this.button16.Text = "Критерій Аббе";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(957, 175);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(193, 23);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "Критерій екстремальних точок";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(937, 307);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Траекторій";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(948, 152);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(25, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "n = ";
+            // 
+            // IndexesTextBox
+            // 
+            this.IndexesTextBox.Location = new System.Drawing.Point(1115, 304);
+            this.IndexesTextBox.Name = "IndexesTextBox";
+            this.IndexesTextBox.Size = new System.Drawing.Size(59, 20);
+            this.IndexesTextBox.TabIndex = 13;
+            this.IndexesTextBox.Text = "1; 2";
+            // 
+            // AlphaTrendTextBox
+            // 
+            this.AlphaTrendTextBox.Location = new System.Drawing.Point(1126, 149);
+            this.AlphaTrendTextBox.Name = "AlphaTrendTextBox";
+            this.AlphaTrendTextBox.Size = new System.Drawing.Size(59, 20);
+            this.AlphaTrendTextBox.TabIndex = 13;
+            this.AlphaTrendTextBox.Text = "0.1";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1064, 307);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "indexes = ";
+            // 
+            // MnumericUpDownTimeData
+            // 
+            this.MnumericUpDownTimeData.Location = new System.Drawing.Point(1012, 304);
+            this.MnumericUpDownTimeData.Name = "MnumericUpDownTimeData";
+            this.MnumericUpDownTimeData.Size = new System.Drawing.Size(46, 20);
+            this.MnumericUpDownTimeData.TabIndex = 3;
+            this.MnumericUpDownTimeData.Value = new decimal(new int[] {
+            13,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(1075, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "alpha = ";
+            // 
+            // nTimeDataNumeric
+            // 
+            this.nTimeDataNumeric.Location = new System.Drawing.Point(979, 149);
+            this.nTimeDataNumeric.Name = "nTimeDataNumeric";
+            this.nTimeDataNumeric.Size = new System.Drawing.Size(62, 20);
+            this.nTimeDataNumeric.TabIndex = 3;
+            this.nTimeDataNumeric.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // TauNumericUpDown
             // 
@@ -2670,9 +2749,9 @@ namespace Chart1._1
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(923, 179);
+            this.button14.Location = new System.Drawing.Point(923, 334);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(108, 23);
+            this.button14.Size = new System.Drawing.Size(259, 23);
             this.button14.TabIndex = 10;
             this.button14.Text = "Реконструкція";
             this.button14.UseVisualStyleBackColor = true;
@@ -2740,7 +2819,7 @@ namespace Chart1._1
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(923, 149);
+            this.button8.Location = new System.Drawing.Point(923, 272);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(264, 23);
             this.button8.TabIndex = 6;
@@ -2770,10 +2849,10 @@ namespace Chart1._1
             // 
             // TimeDataTextBox
             // 
-            this.TimeDataTextBox.Location = new System.Drawing.Point(923, 218);
+            this.TimeDataTextBox.Location = new System.Drawing.Point(923, 392);
             this.TimeDataTextBox.Multiline = true;
             this.TimeDataTextBox.Name = "TimeDataTextBox";
-            this.TimeDataTextBox.Size = new System.Drawing.Size(259, 444);
+            this.TimeDataTextBox.Size = new System.Drawing.Size(259, 270);
             this.TimeDataTextBox.TabIndex = 1;
             // 
             // TimeDataChart
@@ -2790,17 +2869,11 @@ namespace Chart1._1
             series19.Name = "Ряд";
             series20.ChartArea = "ChartArea1";
             series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series20.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            series20.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             series20.Legend = "Legend1";
             series20.Name = " Ряд";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series21.Color = System.Drawing.Color.Red;
-            series21.Legend = "Legend1";
-            series21.Name = "Тренд";
             this.TimeDataChart.Series.Add(series19);
             this.TimeDataChart.Series.Add(series20);
-            this.TimeDataChart.Series.Add(series21);
             this.TimeDataChart.Size = new System.Drawing.Size(895, 636);
             this.TimeDataChart.TabIndex = 0;
             this.TimeDataChart.Text = "chart5";
@@ -2876,6 +2949,8 @@ namespace Chart1._1
             ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDown)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MnumericUpDownTimeData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTimeDataNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TauNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeDataChart)).EndInit();
             this.ResumeLayout(false);
@@ -2944,19 +3019,6 @@ namespace Chart1._1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.ToolStripMenuItem MenuViborki;
-        private System.Windows.Forms.ToolStripMenuItem дляДвохВибірокToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem дляKВибірокToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem параметриToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem критерійБартлетаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem однофакторнийДисперсійнийАналізToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem незалежніВибіркиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem перевіркаЗбігуСередніхЗалежніToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem перевіркаЗбігуСередніхНезалToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem перевіркаЗбігуДисперсійToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem критерійВілкоксонаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem критерійЗнаківToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem видалитиДійснуВибіркуToolStripMenuItem;
         private System.Windows.Forms.TabControl DimentionalTabControl;
         private System.Windows.Forms.TabPage tabPage3;
@@ -3139,6 +3201,24 @@ namespace Chart1._1
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolStripMenuItem кластериToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem кластеризаціяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сумаВнутрішньокластернихДисперсійToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сумаПопарнихВнутрішньокластернихВідстанейToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem загальнаВнутрішньокластернаДисперсіяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem відношенняФункціоналівToolStripMenuItem;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox AlphaTrendTextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown nTimeDataNumeric;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox IndexesTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown MnumericUpDownTimeData;
+        private System.Windows.Forms.Button button18;
     }
 }
 
